@@ -28,10 +28,18 @@ const ShawarmaImg = styled.img`
   top: 19px;
 `;
 
+const LogoImg = styled.img`
+  width: 38px;
+  height: 47px;
+  padding-left: 15px;
+  align-self: flex-start;
+`;
+
 const Header = () => {
   return (
     <>
       <HeaderBar>
+        <LogoImg src={"img/logo.png"}></LogoImg>
         <StreamingImg src={"img/streaminglight.png"}></StreamingImg>
         <ShawarmaImg src={"img/shawarmalight.png"}></ShawarmaImg>
       </HeaderBar>
