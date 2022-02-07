@@ -1,4 +1,12 @@
+import { useContext } from "react";
+
+import ApiKebabContext from "../contexts/ApiKebabContext";
+
 const StreamerForm = () => {
+  const { name, setName } = useContext(ApiKebabContext);
+  const { imageImput, setImageImput } = useContext(ApiKebabContext);
+  const { description, setDescription } = useContext(ApiKebabContext);
+
   return (
     <>
       <form className="form-data ">
@@ -8,8 +16,8 @@ const StreamerForm = () => {
             type="text"
             id="name"
             placeholder="Your Name"
-            onChange={(event) => setUsername(event.target.value)}
-            value={username}
+            onChange={(event) => setName(event.target.value)}
+            value={name}
           />
         </div>
         <div className="form-block ">
@@ -18,8 +26,8 @@ const StreamerForm = () => {
             type="imageImput"
             id="imageImput"
             placeholder="image"
-            onChange={(event) => setImage(event.target.value)}
-            value={Image}
+            onChange={(event) => setImageImput(event.target.value)}
+            value={imageImput}
           />
         </div>
         <div className="form-block">
@@ -28,7 +36,7 @@ const StreamerForm = () => {
             type="Description"
             id="description"
             placeholder="Description"
-            value={Description}
+            value={description}
             onChange={(event) => setDescription(event.target.value)}
           />
         </div>
