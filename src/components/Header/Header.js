@@ -6,6 +6,10 @@ const HeaderBar = styled.div`
   background: #fff;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const StreamingImg = styled.img`
@@ -14,7 +18,14 @@ const StreamingImg = styled.img`
   height: 16px;
   left: 70px;
   top: 3px;
-  src: ${"img/streaminglight.png"};
+`;
+
+const ShawarmaImg = styled.img`
+  position: absolute;
+  width: 186px;
+  height: 31px;
+  left: 102px;
+  top: 19px;
 `;
 
 const Header = () => {
@@ -22,6 +33,7 @@ const Header = () => {
     <>
       <HeaderBar>
         <StreamingImg src={"img/streaminglight.png"}></StreamingImg>
+        <ShawarmaImg src={"img/shawarmalight.png"}></ShawarmaImg>
       </HeaderBar>
     </>
   );
