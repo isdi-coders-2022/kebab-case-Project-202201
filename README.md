@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Project Schematic
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Data Layer with actions
 
-## Available Scripts
+- Streamer List from api - Overwrite array with a new array.
+- Favorites List from kebab team - delete./, add new one, modify
+- Theme - turn light to dark or dark to light
 
-In the project directory, you can run:
+## Components / Responsaiblities
 
-### `yarn start`
+- App:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+  - Updates streamer list depending on search bar input
+  - Updates streamer list depending on sort input
+  - Updates streamer list depending on filter input
+  - Redirects to info page when a streamer is clicked
+  - Adds streamer to favs list when a durum is clicked.
+  - Toggles theme from dark to light
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+  - Updates FavoriteStreamer list
+  - Removes streamers from favorite list when the X is clicked
+  - Launches edit page when the edit button is clicked
+  - Launches streamer creation page when the "create" button is clicked.
+  - Redirects to info page when a favoriteStreamer is clicked
 
-### `yarn test`
+- Header: - Renders theme button
+- Nav bar
+  - Links to Main and Favs
+  - Renders MrKebab on desktop view.
+- MrKebab: - Shows aboutUs info on hover.
+- Main
+  - StreamerList: - Renders received list of streamers.
+  - Streamer:
+    - Renders streamer data.
+    - Receives user click action.
+- StreamerStatus: - Renders text and color according to received status.
+- IconButton: - Renders Icon received - Receives action on click.
+- TextButton: - Renders Text received - Receives action on click.
+- Search Bar: - Renders search bar - Receives user text input - Launches action
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Favs:
+  -FavoriteStreamer:
 
-### `yarn build`
+  - Renders streamer info
+  - Renders video reel
+  - Renders BigScreen when on desktop
+  - When on desktop all video shall be played on BigScreen.
+  - Renders current stream if streamer is online
+  - Receives user action on click.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Detail:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+  - Reads queryParams
+  - Renders streamer data
+  - Renders durumFav button
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- Form Page:
+  - Form:
+    - Input Fields: Receive and send user input text.
+    - Renders cancel and add button.
+    - Validates user input.
+    - Populates streamer data if received.
