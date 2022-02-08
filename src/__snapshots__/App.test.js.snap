@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div>
+  <header
+    className="sc-bdvvtL gHmFEN"
+    onClick={[Function]}
+  >
+    <img
+      alt="logo shawarma"
+      className="sc-hKwDye fsGAPt"
+      src="img/logo.png"
+    />
+    <img
+      alt="streaming header title"
+      className="sc-gsDKAQ cAbkVa"
+      src="img/streaminglight.png"
+    />
+    <img
+      alt="streaming header title"
+      className="sc-dkPtRN dOsohE"
+      src="img/shawarmalight.png"
+    />
+  </header>
+  <div
+    className="sc-eCImPb dmDUM"
+  >
+    <button>
+      hola
+    </button>
+    <button>
+      <img
+        className="sc-jRQBWg itFuPC"
+        src="img/multidurum.png"
+      />
+    </button>
+    <button>
+      hola
+    </button>
+  </div>
+</div>
+`;
