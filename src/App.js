@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./components/contexts/ThemeContext";
-import ThemeContextProvider from "./components/contexts/ThemeContextProvider";
 import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
 import lightTheme from "./themes/lightTheme";
-import darkTheme from "./themes/darkTheme";
 
 function App() {
   const { initialValue } = useContext(ThemeContext);

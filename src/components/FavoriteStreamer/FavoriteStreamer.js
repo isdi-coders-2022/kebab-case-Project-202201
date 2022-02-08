@@ -1,9 +1,7 @@
-import { useContext } from "react";
 import styled from "styled-components";
-import ThemeContextProvider from "../contexts/ThemeContextProvider";
 
 const StreamerArticle = styled.article`
-  background-color: #eaeae1;
+  background-color: ${(props) => props.theme.body};
 `;
 
 const FavStreamerHeader = styled.header`
