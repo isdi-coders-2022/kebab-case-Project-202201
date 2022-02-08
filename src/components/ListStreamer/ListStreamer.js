@@ -4,14 +4,13 @@ import styled from "styled-components";
 const Container = styled.div`
   background-color: #eaeae1;
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
 `;
 
-const ListStreamer = () => {
-  const streamers = [1, 2, 3, 4, 5];
-
+const ListStreamer = ({ streamers }) => {
   return (
-    <Container>
+    <Container className="container">
       {streamers.map((streamer) => {
         return <FavoriteStreamer key={streamers} streamerInfo={streamers} />;
       })}
