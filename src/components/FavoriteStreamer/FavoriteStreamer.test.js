@@ -5,7 +5,7 @@ describe("Given an instance of FavoriteStreamer component", () => {
   let streamerInfo = null;
   beforeAll(() => {
     streamerInfo = {
-      profile_image_url: "",
+      profile_image_url: "a-very-specific-image-url.png",
       display_name: "adri",
     };
   });
@@ -13,9 +13,11 @@ describe("Given an instance of FavoriteStreamer component", () => {
     test("It should display the received info", () => {
       render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
 
-      const renderedElement = screen.getByText("adri");
+      const article = screen.getByRole("article");
+      const header = screen.getByRole("heading");
 
-      expect(renderedElement).toBeInTheDocument();
+      expect(article).toBeInTheDocument();
+      expect(header).toHaveTextContent("adri");
     });
   });
 });

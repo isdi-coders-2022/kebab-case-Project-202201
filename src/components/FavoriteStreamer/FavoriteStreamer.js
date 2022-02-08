@@ -1,13 +1,16 @@
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const StreamerArticle = styled.article`
-  background: ${(props) => props.theme.body};
+  background: ${(props) => props.theme.alt};
+  padding: 5px 7px;
 `;
 
 const FavStreamerHeader = styled.header`
-  border-bottom: 5px solid hotpink;
+  border-bottom: 5px solid ${(props) => props.theme.accent};
+  padding: 0;
   display: flex;
-  padding: 10px;
+  padding: 0px;
   justify-content: space-between;
   & > * {
     height: 100%;
@@ -15,10 +18,17 @@ const FavStreamerHeader = styled.header`
   & :nth-child(2) {
     flex: 1 1 auto;
   }
+  & h2 {
+    color: ${(props) => props.theme.accent};
+  }
+  & img {
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+  }
 `;
 
 const FavoriteStreamer = ({ streamerInfo }) => {
-  // const { variable } = useContext(ThemeContextProvider);
   return (
     <StreamerArticle>
       <FavStreamerHeader>
@@ -27,13 +37,23 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           alt={`${streamerInfo.display_name}`}
         ></img>
         <div>
-          {/* <div>{variable}</div> */}
-          <h2>{streamerInfo.display_name}</h2>
+          <p>online/offline</p>
+          <div>
+            <h2>{streamerInfo.display_name}</h2>
+            <button>edit button</button>
+          </div>
         </div>
         <button>shish-kebab</button>
       </FavStreamerHeader>
       <div>Reel Container</div>
     </StreamerArticle>
   );
+};
+
+FavoriteStreamer.propTypes = {
+  streamerInfo: propTypes.shape({
+    display_name: propTypes.string.isRequired,
+    profile_image_url: propTypes.string.isRequired,
+  }),
 };
 export default FavoriteStreamer;
