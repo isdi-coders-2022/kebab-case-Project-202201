@@ -1,13 +1,15 @@
 import actionTypes from "../actions/theme/actionTypes";
+import lightTheme from "../../themes/lightTheme";
+import darkTheme from "../../themes/darkTheme";
 
 const themeReducer = (currentTheme, action) => {
   let newTheme;
   switch (action.type) {
     case actionTypes.toggleTheme:
-      newTheme = currentTheme === "light" ? "dark" : "light";
+      newTheme = currentTheme === lightTheme ? darkTheme : lightTheme;
       break;
     default:
-      newTheme = "light";
+      newTheme = lightTheme;
   }
 
   return newTheme;
