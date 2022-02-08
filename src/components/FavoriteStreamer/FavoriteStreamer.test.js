@@ -24,7 +24,7 @@ describe("Given an instance of FavoriteStreamer component", () => {
     });
   });
 
-  describe("When receives streamerIngfo", () => {
+  describe("When receives streamerInfo", () => {
     test("THen it should follow the snapshots shape", () => {
       const favStreamer = TestRenderer.create(
         <FavoriteStreamer streamerInfo={streamerInfo} />
