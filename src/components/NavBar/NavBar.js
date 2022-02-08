@@ -7,6 +7,8 @@ const NavBarStyled = styled.div`
   height: 65px;
   background: #461094;
   box-shadow: 0px -4px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: space-around;
 `;
 
 const NavBar = () => {
