@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+<div>
+  <header
+    className="sc-bdvvtL gHmFEN"
+    onClick={[Function]}
+  >
+    <img
+      alt="logo shawarma"
+      className="sc-hKwDye fsGAPt"
+      src="img/logo.png"
+    />
+    <img
+      alt="streaming header title"
+      className="sc-gsDKAQ cAbkVa"
+      src="img/streaminglight.png"
+    />
+    <img
+      alt="streaming header title"
+      className="sc-dkPtRN dOsohE"
+      src="img/shawarmalight.png"
+    />
+  </header>
+  <div
+    className="sc-gKclnd gTYRfD"
+  >
+    <button
+      className="sc-eCImPb cJVRaK"
+      onClick=""
+      type="button"
+    >
+      HOME
+    </button>
+    <button
+      className="sc-jRQBWg hAWCQO"
+      onClick=""
+      type="button"
+    >
+      <img
+        alt="multidurum"
+        src="img/multidurum.png"
+      />
+    </button>
+    <button
+      className="sc-eCImPb cJVRaK"
+      onClick=""
+      type="button"
+    >
+      FAVS
+    </button>
+  </div>
+  <article
+    className="sc-iCfMLu gINjxP"
+  >
+    <header
+      className="sc-furwcr eJqRMB"
+    >
+      <img
+        alt="Wololoo"
+        src="https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg"
+      />
+      <div>
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2>
+            Wololoo
+          </h2>
+          <button>
+            edit button
+          </button>
+        </div>
+      </div>
+      <button>
+        shish-kebab
+      </button>
+    </header>
+    <div>
+      Reel Container
+    </div>
+  </article>
+</div>
+`;
