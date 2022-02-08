@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StreamerArticle = styled.article`
-  background-color: #eaeae1;
+  background-color: ${(props) => props.theme.body};
 `;
 
 const FavStreamerHeader = styled.header`
@@ -18,6 +18,7 @@ const FavStreamerHeader = styled.header`
 `;
 
 const FavoriteStreamer = ({ streamerInfo }) => {
+  // const { variable } = useContext(ThemeContextProvider);
   return (
     <StreamerArticle>
       <FavStreamerHeader>
@@ -26,7 +27,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           alt={`${streamerInfo.display_name}`}
         ></img>
         <div>
-          <div>online / offline</div>
+          {/* <div>{variable}</div> */}
           <h2>{streamerInfo.display_name}</h2>
         </div>
         <button>shish-kebab</button>
