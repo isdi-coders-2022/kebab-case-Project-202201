@@ -17,6 +17,7 @@ function App() {
     <div>
       <Header />
       <Streamer props={streamerInfo} />
+      <Streamer props={streamerInfo} />
     </div>
   );
 }
