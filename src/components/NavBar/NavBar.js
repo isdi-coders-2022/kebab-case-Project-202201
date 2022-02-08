@@ -14,23 +14,17 @@ const NavBarStyled = styled.div`
   justify-content: space-around;
 `;
 
-const MenuButton = styled.img`
-  width: 38px;
-  height: 47px;
-  padding-left: 15px;
-  align-self: flex-start;
-`;
-
 const NavBar = () => {
   return (
     <>
       <NavBarStyled>
-        <ButtonText text={"HOME"} />
-        <ButtonImage />
-        {/* <button>
-          <MenuButton src={"img/multidurum.png"} />
-        </button> */}
-        <ButtonText text={"FAVS"} />
+        <ButtonText text={"HOME"} actionOnClick={""} />
+        <ButtonImage
+          image={"img/multidurum.png"}
+          imageAlt={"multidurum"}
+          actionOnClick={""}
+        />
+        <ButtonText text={"FAVS"} actionOnClick={""} />
       </NavBarStyled>
     </>
   );
