@@ -5,15 +5,15 @@ import ListStreamer from "./ListStreamer";
 describe("Given a ListStreamer", () => {
   let streamers = null;
   beforeAll(() => {
-    streamers = [1];
+    streamers = [1, 2];
   });
   describe("When called a list of streamers", () => {
     test("It should display a list of streamers", () => {
       render(<ListStreamer streamers={streamers} />);
 
-      const renderedElement = screen.getByRole("article");
+      const renderedElement = screen.getAllByRole("article");
 
-      expect(renderedElement).toBeInTheDocument();
+      expect(renderedElement[0]).toBeInTheDocument();
     });
   });
   describe("When it get a const listStreamer that creates ListStramer with 1 streamer", () => {
