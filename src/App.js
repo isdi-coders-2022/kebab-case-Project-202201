@@ -13,14 +13,13 @@ function App() {
   };
 
   return (
-
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
+
         <NavBar />
       </div>
     </ThemeProvider>
-
   );
 }
 

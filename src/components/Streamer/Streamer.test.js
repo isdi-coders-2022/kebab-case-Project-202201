@@ -15,7 +15,7 @@ describe("Given the Streamer component", () => {
           "https://static-cdn.jtvnw.net/jtv_user_pictures/41b23352-5c99-4eb2-974b-1e9b8120425e-profile_image-300x300.png",
       };
 
-      render(<Streamer props={streamerInfo}></Streamer>);
+      render(<Streamer streamerData={streamerInfo}></Streamer>);
 
       const streamerElement = screen.getByText("partner");
 
