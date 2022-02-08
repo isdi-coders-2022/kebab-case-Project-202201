@@ -15,16 +15,33 @@ const FavStreamerHeader = styled.header`
   & > * {
     height: 100%;
   }
-  & :nth-child(2) {
+  & > :nth-child(2) {
+    padding-left: 15px;
     flex: 1 1 auto;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
   }
   & h2 {
     color: ${(props) => props.theme.accent};
+    display: inline-block;
+    padding-bottom: 7px;
+    font-size: 24px;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    padding-right: 10px;
   }
   & img {
     border-radius: 50%;
     width: 70px;
     height: 70px;
+  }
+  & streamer-name-block {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
   }
 `;
 
@@ -38,7 +55,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
         ></img>
         <div>
           <p>online/offline</p>
-          <div>
+          <div className="streamer-name-block">
             <h2>{streamerInfo.display_name}</h2>
             <button>edit button</button>
           </div>

@@ -15,9 +15,11 @@ describe("Given an instance of FavoriteStreamer component", () => {
 
       const article = screen.getByRole("article");
       const header = screen.getByRole("heading");
+      const image = screen.getByRole("img");
 
       expect(article).toBeInTheDocument();
       expect(header).toHaveTextContent("adri");
+      expect(image).toBeInTheDocument();
     });
   });
 });
