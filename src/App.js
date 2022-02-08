@@ -13,6 +13,7 @@ function App() {
         <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
       </div>
     </ThemeProvider>
+</div>
   );
 }
 
