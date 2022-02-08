@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a NavBar component When it get a const newNavBar that creates NavBar then it should create and compare a snapshot with newNavBar 1`] = `
+<div
+  className="sc-dkPtRN iNEMgr"
+>
+  <button
+    className="sc-bdvvtL jbnYpL"
+    onClick=""
+    type="button"
+  >
+    HOME
+  </button>
+  <button
+    className="sc-gsDKAQ QrzIO"
+    onClick=""
+    type="button"
+  >
+    <img
+      alt="multidurum"
+      src="img/multidurum.png"
+    />
+  </button>
+  <button
+    className="sc-bdvvtL jbnYpL"
+    onClick=""
+    type="button"
+  >
+    FAVS
+  </button>
+</div>
+`;
