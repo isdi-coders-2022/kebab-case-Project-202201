@@ -2,7 +2,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const ArticleCard = styled.article`
-  width: 345px;
+  width: calc(100% - 40px);
+  margin: auto;
   height: 121px;
   left: 15px;
   top: 15px;
@@ -11,7 +12,13 @@ const ArticleCard = styled.article`
   flex-direction: row;
 `;
 
-const ColumnCard = styled.div``;
+const ColumnCard1 = styled.div``;
+
+const ColumnCard2 = styled.div`
+  padding-left: 15px;
+  display: flex;
+  flex-direction: column;
+`;
 
 const RoundedImage = styled.img`
   position: relative;
@@ -24,10 +31,10 @@ const RoundedImage = styled.img`
 
 const BroadcasterType = styled.p`
   position: relative;
-  width: 60px;
+  width: 70px;
   height: 18px;
-  left: 30px;
-  top: -20px;
+  left: 25px;
+  bottom: 10px;
 
   font-family: Roboto;
   font-style: normal;
@@ -41,53 +48,95 @@ const BroadcasterType = styled.p`
   color: #ffffff;
 `;
 
-const DurumIcon = styled.img`
-  position: relative;
-  width: 50px;
-  height: 50px;
-  left: 320px;
-  bottom: 70px;
+const NameStreamer = styled.p`
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 16px;
+
+  letter-spacing: 0.4px;
+
+  color: #5d16c6;
 `;
 
-/* color: ${(props) => props.theme.secondaryColor}; */
+const OnlineType = styled.p`
+  padding-right: 10px;
+  text-align: right;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
 
-const Streamer = ({ props }) => {
-  const durumIcon = "./img/durumFavDown.png";
+  text-align: right;
+  letter-spacing: 0.4px;
+
+  color: #0fa60c;
+`;
+
+const StreamerDescription = styled.p`
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: right;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  color: #000000;
+`;
+
+const Streamer = ({
+  props: {
+    profile_image_url,
+    broadcaster_type,
+    display_name,
+    type,
+    description,
+  },
+  actionOnClick,
+}) => {
   return (
     <>
-      <ArticleCard className="streamerMain">
-        <ColumnCard>
+      <ArticleCard className="streamerMain" onClick={actionOnClick}>
+        <ColumnCard1>
           <RoundedImage
             className="streamerPicture"
             alt="Streamer"
-            src={props.profile_image_url}
+            src={profile_image_url}
           ></RoundedImage>
           <BroadcasterType className="broadcasterType">
-            {props.broadcaster_type}
+            {broadcaster_type}
           </BroadcasterType>
-        </ColumnCard>
-        <ColumnCard>
-          <p className="displayName">{props.display_name}</p>
-          <p className="onlineType">{props.type}</p>
-          <p className="StreamerDescription">{props.description}</p>
-        </ColumnCard>
+        </ColumnCard1>
+        <ColumnCard2>
+          <NameStreamer className="displayName">{display_name}</NameStreamer>
+          <OnlineType className="onlineType">{type}</OnlineType>
+          <StreamerDescription className="StreamerDescription">
+            {description.length > 100
+              ? description.slice(0, 99) + "..."
+              : description}
+          </StreamerDescription>
+        </ColumnCard2>
       </ArticleCard>
-      <DurumIcon
-        className="myFavoriteIcon"
-        alt="Durum"
-        src={durumIcon}
-      ></DurumIcon>
     </>
   );
 };
 
 Streamer.propTypes = {
   id: PropTypes.number,
-  display_name: PropTypes.string.isRequired,
-  broadcaster_type: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  profile_image_url: PropTypes.string.isRequired,
-  //actionClick: propTypes.func,
+  display_name: PropTypes.string,
+  broadcaster_type: PropTypes.string,
+  description: PropTypes.string,
+  profile_image_url: PropTypes.string,
+  actionClick: PropTypes.func,
 };
 
 export default Streamer;
