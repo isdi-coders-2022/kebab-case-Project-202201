@@ -16,6 +16,10 @@ const ButtonText = styled.button`
 `;
 
 const Button = ({ text, actionOnClick }) => {
-  return <ButtonText onClick={actionOnClick}>Hola</ButtonText>;
+  return (
+    <ButtonText type="button" onClick={actionOnClick}>
+      {text}
+    </ButtonText>
+  );
 };
 export default Button;
