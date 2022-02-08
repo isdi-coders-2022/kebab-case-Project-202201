@@ -35,39 +35,3 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
   </div>
 </article>
 `;
-
-exports[`Given an instance of FavoriteStreamer component When receives streamerIngfo THen it should follow the snapshots shape 1`] = `
-<article
-  className="sc-bdvvtL kQhRHt"
->
-  <header
-    className="sc-gsDKAQ jTmZrl"
-  >
-    <img
-      alt="adri"
-      src="a-very-specific-image-url.png"
-    />
-    <div>
-      <p>
-        online/offline
-      </p>
-      <div
-        className="streamer-name-block"
-      >
-        <h2>
-          adri
-        </h2>
-        <button>
-          edit button
-        </button>
-      </div>
-    </div>
-    <button>
-      shish-kebab
-    </button>
-  </header>
-  <div>
-    Reel Container
-  </div>
-</article>
-`;
