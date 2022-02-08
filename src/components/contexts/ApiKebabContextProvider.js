@@ -1,7 +1,7 @@
 import { useState } from "react";
 import ApiKebabContext from "./ApiKebabContext";
 
-const FormContextProvider = ({ children }) => {
+const ApiKebabContextProvider = ({ children }) => {
   const [name, setName] = useState("");
   const [imageImput, setImageImput] = useState("");
   const [description, setDescription] = useState("");
@@ -21,4 +21,4 @@ const FormContextProvider = ({ children }) => {
     </ApiKebabContext.Provider>
   );
 };
-export default FormContextProvider;
+export default ApiKebabContextProvider;

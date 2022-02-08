@@ -1,16 +1,14 @@
-import { useContext } from "react";
+import { useState } from "react";
 
-import ApiKebabContext from "../contexts/ApiKebabContext";
-
-const StreamerForm = () => {
-  const { name, setName } = useContext(ApiKebabContext);
-  const { imageImput, setImageImput } = useContext(ApiKebabContext);
-  const { description, setDescription } = useContext(ApiKebabContext);
+const StreamerForm = ({ actionOnAdd, actionOnCancel }) => {
+  const [name, setName] = useState("");
+  const [imageImput, setImageImput] = useState("");
+  const [description, setDescription] = useState("");
 
   return (
     <>
-      <form className="form-data ">
-        <div className="form-block ">
+      <form className="form-data">
+        <div className="form-block">
           <label htmlFor="Name">Name: </label>
           <input
             type="text"
@@ -20,9 +18,10 @@ const StreamerForm = () => {
             value={name}
           />
         </div>
-        <div className="form-block ">
+        <div className="form-block">
           <label htmlFor="imageImput">Image: </label>
           <input
+            aria-label="imageInput"
             type="imageImput"
             id="imageImput"
             placeholder="image"
@@ -41,6 +40,15 @@ const StreamerForm = () => {
           />
         </div>
       </form>
+      <button onClick={actionOnCancel}>Cancel</button>
+      <button
+        className="addButton"
+        onClick={() => {
+          actionOnAdd(imageImput);
+        }}
+      >
+        ADD +
+      </button>
     </>
   );
 };
