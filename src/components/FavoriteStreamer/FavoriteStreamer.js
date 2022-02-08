@@ -1,4 +1,6 @@
+import { useContext } from "react";
 import styled from "styled-components";
+import ThemeContextProvider from "../contexts/ThemeContextProvider";
 
 const StreamerArticle = styled.article`
   background-color: #eaeae1;
@@ -18,6 +20,7 @@ const FavStreamerHeader = styled.header`
 `;
 
 const FavoriteStreamer = ({ streamerInfo }) => {
+  // const { variable } = useContext(ThemeContextProvider);
   return (
     <StreamerArticle>
       <FavStreamerHeader>
@@ -26,7 +29,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           alt={`${streamerInfo.display_name}`}
         ></img>
         <div>
-          <div>online / offline</div>
+          {/* <div>{variable}</div> */}
           <h2>{streamerInfo.display_name}</h2>
         </div>
         <button>shish-kebab</button>

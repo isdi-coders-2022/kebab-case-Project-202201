@@ -2,6 +2,10 @@ import ThemeContext from "./ThemeContext";
 
 const ThemeContextProvider = ({ children }) => {
   const initialValue = "light";
-  return <ThemeContext value={{ initialValue }}>{children}</ThemeContext>;
+  return (
+    <ThemeContext.Provider value={{ initialValue }}>
+      {children}
+    </ThemeContext.Provider>
+  );
 };
 export default ThemeContextProvider;
