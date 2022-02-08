@@ -20,7 +20,6 @@ function App() {
   };
 
   return (
-
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
@@ -28,7 +27,6 @@ function App() {
         <FavoriteStreamer streamerInfo={streamerInfo} />
       </div>
     </ThemeProvider>
-
   );
 }
 
