@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StreamerArticle = styled.article`
-  background-color: ${(props) => props.theme.body};
+  background: ${(props) => props.theme.body};
 `;
 
 const FavStreamerHeader = styled.header`

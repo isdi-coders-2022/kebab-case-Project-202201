@@ -1,11 +1,13 @@
 import styled from "styled-components";
 
-const HeaderBar = styled.div`
+const HeaderBar = styled.header`
   height: 60px;
   width: 100%;
-  background: #fff;
+  background-color: ${(props) => props.theme.accent};
+  /* background-color: ${(props) => props.theme.body}; */
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-  position: absolute;
+  position: fixed;
+  top: 0;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -35,10 +37,10 @@ const LogoImg = styled.img`
   align-self: flex-start;
 `;
 
-const Header = () => {
+const Header = ({ actionOnClick }) => {
   return (
     <>
-      <HeaderBar>
+      <HeaderBar onClick={actionOnClick}>
         <LogoImg src={"img/logo.png"} alt={"logo shawarma"}></LogoImg>
         <StreamingImg
           src={"img/streaminglight.png"}
