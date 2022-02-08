@@ -7,11 +7,13 @@ import lightTheme from "./themes/lightTheme";
 function App() {
   const { initialValue } = useContext(ThemeContext);
   return (
+    <div>
     <ThemeProvider theme={lightTheme}>
       <div>
         <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
       </div>
     </ThemeProvider>
+</div>
   );
 }
 
