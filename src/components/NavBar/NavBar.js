@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { render, screen } from "@testing-library/react";
 
 const NavBarStyled = styled.div`
   position: fixed;
