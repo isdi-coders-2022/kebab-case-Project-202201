@@ -14,6 +14,7 @@ function App() {
         <div>
           <Header />
           <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
+
           <NavBar />
         </div>
       </ThemeProvider>
