@@ -8,12 +8,14 @@ import Header from "./components/Header/Header";
 function App() {
   const { initialValue } = useContext(ThemeContext);
   return (
+    <div>
     <ThemeProvider theme={lightTheme}>
       <div>
         <Header />
         <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
       </div>
     </ThemeProvider>
+</div>
   );
 }
 
