@@ -16,7 +16,6 @@ function App() {
   return (
     <div>
       <Header />
-      <p>Hola</p>
       <Streamer props={streamerInfo} />
     </div>
   );
