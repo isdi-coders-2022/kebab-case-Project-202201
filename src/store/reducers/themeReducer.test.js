@@ -1,7 +1,7 @@
 import themeReducer from "./themeReducer";
 import { toggleThemeAction } from "../actions/theme/actionCreators";
 import lightTheme from "../../themes/lightTheme";
-import darkTheme from "../../themes/darktTheme";
+import darkTheme from "../../themes/darkTheme";
 
 describe("Given themeReducer", () => {
   describe("When given a current theme 'light' and a toggleaction", () => {
