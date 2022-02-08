@@ -1,62 +1,41 @@
-# Project Schematic
+# Kebab-Case
 
-## Data Layer with actions
+![](https://kebabcase.netlify.app/img/streaminglight.png)
+![](https://kebabcase.netlify.app/img/shawarmalight.png)
 
-- Streamer List from api - Overwrite array with a new array.
-- Favorites List from kebab team - delete./, add new one, modify
-- Theme - turn light to dark or dark to light
+![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-## Components / Responsaiblities
+###About
+Hi! We are a group of students who are practicing with our react skills. This project attacks the [Twitch Api](https://dev.twitch.tv/docs/api/) with differents endpoints. We want to create a service where you can manage and visualize your favorite streamers.
 
-- App:
+###Figma
+We created the preciew with [Figma](https://www.figma.com/file/Q4uYKa0MjUs7cx829Bo0gL/kebab-case?node-id=1048%3A5933) so we designed a light theme and a dark theme. It is full responsive and kebab themed.
 
-  - Updates streamer list depending on search bar input
-  - Updates streamer list depending on sort input
-  - Updates streamer list depending on filter input
-  - Redirects to info page when a streamer is clicked
-  - Adds streamer to favs list when a durum is clicked.
-  - Toggles theme from dark to light
+###Trello
+We are using trello as our A.G.I.L.E. envirorment
 
-  - Updates FavoriteStreamer list
-  - Removes streamers from favorite list when the X is clicked
-  - Launches edit page when the edit button is clicked
-  - Launches streamer creation page when the "create" button is clicked.
-  - Redirects to info page when a favoriteStreamer is clicked
+###API
+The [Twitch Api](https://dev.twitch.tv/docs/api/) has a lot of informations but the endpoints we are atacking are:
 
-- Header: - Renders theme button
-- Nav bar
-  - Links to Main and Favs
-  - Renders MrKebab on desktop view.
-- MrKebab: - Shows aboutUs info on hover.
-- Main
-  - StreamerList: - Renders received list of streamers.
-  - Streamer:
-    - Renders streamer data.
-    - Receives user click action.
-- StreamerStatus: - Renders text and color according to received status.
-- IconButton: - Renders Icon received - Receives action on click.
-- TextButton: - Renders Text received - Receives action on click.
-- Search Bar: - Renders search bar - Receives user text input - Launches action
+- https://api.twitch.tv/helix/streams - it gets the top 20 streamers that are online right now sorted by viewers
+- https://api.twitch.tv/helix/users?login=[streamerName] - this gave us the basic info of each streamer
+- https://api.twitch.tv/helix/clips - with parameter **broadcaster_id** we can get the latest clips of a streamer
+- https://api.twitch.tv/helix/chat/emotes - with parameter **broadcaster_id** we can get the list of chanel icons
 
-- Favs:
-  -FavoriteStreamer:
+We algo had to authenticate and register the twitch app to get a token and id hash.
 
-  - Renders streamer info
-  - Renders video reel
-  - Renders BigScreen when on desktop
-  - When on desktop all video shall be played on BigScreen.
-  - Renders current stream if streamer is online
-  - Receives user action on click.
+###About us
+Our Shawarma team is made by
 
-- Detail:
+[Josep Conejero](https://github.com/Bermeu), [Sílvia Martínez](https://github.com/lallunavermella), [Adrián Valladares](https://github.com/AdrianValladaresDiaz) and [Kevin Real](https://github.com/krealal)
 
-  - Reads queryParams
-  - Renders streamer data
-  - Renders durumFav button
+###Links
 
-- Form Page:
-  - Form:
-    - Input Fields: Receive and send user input text.
-    - Renders cancel and add button.
-    - Validates user input.
-    - Populates streamer data if received.
+[Figma](https://www.figma.com/file/Q4uYKa0MjUs7cx829Bo0gL/kebab-case?node-id=1048%3A5933)
+[Production](https://kebabcase.netlify.app/)
+[Trello](https://trello.com/b/Qtlo49NA/kebab-kase-group-challenge)
+[Git](https://github.com/isdi-coders-2022/kebab-case-Project-202201)
+
+**Table of Contents**
+
+[TOC]
