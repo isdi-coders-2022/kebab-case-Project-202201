@@ -1,4 +1,9 @@
-const Streamer = (props) => {
+/* import styled from "styled-components";
+
+const hola = styled.hola``; */
+
+const Streamer = ({ props }) => {
+  const durumIcon = "./img/durumFavDown.png";
   return (
     <article className="streamerMain">
       <img
@@ -10,7 +15,7 @@ const Streamer = (props) => {
       <p className="displayName">{props.display_name}</p>
       <p className="onlineType">{props.type}</p>
       <p className="StreamerDescription">{props.description}</p>
-      <img className="myFavoriteIcon" alt="Durum" src={props.durumIcon}></img>
+      <img className="myFavoriteIcon" alt="Durum" src={durumIcon}></img>
     </article>
   );
 };
