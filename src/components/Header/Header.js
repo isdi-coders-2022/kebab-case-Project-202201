@@ -39,9 +39,15 @@ const Header = () => {
   return (
     <>
       <HeaderBar>
-        <LogoImg src={"img/logo.png"}></LogoImg>
-        <StreamingImg src={"img/streaminglight.png"}></StreamingImg>
-        <ShawarmaImg src={"img/shawarmalight.png"}></ShawarmaImg>
+        <LogoImg src={"img/logo.png"} alt={"logo shawarma"}></LogoImg>
+        <StreamingImg
+          src={"img/streaminglight.png"}
+          alt={"streaming header title"}
+        ></StreamingImg>
+        <ShawarmaImg
+          src={"img/shawarmalight.png"}
+          alt={"streaming header title"}
+        ></ShawarmaImg>
       </HeaderBar>
     </>
   );
