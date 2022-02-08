@@ -1,5 +1,3 @@
-import styled from "styled-components";
-
 const lightTheme = {
   body: "#fafafa",
   back: "#fff",
