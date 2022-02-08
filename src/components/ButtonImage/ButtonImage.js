@@ -1,9 +1,15 @@
 import styled from "styled-components";
 
 const ButtonImg = styled.button`
-  border-color: ${(props) => props.theme.accentAlt2};
+  background-color: transparent;
+  border: 0px;
+  display: flex;
+  align-items: flex-start
   width: 50px;
   height: 50px;
+  & img {
+    height : 100%;
+  }
 `;
 
 const ButtonImage = ({ imageAlt, image, actionOnClick }) => {
