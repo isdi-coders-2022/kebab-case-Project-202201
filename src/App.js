@@ -1,10 +1,9 @@
-import Header from "./components/Header/Header";
-import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
 import lightTheme from "./themes/lightTheme";
+import Button from "./components/Button/Button";
 
 function App() {
   const { initialValue } = useContext(ThemeContext);
@@ -12,9 +11,8 @@ function App() {
     <div>
       <ThemeProvider theme={lightTheme}>
         <div>
-          <Header />
+          <Button />
           <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
-          <NavBar />
         </div>
       </ThemeProvider>
     </div>
