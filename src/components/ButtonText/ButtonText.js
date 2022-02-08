@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-const ButtonText = styled.button`
+const ButtonTxt = styled.button`
   background-color: ${(props) => props.theme.accent};
   border-color: ${(props) => props.theme.accentAlt2};
   color: white;
@@ -15,11 +15,11 @@ const ButtonText = styled.button`
   padding: 4px 8px 4px 6px;
 `;
 
-const Button = ({ text, actionOnClick }) => {
+const ButtonText = ({ text, actionOnClick }) => {
   return (
-    <ButtonText type="button" onClick={actionOnClick}>
+    <ButtonTxt type="button" onClick={actionOnClick}>
       {text}
-    </ButtonText>
+    </ButtonTxt>
   );
 };
-export default Button;
+export default ButtonText;
