@@ -16,10 +16,12 @@ describe("Given a ListStreamer", () => {
       expect(renderedElement).toBeInTheDocument();
     });
   });
-  describe("When it get a const App that creates Header", () => {
-    test("then it should create and compare a snapshot with Header component", () => {
-      const app = TestRenderer.create(<ListStreamer streamers={streamers} />);
-      expect(app.toJSON()).toMatchSnapshot();
+  describe("When it get a const listStreamer that creates ListStramer with 1 streamer", () => {
+    test("then it should create and compare a snapshot with ListStreamer and the created Streamer", () => {
+      const listStreamer = TestRenderer.create(
+        <ListStreamer streamers={streamers} />
+      );
+      expect(listStreamer.toJSON()).toMatchSnapshot();
     });
   });
 });
