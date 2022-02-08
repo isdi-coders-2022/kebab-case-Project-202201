@@ -2,19 +2,31 @@
 
 exports[`Given a NavBar component When it get a const newNavBar that creates NavBar then it should create and compare a snapshot with newNavBar 1`] = `
 <div
-  className="sc-bdvvtL etcVKg"
+  className="sc-dkPtRN iNEMgr"
 >
-  <button>
-    hola
+  <button
+    className="sc-bdvvtL jbnYpL"
+    onClick=""
+    type="button"
+  >
+    HOME
   </button>
-  <button>
+  <button
+    className="sc-gsDKAQ QrzIO"
+    onClick=""
+    type="button"
+  >
     <img
-      className="sc-gsDKAQ cAezFe"
+      alt="multidurum"
       src="img/multidurum.png"
     />
   </button>
-  <button>
-    hola
+  <button
+    className="sc-bdvvtL jbnYpL"
+    onClick=""
+    type="button"
+  >
+    FAVS
   </button>
 </div>
 `;

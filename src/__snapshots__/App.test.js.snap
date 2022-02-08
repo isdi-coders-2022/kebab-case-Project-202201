@@ -23,20 +23,65 @@ exports[` 1`] = `
     />
   </header>
   <div
-    className="sc-eCImPb dmDUM"
+    className="sc-gKclnd gTYRfD"
   >
-    <button>
-      hola
+    <button
+      className="sc-eCImPb cJVRaK"
+      onClick=""
+      type="button"
+    >
+      HOME
     </button>
-    <button>
+    <button
+      className="sc-jRQBWg hAWCQO"
+      onClick=""
+      type="button"
+    >
       <img
-        className="sc-jRQBWg itFuPC"
+        alt="multidurum"
         src="img/multidurum.png"
       />
     </button>
-    <button>
-      hola
+    <button
+      className="sc-eCImPb cJVRaK"
+      onClick=""
+      type="button"
+    >
+      FAVS
     </button>
   </div>
+  <article
+    className="sc-iCfMLu gINjxP"
+  >
+    <header
+      className="sc-furwcr eJqRMB"
+    >
+      <img
+        alt="Wololoo"
+        src="https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg"
+      />
+      <div>
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2>
+            Wololoo
+          </h2>
+          <button>
+            edit button
+          </button>
+        </div>
+      </div>
+      <button>
+        shish-kebab
+      </button>
+    </header>
+    <div>
+      Reel Container
+    </div>
+  </article>
 </div>
 `;

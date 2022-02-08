@@ -5,16 +5,56 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
   className="sc-dkPtRN eElyIp container"
 >
   <article
-    className="sc-bdvvtL cforNZ"
+    className="sc-bdvvtL kQhRHt"
   >
     <header
-      className="sc-gsDKAQ lplKdE"
+      className="sc-gsDKAQ jTmZrl"
     >
       <img
         alt="undefined"
       />
       <div>
-        <h2 />
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2 />
+          <button>
+            edit button
+          </button>
+        </div>
+      </div>
+      <button>
+        shish-kebab
+      </button>
+    </header>
+    <div>
+      Reel Container
+    </div>
+  </article>
+  <article
+    className="sc-bdvvtL kQhRHt"
+  >
+    <header
+      className="sc-gsDKAQ jTmZrl"
+    >
+      <img
+        alt="undefined"
+      />
+      <div>
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2 />
+          <button>
+            edit button
+          </button>
+        </div>
       </div>
       <button>
         shish-kebab

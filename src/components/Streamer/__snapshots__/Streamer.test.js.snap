@@ -1,48 +1,41 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Given the Streamer component When it get a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
-Array [
-  <article
-    className="sc-bdvvtL gxnRGz streamerMain"
+<article
+  className="sc-bdvvtL lenojC streamerMain"
+>
+  <div
+    className="sc-gsDKAQ"
   >
-    <div
-      className="sc-gsDKAQ"
+    <img
+      alt="Streamer"
+      className="sc-hKwDye eyfpIZ streamerPicture"
+      src="https://static-cdn.jtvnw.net/jtv_user_pictures/41b23352-5c99-4eb2-974b-1e9b8120425e-profile_image-300x300.png"
+    />
+    <p
+      className="sc-eCImPb ivAPqd broadcasterType"
     >
-      <img
-        alt="Streamer"
-        className="sc-dkPtRN cxEaNK streamerPicture"
-        src="https://static-cdn.jtvnw.net/jtv_user_pictures/41b23352-5c99-4eb2-974b-1e9b8120425e-profile_image-300x300.png"
-      />
-      <p
-        className="sc-hKwDye jFyYqG broadcasterType"
-      >
-        partner
-      </p>
-    </div>
-    <div
-      className="sc-gsDKAQ"
+      partner
+    </p>
+  </div>
+  <div
+    className="sc-dkPtRN bNzhNO"
+  >
+    <p
+      className="sc-jRQBWg iRoBWE displayName"
     >
-      <p
-        className="displayName"
-      >
-        LEC
-      </p>
-      <p
-        className="onlineType"
-      >
-        
-      </p>
-      <p
-        className="StreamerDescription"
-      >
-        Official Twitch Channel of the League of Legends European Championship. For more information, schedules and stats head to Lolesports.com
-      </p>
-    </div>
-  </article>,
-  <img
-    alt="Durum"
-    className="sc-eCImPb fzBXoY myFavoriteIcon"
-    src="./img/durumFavDown.png"
-  />,
-]
+      LEC
+    </p>
+    <p
+      className="sc-gKclnd hxBGbz onlineType"
+    >
+      
+    </p>
+    <p
+      className="sc-iCfMLu fBeufj StreamerDescription"
+    >
+      Official Twitch Channel of the League of Legends European Championship. For more information, sched...
+    </p>
+  </div>
+</article>
 `;
