@@ -3,22 +3,24 @@ import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
-import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
-import lightTheme from "./themes/lightTheme";
+import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 
 function App() {
-  const { initialValue } = useContext(ThemeContext);
-  return (
-    <div>
-      <ThemeProvider theme={lightTheme}>
-        <div>
-          <Header />
-          <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
+  const { theme, dispatch } = useContext(ThemeContext);
 
-          <NavBar />
-        </div>
-      </ThemeProvider>
-    </div>
+  const toggleTheme = () => {
+    dispatch(toggleThemeAction());
+  };
+
+  return (
+
+    <ThemeProvider theme={theme}>
+      <div>
+        <Header actionOnClick={toggleTheme} />
+        <NavBar />
+      </div>
+    </ThemeProvider>
+
   );
 }
 
