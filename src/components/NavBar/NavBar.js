@@ -24,7 +24,7 @@ const NavBar = () => {
       <NavBarStyled>
         <button>hola</button>
         <button>
-          <MenuButton />
+          <MenuButton src={"img/multidurum.png"} />
         </button>
         <button>hola</button>
       </NavBarStyled>
