@@ -12,7 +12,11 @@ const NavBarStyled = styled.div`
 const NavBar = () => {
   return (
     <>
-      <NavBarStyled />
+      <NavBarStyled>
+        <button>hola</button>
+        <button>hola</button>
+        <button>hola</button>
+      </NavBarStyled>
     </>
   );
 };
