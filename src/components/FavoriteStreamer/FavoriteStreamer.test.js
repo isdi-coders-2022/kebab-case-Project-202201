@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import FavoriteStreamer from "./FavoriteStreamer";
+import TestRenderer from "react-test-renderer";
 
 describe("Given an instance of FavoriteStreamer component", () => {
   let streamerInfo = null;
@@ -20,6 +21,15 @@ describe("Given an instance of FavoriteStreamer component", () => {
       expect(article).toBeInTheDocument();
       expect(header).toHaveTextContent("adri");
       expect(image).toBeInTheDocument();
+    });
+  });
+
+  describe("When receives streamerInfo", () => {
+    test("THen it should follow the snapshots shape", () => {
+      const favStreamer = TestRenderer.create(
+        <FavoriteStreamer streamerInfo={streamerInfo} />
+      );
+      expect(favStreamer.toJSON()).toMatchSnapshot();
     });
   });
 });
