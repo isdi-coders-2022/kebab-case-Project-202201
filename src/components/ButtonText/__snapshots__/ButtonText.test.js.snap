@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ButtonText Component When it get a const App that creates Header then it should create and compare a snapshot with Header component 1`] = `
+<button
+  className="sc-bdvvtL jbnYpL"
+  type="button"
+/>
+`;
+
+exports[`Given a ButtonText Component When it get a const button that creates a ButtonText then it should create and compare a snapshot with ButtonText component 1`] = `
+<button
+  className="sc-bdvvtL jbnYpL"
+  type="button"
+/>
+`;
