@@ -1,6 +1,6 @@
 import StreamerForm from "./StreamForm";
 import { render, screen, fireEvent } from "@testing-library/react";
-import ApiKebabContextProvider from "../contexts/ApiKebabContextProvider";
+import ApiKebabContextProvider from "../../store/contexts/ApiKebabContextProvider";
 
 describe("Given a Form component", () => {
   describe("When it's rendered", () => {
