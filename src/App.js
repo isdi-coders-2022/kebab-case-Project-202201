@@ -1,19 +1,26 @@
+import Header from "./components/Header/Header";
+import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
-import ThemeContext from "./components/contexts/ThemeContext";
-import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
-import lightTheme from "./themes/lightTheme";
+import ThemeContext from "./store/contexts/ThemeContext";
+import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 
 function App() {
-  const { initialValue } = useContext(ThemeContext);
+  const { theme, dispatch } = useContext(ThemeContext);
+
+  const toggleTheme = () => {
+    dispatch(toggleThemeAction());
+  };
+
   return (
-    <div>
-    <ThemeProvider theme={lightTheme}>
+
+    <ThemeProvider theme={theme}>
       <div>
-        <FavoriteStreamer streamerInfo={{ display_name: initialValue }} />
+        <Header actionOnClick={toggleTheme} />
+        <NavBar />
       </div>
     </ThemeProvider>
-</div>
+
   );
 }
 
