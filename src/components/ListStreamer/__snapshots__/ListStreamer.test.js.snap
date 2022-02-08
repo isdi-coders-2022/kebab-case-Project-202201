@@ -1,32 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given a ListStreamer When it get a const App that creates Header then it should create and compare a snapshot with Header component 1`] = `
-<div
-  className="sc-dkPtRN eElyIp container"
->
-  <article
-    className="sc-bdvvtL cforNZ"
-  >
-    <header
-      className="sc-gsDKAQ lplKdE"
-    >
-      <img
-        alt="undefined"
-      />
-      <div>
-        <h2 />
-      </div>
-      <button>
-        shish-kebab
-      </button>
-    </header>
-    <div>
-      Reel Container
-    </div>
-  </article>
-</div>
-`;
-
 exports[`Given a ListStreamer When it get a const listStreamer that creates ListStramer with 1 streamer then it should create and compare a snapshot with ListStreamer and the created Streamer 1`] = `
 <div
   className="sc-dkPtRN eElyIp container"
