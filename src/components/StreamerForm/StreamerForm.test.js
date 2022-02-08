@@ -1,4 +1,5 @@
 import StreamerForm from "./StreamForm";
+import userEvent from "@testing-library/user-event";
 import { render, screen, fireEvent } from "@testing-library/react";
 import ApiKebabContextProvider from "../../store/contexts/ApiKebabContextProvider";
 
@@ -15,7 +16,7 @@ describe("Given a Form component", () => {
       const imageInput = screen.getByLabelText("imageInput");
       fireEvent.change(imageInput, { target: { value: "my-image" } });
 
-      fireEvent.click(screen.getByText("ADD +"));
+      userEvent.click(screen.getByText("ADD +"));
 
       expect(actionOnAddMock).toHaveBeenCalled();
       expect(actionOnAddMock).toHaveBeenCalledWith("my-image");
