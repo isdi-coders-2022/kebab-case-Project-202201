@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ListStreamer When it get a const listStreamer that creates ListStramer with 1 streamer then it should create and compare a snapshot with ListStreamer and the created Streamer 1`] = `
+<div
+  className="sc-bdvvtL etcVKg"
+>
+  <button>
+    hola
+  </button>
+  <button>
+    <img
+      className="sc-gsDKAQ cAezFe"
+      src="img/multidurum.png"
+    />
+  </button>
+  <button>
+    hola
+  </button>
+</div>
+`;
+
+exports[`Given a NavBar component When it get a const newNavBar that creates NavBar then it should create and compare a snapshot with newNavBar 1`] = `
+<div
+  className="sc-bdvvtL etcVKg"
+>
+  <button>
+    hola
+  </button>
+  <button>
+    <img
+      className="sc-gsDKAQ cAezFe"
+      src="img/multidurum.png"
+    />
+  </button>
+  <button>
+    hola
+  </button>
+</div>
+`;
