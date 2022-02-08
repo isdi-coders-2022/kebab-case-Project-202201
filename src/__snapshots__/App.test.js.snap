@@ -3,27 +3,31 @@
 exports[` 1`] = `
 <div>
   <header
-    className="sc-bdvvtL gHmFEN"
-    onClick={[Function]}
+    className="sc-gsDKAQ lgLrrS"
   >
-    <img
-      alt="logo shawarma"
-      className="sc-hKwDye fsGAPt"
-      src="img/logo.png"
-    />
+    <button
+      className="sc-bdvvtL cgHFUT"
+      onClick={[Function]}
+      type="button"
+    >
+      <img
+        alt="logo shawarma"
+        src="img/logo.png"
+      />
+    </button>
     <img
       alt="streaming header title"
-      className="sc-gsDKAQ cAbkVa"
+      className="sc-dkPtRN eSHNya"
       src="img/streaminglight.png"
     />
     <img
       alt="streaming header title"
-      className="sc-dkPtRN dOsohE"
+      className="sc-hKwDye fVvAZv"
       src="img/shawarmalight.png"
     />
   </header>
   <div
-    className="sc-gKclnd gTYRfD"
+    className="sc-jRQBWg issXiZ"
   >
     <button
       className="sc-eCImPb cJVRaK"
@@ -33,7 +37,7 @@ exports[` 1`] = `
       HOME
     </button>
     <button
-      className="sc-jRQBWg hAWCQO"
+      className="sc-bdvvtL cgHFUT"
       onClick=""
       type="button"
     >
@@ -51,10 +55,10 @@ exports[` 1`] = `
     </button>
   </div>
   <article
-    className="sc-iCfMLu gINjxP"
+    className="sc-gKclnd hQnfJi"
   >
     <header
-      className="sc-furwcr eJqRMB"
+      className="sc-iCfMLu bngWWC"
     >
       <img
         alt="Wololoo"

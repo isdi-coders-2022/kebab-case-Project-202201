@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ButtonImage from "../ButtonImage/ButtonImage";
 
 const HeaderBar = styled.header`
   height: 60px;
@@ -12,6 +13,12 @@ const HeaderBar = styled.header`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  & button {
+    width: 38px;
+    height: 47px;
+    padding-left: 15px;
+    align-self: flex-start;
+  }
 `;
 
 const StreamingImg = styled.img`
@@ -30,18 +37,15 @@ const ShawarmaImg = styled.img`
   top: 19px;
 `;
 
-const LogoImg = styled.img`
-  width: 38px;
-  height: 47px;
-  padding-left: 15px;
-  align-self: flex-start;
-`;
-
 const Header = ({ actionOnClick }) => {
   return (
     <>
-      <HeaderBar onClick={actionOnClick}>
-        <LogoImg src={"img/logo.png"} alt={"logo shawarma"}></LogoImg>
+      <HeaderBar>
+        <ButtonImage
+          imageAlt={"logo shawarma"}
+          image={"img/logo.png"}
+          actionOnClick={actionOnClick}
+        />
         <StreamingImg
           src={"img/streaminglight.png"}
           alt={"streaming header title"}
