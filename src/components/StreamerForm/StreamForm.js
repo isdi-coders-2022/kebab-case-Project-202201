@@ -1,5 +1,32 @@
-import { useState } from "react";
+import styled from "styled-components";
+import ButtonText from "../ButtonText/ButtonText";
 
+const StyledForm = styled.form`
+  background-color: ${(props) => props.theme.alt};
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 345px;
+  height: 367px;
+  left: 22px;
+  top: 87px;
+`;
+
+const StyleLineForm = styled.div`
+  color: ${(props) => props.theme.accent};
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  marging: 15px;
+`;
+const StyleButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 10px;
+`;
 const StreamerForm = ({
   actionOnAdd,
   actionOnCancel,
@@ -9,42 +36,46 @@ const StreamerForm = ({
 }) => {
   return (
     <>
-      <form className="form-data">
-        <div className="form-block">
-          <label htmlFor="Name">Name: </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            onChange={""}
-            value={name}
-          />
-        </div>
-        <div className="form-block">
-          <label htmlFor="imageImput">Image: </label>
-          <input
-            type="imageImput"
-            id="imageImput"
-            placeholder="image"
-            onChange={""}
-            value={imageImput}
-          />
-        </div>
-        <div className="form-block">
-          <label htmlFor="Description">Description: </label>
-          <input
-            type="Description"
-            id="description"
-            placeholder="Description"
-            value={description}
-            onChange={""}
-          />
-        </div>
-      </form>
-      <button onClick={actionOnCancel}>Cancel</button>
-      <button className="addButton" onClick={""}>
-        ADD +
-      </button>
+      <StyledForm>
+        <StyleLineForm>
+          <form className="form-data">
+            <div className="form-block">
+              <label htmlFor="Name">Name: </label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                onChange={""}
+                value={name}
+              />
+            </div>
+            <div className="form-block">
+              <label htmlFor="imageImput">Image: </label>
+              <input
+                type="imageImput"
+                id="imageImput"
+                placeholder="image"
+                onChange={""}
+                value={imageImput}
+              />
+            </div>
+            <div className="form-block">
+              <label htmlFor="Description">Description: </label>
+              <input
+                type="Description"
+                id="description"
+                placeholder="Description"
+                value={description}
+                onChange={""}
+              />
+            </div>
+          </form>
+        </StyleLineForm>
+        <StyleButtons>
+          <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
+          <ButtonText text={"ADD+"} actionOnClick={() => {}} />
+        </StyleButtons>
+      </StyledForm>
     </>
   );
 };
