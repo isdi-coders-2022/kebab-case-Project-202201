@@ -4,7 +4,6 @@ import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
-
 import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
 
 const streamerInfo = {
@@ -12,7 +11,6 @@ const streamerInfo = {
   profile_image_url:
     "https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg",
 };
-
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
@@ -25,7 +23,6 @@ function App() {
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
-        <StreamerForm />
         <NavBar />
         <FavoriteStreamer streamerInfo={streamerInfo} />
       </div>

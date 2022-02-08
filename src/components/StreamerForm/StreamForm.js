@@ -40,7 +40,7 @@ const StreamerForm = ({
         <StyleLineForm>
           <form className="form-data">
             <div className="form-block">
-              <label htmlFor="Name">Name: </label>
+              <label for="name">Name:</label>
               <input
                 type="text"
                 id="name"
@@ -50,19 +50,19 @@ const StreamerForm = ({
               />
             </div>
             <div className="form-block">
-              <label htmlFor="imageImput">Image: </label>
+              <label for="imageInput">Image:</label>
               <input
-                type="imageImput"
-                id="imageImput"
+                type="imageInput"
+                id="imageInput"
                 placeholder="image"
                 onChange={""}
                 value={imageImput}
               />
             </div>
             <div className="form-block">
-              <label htmlFor="Description">Description: </label>
+              <label for="description">Description:</label>
               <input
-                type="Description"
+                type="description"
                 id="description"
                 placeholder="Description"
                 value={description}
