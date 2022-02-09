@@ -4,7 +4,6 @@ import { useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
-/* import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer"; */
 import useTwitchAPI from "./hooks/useTwitchAPI";
 import MainPageContext from "./store/contexts/MainPageContext";
 
@@ -16,8 +15,7 @@ import MainPageContext from "./store/contexts/MainPageContext";
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
-  const { streamerList } = useContext(MainPageContext);
-  debugger;
+
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
@@ -25,6 +23,8 @@ function App() {
   useEffect(() => {
     dispatchStreamerList();
   }, [dispatchStreamerList]);
+  const { streamerList } = useContext(MainPageContext);
+  debugger;
   return (
     <ThemeProvider theme={theme}>
       <div>
