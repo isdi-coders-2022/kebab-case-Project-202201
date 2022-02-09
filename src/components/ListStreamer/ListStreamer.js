@@ -12,7 +12,7 @@ const ListStreamer = ({ streamers }) => {
   return (
     <Container className="container">
       {streamers.map((streamer) => {
-        return <FavoriteStreamer key={streamers} streamerInfo={streamers} />;
+        return <FavoriteStreamer key={streamer} streamerInfo={streamer} />;
       })}
     </Container>
   );

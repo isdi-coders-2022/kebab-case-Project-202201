@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given a ListStreamer When it get a const listStreamer that creates ListStramer with 1 streamer then it should create and compare a snapshot with ListStreamer and the created Streamer 1`] = `
+<div
+  className="sc-dkPtRN eElyIp container"
+>
+  <article
+    className="sc-bdvvtL kQhRHt"
+  >
+    <header
+      className="sc-gsDKAQ jTmZrl"
+    >
+      <img
+        alt="undefined"
+      />
+      <div>
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2 />
+          <button>
+            edit button
+          </button>
+        </div>
+      </div>
+      <button>
+        shish-kebab
+      </button>
+    </header>
+    <div>
+      Reel Container
+    </div>
+  </article>
+  <article
+    className="sc-bdvvtL kQhRHt"
+  >
+    <header
+      className="sc-gsDKAQ jTmZrl"
+    >
+      <img
+        alt="undefined"
+      />
+      <div>
+        <p>
+          online/offline
+        </p>
+        <div
+          className="streamer-name-block"
+        >
+          <h2 />
+          <button>
+            edit button
+          </button>
+        </div>
+      </div>
+      <button>
+        shish-kebab
+      </button>
+    </header>
+    <div>
+      Reel Container
+    </div>
+  </article>
+</div>
+`;

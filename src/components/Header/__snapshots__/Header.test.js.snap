@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given Header component When it get a const App that creates Header then it should create and compare a snapshot with Header component 1`] = `
+<header
+  className="sc-gsDKAQ ecnTAA"
+>
+  <button
+    className="sc-bdvvtL cgHFUT"
+    type="button"
+  >
+    <img
+      alt="logo shawarma"
+      src="img/logo.png"
+    />
+  </button>
+  <img
+    alt="streaming header title"
+    className="sc-dkPtRN eSHNya"
+    src="img/streaminglight.png"
+  />
+  <img
+    alt="streaming header title"
+    className="sc-hKwDye fVvAZv"
+    src="img/shawarmalight.png"
+  />
+</header>
+`;

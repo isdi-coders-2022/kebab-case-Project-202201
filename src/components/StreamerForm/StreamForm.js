@@ -1,54 +1,81 @@
-import { useState } from "react";
+import styled from "styled-components";
+import ButtonText from "../ButtonText/ButtonText";
 
-const StreamerForm = ({ actionOnAdd, actionOnCancel }) => {
-  const [name, setName] = useState("");
-  const [imageImput, setImageImput] = useState("");
-  const [description, setDescription] = useState("");
+const StyledForm = styled.form`
+  background-color: ${(props) => props.theme.alt};
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 345px;
+  height: 367px;
+  left: 22px;
+  top: 87px;
+`;
 
+const StyleLineForm = styled.div`
+  color: ${(props) => props.theme.accent};
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+  marging: 15px;
+`;
+const StyleButtons = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  bottom: 10px;
+`;
+const StreamerForm = ({
+  actionOnAdd,
+  actionOnCancel,
+  name,
+  imageImput,
+  description,
+}) => {
   return (
     <>
-      <form className="form-data">
-        <div className="form-block">
-          <label htmlFor="Name">Name: </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Your Name"
-            onChange={(event) => setName(event.target.value)}
-            value={name}
-          />
-        </div>
-        <div className="form-block">
-          <label htmlFor="imageImput">Image: </label>
-          <input
-            aria-label="imageInput"
-            type="imageImput"
-            id="imageImput"
-            placeholder="image"
-            onChange={(event) => setImageImput(event.target.value)}
-            value={imageImput}
-          />
-        </div>
-        <div className="form-block">
-          <label htmlFor="Description">Description: </label>
-          <input
-            type="Description"
-            id="description"
-            placeholder="Description"
-            value={description}
-            onChange={(event) => setDescription(event.target.value)}
-          />
-        </div>
-      </form>
-      <button onClick={actionOnCancel}>Cancel</button>
-      <button
-        className="addButton"
-        onClick={() => {
-          actionOnAdd(imageImput);
-        }}
-      >
-        ADD +
-      </button>
+      <StyledForm>
+        <StyleLineForm>
+          <form className="form-data">
+            <div className="form-block">
+              <label for="name">Name:</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                onChange={""}
+                value={name}
+              />
+            </div>
+            <div className="form-block">
+              <label for="imageInput">Image:</label>
+              <input
+                type="imageInput"
+                id="imageInput"
+                placeholder="image"
+                onChange={""}
+                value={imageImput}
+              />
+            </div>
+            <div className="form-block">
+              <label for="description">Description:</label>
+              <input
+                type="description"
+                id="description"
+                placeholder="Description"
+                value={description}
+                onChange={""}
+              />
+            </div>
+          </form>
+        </StyleLineForm>
+        <StyleButtons>
+          <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
+          <ButtonText text={"ADD+"} actionOnClick={() => {}} />
+        </StyleButtons>
+      </StyledForm>
     </>
   );
 };

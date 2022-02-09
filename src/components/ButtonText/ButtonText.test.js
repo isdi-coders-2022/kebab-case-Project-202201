@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
+import TestRenderer from "react-test-renderer";
 import ButtonText from "./ButtonText";
 
 describe("Given a ButtonText Component", () => {
@@ -13,6 +14,12 @@ describe("Given a ButtonText Component", () => {
       userEvent.click(button);
 
       expect(action).toHaveBeenCalled();
+    });
+  });
+  describe("When it get a const button that creates a ButtonText", () => {
+    test("then it should create and compare a snapshot with ButtonText component", () => {
+      const button = TestRenderer.create(<ButtonText />);
+      expect(button.toJSON()).toMatchSnapshot();
     });
   });
 });
