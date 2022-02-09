@@ -23,6 +23,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
+
         <NavBar />
         <FavoriteStreamer streamerInfo={streamerInfo} />
       </div>

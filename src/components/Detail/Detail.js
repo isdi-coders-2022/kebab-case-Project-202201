@@ -94,7 +94,7 @@ const StreamerDescription = styled.p`
   color: #000000;
 `;
 
-const Streamer = ({
+const Detail = ({
   streamerData: {
     profile_image_url,
     broadcaster_type,
@@ -102,11 +102,10 @@ const Streamer = ({
     type,
     description,
   },
-  actionOnClick,
 }) => {
   return (
     <>
-      <ArticleCard className="streamerMain" onClick={actionOnClick}>
+      <ArticleCard className="streamerMain">
         <ColumnCard1>
           <RoundedImage
             className="streamerPicture"
@@ -131,7 +130,7 @@ const Streamer = ({
   );
 };
 
-Streamer.propTypes = {
+Detail.propTypes = {
   id: PropTypes.number,
   display_name: PropTypes.string,
   broadcaster_type: PropTypes.string,
@@ -140,4 +139,4 @@ Streamer.propTypes = {
   actionClick: PropTypes.func,
 };
 
-export default Streamer;
+export default Detail;
