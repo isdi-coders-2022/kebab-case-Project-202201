@@ -10,8 +10,8 @@ const useTwitchAPI = () => {
     const packageInfo = {
       method: "GET",
       headers: {
-        Authorization: "Bearer 2skh3pxj2nk4q2x0mp7nvd479u7zvj",
-        "Client-Id": "7apyztvt5kmx8o1ateivp57mxe17ml",
+        Authorization: `Bearer ${process.env.REACT_APP_PASS}`,
+        "Client-Id": `${process.env.REACT_APP_ID}`,
       },
     };
     const response = await fetch(streamsListEndpoint, packageInfo);
