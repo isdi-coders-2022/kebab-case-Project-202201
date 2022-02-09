@@ -28,14 +28,20 @@ const StyleButtons = styled.div`
   justify-content: space-around;
   bottom: 10px;
 `;
-const StreamerForm = ({ name, imageImput, description }) => {
+const StreamerForm = ({
+  name,
+  imageImput,
+  description,
+  actionAdd,
+  actionCancel,
+}) => {
   return (
     <>
       <StyledForm>
         <StyleLineForm>
           <form className="form-data">
             <div className="form-block">
-              <label for="name">Name:</label>
+              <label htmlFor="name">Name:</label>
               <input
                 type="text"
                 id="name"
@@ -45,7 +51,7 @@ const StreamerForm = ({ name, imageImput, description }) => {
               />
             </div>
             <div className="form-block">
-              <label for="imageInput">Image:</label>
+              <label htmlFor="imageInput">Image:</label>
               <input
                 type="imageInput"
                 id="imageInput"
@@ -55,7 +61,7 @@ const StreamerForm = ({ name, imageImput, description }) => {
               />
             </div>
             <div className="form-block">
-              <label for="description">Description:</label>
+              <label htmlFor="description">Description:</label>
               <input
                 type="description"
                 id="description"
@@ -67,8 +73,8 @@ const StreamerForm = ({ name, imageImput, description }) => {
           </form>
         </StyleLineForm>
         <StyleButtons>
-          <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
-          <ButtonText text={"ADD+"} actionOnClick={() => {}} />
+          <ButtonText text={"CANCEL"} actionOnClick={actionAdd} />
+          <ButtonText text={"ADD+"} actionOnClick={actionCancel} />
         </StyleButtons>
       </StyledForm>
     </>
