@@ -29,7 +29,7 @@ exports[`Given the Streamer component When it get a const streamer that creates 
     <p
       className="sc-gKclnd hxBGbz onlineType"
     >
-      
+      online
     </p>
     <p
       className="sc-iCfMLu fBeufj StreamerDescription"

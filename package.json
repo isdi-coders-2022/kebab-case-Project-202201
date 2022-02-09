@@ -48,7 +48,10 @@
     "collectCoverageFrom": [
       "src/**/*.js",
       "!src/**/*.test.js",
-      "!src/index.js"
+      "!src/index.js",
+      "!src/setupTests.js",
+      "!src/themes/darkTheme.js",
+      "!src/themes/lightTheme.js"
     ]
   }
 }
