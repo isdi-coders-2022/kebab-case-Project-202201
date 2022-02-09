@@ -5,7 +5,8 @@
 
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
-###About
+### About
+
 Hi! We are a group of students who are practicing with our react skills. This project attacks the [Twitch Api](https://dev.twitch.tv/docs/api/) with differents endpoints. We want to create a service where you can manage and visualize your favorite streamers.
 
 ###Figma

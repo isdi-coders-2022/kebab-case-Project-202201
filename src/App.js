@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
+import ClipCarousel from "./components/ClipCarousel/ClipCarousel";
 
 const streamerInfo = {
   display_name: "Wololoo",
@@ -20,15 +21,14 @@ function App() {
   };
 
   return (
-
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
         <FavoriteStreamer streamerInfo={streamerInfo} />
+        <ClipCarousel streamerId={431671263} />
       </div>
     </ThemeProvider>
-
   );
 }
 
