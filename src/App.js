@@ -6,6 +6,7 @@ import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 /* import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer"; */
 import useTwitchAPI from "./hooks/useTwitchAPI";
+import MainPageContext from "./store/contexts/MainPageContext";
 
 /* const streamerInfo = {
   display_name: "Wololoo",
@@ -15,6 +16,8 @@ import useTwitchAPI from "./hooks/useTwitchAPI";
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
+  const { streamerList } = useContext(MainPageContext);
+  debugger;
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
@@ -27,6 +30,7 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
+
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
     </ThemeProvider>
