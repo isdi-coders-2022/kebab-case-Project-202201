@@ -14,7 +14,6 @@ const useTwitchAPI = () => {
         "Client-Id": `${process.env.REACT_APP_ID}`,
       },
     };
-    console.log(packageInfo);
     const response = await fetch(streamsListEndpoint, packageInfo);
     const streamerListJson = await response.json();
     return streamerListJson.data;
