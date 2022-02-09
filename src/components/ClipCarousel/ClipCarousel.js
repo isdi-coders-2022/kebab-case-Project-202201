@@ -15,25 +15,22 @@ const ClipCarousel = ({ streamerId }) => {
   }, [fetchClipList, streamerId]);
 
   return (
-    <div>
-      {clipList.length > 0 && (
-        <ul>
-          {clipList.map((clip) => {
-            return (
-              <li key={clip.id}>
-                <iframe
-                  src={`${clip.embed_url}&parent=localhost`}
-                  width={"250"}
-                  allowFullScreen={true}
-                  autoPlay={false}
-                  title={clip.title}
-                ></iframe>
-              </li>
-            );
-          })}
-        </ul>
-      )}
-    </div>
+    <ul>
+      {clipList.length > 0 &&
+        clipList.map((clip) => {
+          return (
+            <li key={clip.id}>
+              <iframe
+                src={`${clip.embed_url}&parent=localhost`}
+                width={"250"}
+                allowFullScreen={true}
+                autoPlay={false}
+                title={clip.title}
+              ></iframe>
+            </li>
+          );
+        })}
+    </ul>
   );
 };
 
