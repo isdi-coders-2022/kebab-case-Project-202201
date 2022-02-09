@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 const ArticleCard = styled.article`
   width: calc(100% - 40px);
-  margin: auto;
+  margin: 10px;
   height: 121px;
   left: 15px;
   top: 15px;

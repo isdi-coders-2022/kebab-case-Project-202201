@@ -13,9 +13,12 @@ function App() {
   const { streamerList } = useContext(MainPageContext);
 
   const streamerInfo = {
-    display_name: "Wololoo",
     profile_image_url:
       "https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg",
+    broadcaster_type: "prueba",
+    display_name: "prueba",
+    type: "prueba",
+    description: "prueba",
   };
 
   const { dispatchStreamerList } = useTwitchAPI();
@@ -30,6 +33,8 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
+        <Streamer props={streamerInfo} />
+        <Streamer props={streamerInfo} />
         <Streamer props={streamerInfo} />
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
