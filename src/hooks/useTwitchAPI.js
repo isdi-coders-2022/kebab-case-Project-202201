@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useCallback, useContext } from "react";
 import MainPageContext from "../store/contexts/MainPageContext";
 import { loadStreamerList } from "../store/actions/mainPage/actionCreators";
 
@@ -18,12 +18,11 @@ const useTwitchAPI = () => {
     const streamerListJson = await response.json();
     return streamerListJson.data;
   }
-
-  async function dispatchStreamerList() {
+  const dispatchStreamerList = useCallback(async () => {
     const data = await fetchStreamInfo();
     const action = loadStreamerList(data);
     dispatch(action);
-  }
+  }, [dispatch]);
 
   return {
     fetchStreamInfo,
