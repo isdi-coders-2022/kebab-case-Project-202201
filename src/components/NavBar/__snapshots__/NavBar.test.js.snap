@@ -6,14 +6,14 @@ exports[`Given a NavBar component When it get a const newNavBar that creates Nav
 >
   <button
     className="sc-bdvvtL jbnYpL"
-    onClick=""
+    onClick={[Function]}
     type="button"
   >
     HOME
   </button>
   <button
     className="sc-gsDKAQ QrzIO"
-    onClick=""
+    onClick={[Function]}
     type="button"
   >
     <img
@@ -23,7 +23,7 @@ exports[`Given a NavBar component When it get a const newNavBar that creates Nav
   </button>
   <button
     className="sc-bdvvtL jbnYpL"
-    onClick=""
+    onClick={[Function]}
     type="button"
   >
     FAVS
