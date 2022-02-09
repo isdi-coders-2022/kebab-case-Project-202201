@@ -21,7 +21,7 @@ function App() {
   };
   useEffect(() => {
     dispatchStreamerList();
-  }, []);
+  }, [dispatchStreamerList]);
   return (
     <ThemeProvider theme={theme}>
       <div>
