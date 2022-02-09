@@ -12,7 +12,7 @@ function App() {
   const { theme, dispatch } = useContext(ThemeContext);
   const { streamerList } = useContext(MainPageContext);
 
-  const streamerInfo = (streamers, index) => {
+  /* const streamerInfo = (streamers, index) => {
     const profile_image_url = streamers[index].thumbnail_url;
     const broadcaster_type = "master";
     const display_name = streamers[index].user_name;
@@ -25,8 +25,9 @@ function App() {
       type,
       description,
     };
-  };
+  }; */
 
+  console.log(streamerList);
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
@@ -40,9 +41,9 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
-        <Streamer props={streamerList(streamerInfo, 0)} />
-        <Streamer props={streamerList(streamerInfo, 1)} />
-        <Streamer props={streamerList(streamerInfo, 2)} />
+        {/* <Streamer props={streamerInfo(streamerList, 3)} />
+        <Streamer props={streamerInfo(streamerList, 1)} />
+        <Streamer props={streamerInfo(streamerList, 2)} /> */}
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
     </ThemeProvider>
