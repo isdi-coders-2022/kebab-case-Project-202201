@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import ButtonText from "../ButtonText/ButtonText";
+import PropTypes from "prop-types";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
@@ -27,13 +28,7 @@ const StyleButtons = styled.div`
   justify-content: space-around;
   bottom: 10px;
 `;
-const StreamerForm = ({
-  actionOnAdd,
-  actionOnCancel,
-  name,
-  imageImput,
-  description,
-}) => {
+const StreamerForm = ({ name, imageImput, description }) => {
   return (
     <>
       <StyledForm>
@@ -79,4 +74,11 @@ const StreamerForm = ({
     </>
   );
 };
+
+StreamerForm.propTypes = {
+  name: PropTypes.string,
+  imageImput: PropTypes.string,
+  description: PropTypes.string,
+};
+
 export default StreamerForm;
