@@ -1,4 +1,5 @@
 import propTypes from "prop-types";
+import { useMemo } from "react";
 
 const ClipCarousel = ({ streamerId }) => {
   async function getClipList() {
@@ -17,54 +18,78 @@ const ClipCarousel = ({ streamerId }) => {
     const clipList = clipListJson.data;
     return clipList;
   }
+
+  const clips = useMemo(() => {
+    return getClipList();
+  }, []);
   // let clips = "";
   // (async () => {
   //   clips = await getClipList();
   //   console.log(clips);
   // })();
 
-  const clips = [
+  // const clips = await(async () => {
+  //   return await getClipList();
+  // });
+
+  const clips2 = [
     {
-      id: "45463043693",
-      user_id: "190835892",
-      user_login: "lck_korea",
-      user_name: "LCK_Korea",
+      id: "CogentTangentialPoultryBudStar",
+      url: "https://clips.twitch.tv/CogentTangentialPoultryBudStar",
+      embed_url:
+        "https://clips.twitch.tv/embed?clip=CogentTangentialPoultryBudStar",
+      broadcaster_id: "431671263",
+      broadcaster_name: "SorYuGa",
+      creator_id: "506455143",
+      creator_name: "dominium23",
+      video_id: "",
       game_id: "21779",
-      game_name: "League of Legends",
-      type: "live",
-      title: "2022 LCK 스프링 스플릿 | T1 vs HLE - DRX vs KT",
-      viewer_count: 85894,
-      started_at: "2022-02-09T07:15:25Z",
-      language: "ko",
+      language: "es",
+      title: "Explicaciòn de nickname",
+      view_count: 3,
+      created_at: "2021-02-08T19:44:10Z",
       thumbnail_url:
-        "https://static-cdn.jtvnw.net/previews-ttv/live_user_lck_korea-{width}x{height}.jpg",
-      tag_ids: [
-        "ab2975e3-b9ca-4b1a-a93e-fb61a5d5c3a4",
-        "36a89a80-4fcd-4b74-b3d2-2c6fd9b30c95",
-      ],
-      is_mature: false,
+        "https://clips-media-assets2.twitch.tv/AT-cm%7C1042354034-preview-480x272.jpg",
+      duration: 25.7,
     },
     {
-      id: "44651404140",
-      user_id: "65171890",
-      user_login: "rainbow6",
-      user_name: "Rainbow6",
-      game_id: "460630",
-      game_name: "Tom Clancy's Rainbow Six Siege",
-      type: "live",
+      id: "ManlyRefinedCobraCoolStoryBob-NT37-9BjNBtJ0-GS",
+      url: "https://clips.twitch.tv/ManlyRefinedCobraCoolStoryBob-NT37-9BjNBtJ0-GS",
+      embed_url:
+        "https://clips.twitch.tv/embed?clip=ManlyRefinedCobraCoolStoryBob-NT37-9BjNBtJ0-GS",
+      broadcaster_id: "431671263",
+      broadcaster_name: "SorYuGa",
+      creator_id: "402827853",
+      creator_name: "xxWild_BearDxx",
+      video_id: "1290042389",
+      game_id: "490100",
+      language: "es",
       title:
-        "Ninjas in Pyjamas vs. Team Empire // Six Invitational 2022 – Group Stage – Day 2 - Stream A",
-      viewer_count: 68130,
-      started_at: "2022-02-09T08:09:04Z",
-      language: "en",
+        "SOY CRISTIANO, SI, QUE? QUE PASA? | LOST ARK, HABLEMOS | TUS PREGUNTAS AQUÍ | FULL TIME STREAMER DIA #12| !commands [ES/FR/EN]",
+      view_count: 2,
+      created_at: "2022-02-07T13:21:56Z",
       thumbnail_url:
-        "https://static-cdn.jtvnw.net/previews-ttv/live_user_rainbow6-{width}x{height}.jpg",
-      tag_ids: [
-        "36a89a80-4fcd-4b74-b3d2-2c6fd9b30c95",
-        "6ea6bca4-4712-4ab9-a906-e3336a9d8039",
-        "c2542d6d-cd10-4532-919b-3d19f30a768b",
-      ],
-      is_mature: true,
+        "https://clips-media-assets2.twitch.tv/44631911180-offset-14628-preview-480x272.jpg",
+      duration: 28,
+    },
+    {
+      id: "CautiousInquisitiveBibimbapResidentSleeper-futzCDyLr3fBL8-x",
+      url: "https://clips.twitch.tv/CautiousInquisitiveBibimbapResidentSleeper-futzCDyLr3fBL8-x",
+      embed_url:
+        "https://clips.twitch.tv/embed?clip=CautiousInquisitiveBibimbapResidentSleeper-futzCDyLr3fBL8-x",
+      broadcaster_id: "431671263",
+      broadcaster_name: "SorYuGa",
+      creator_id: "140252285",
+      creator_name: "theslowhand77",
+      video_id: "1283218395",
+      game_id: "18122",
+      language: "es",
+      title: "ABUSO DE PODER :c",
+      view_count: 2,
+      created_at: "2022-02-01T10:49:16Z",
+      thumbnail_url:
+        "https://clips-media-assets2.twitch.tv/AT-cm%7CZ3VUXn7rcwg8i693wS_PsQ-preview-480x272.jpg",
+      duration: 30.3,
     },
   ];
   return (
@@ -73,11 +98,10 @@ const ClipCarousel = ({ streamerId }) => {
         return (
           <li key={clip.id}>
             <iframe
-              src={`https://player.twitch.tv/?video=v${clip.video_id}&parent=localhost`}
-              height={"720"}
-              width={"1280"}
-              allowFullScreen={"true"}
-              autoplay={"false"}
+              src={""}
+              width={"250"}
+              allowFullScreen={true}
+              autoPlay={false}
               title={clip.title}
             ></iframe>
           </li>
@@ -85,6 +109,23 @@ const ClipCarousel = ({ streamerId }) => {
       })}
     </ul>
   );
+  // return (
+  //   <ul>
+  //     {clips.map((clip) => {
+  //       return (
+  //         <li key={clip.id}>
+  //           <iframe
+  //             src={`${clip.embed_url}&parent=localhost`}
+  //             width={"250"}
+  //             allowFullScreen={true}
+  //             autoPlay={false}
+  //             title={clip.title}
+  //           ></iframe>
+  //         </li>
+  //       );
+  //     })}
+  //   </ul>
+  // );
 };
 
 export default ClipCarousel;
