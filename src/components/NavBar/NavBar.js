@@ -18,13 +18,13 @@ const NavBar = () => {
   return (
     <>
       <NavBarStyled>
-        <ButtonText text={"HOME"} actionOnClick={""} />
+        <ButtonText text={"HOME"} actionOnClick={() => {}} />
         <ButtonImage
           image={"img/multidurum.png"}
           imageAlt={"multidurum"}
-          actionOnClick={""}
+          actionOnClick={() => {}}
         />
-        <ButtonText text={"FAVS"} actionOnClick={""} />
+        <ButtonText text={"FAVS"} actionOnClick={() => {}} />
       </NavBarStyled>
     </>
   );
