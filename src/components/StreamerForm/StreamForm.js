@@ -34,43 +34,42 @@ const StreamerForm = ({
   description,
   actionAdd,
   actionCancel,
+  actionOnChange,
 }) => {
   return (
     <>
       <StyledForm>
         <StyleLineForm>
-          <form className="form-data">
-            <div className="form-block">
-              <label htmlFor="name">Name:</label>
-              <input
-                type="text"
-                id="name"
-                placeholder="Your Name"
-                onChange={""}
-                value={name}
-              />
-            </div>
-            <div className="form-block">
-              <label htmlFor="imageInput">Image:</label>
-              <input
-                type="imageInput"
-                id="imageInput"
-                placeholder="image"
-                onChange={""}
-                value={imageImput}
-              />
-            </div>
-            <div className="form-block">
-              <label htmlFor="description">Description:</label>
-              <input
-                type="description"
-                id="description"
-                placeholder="Description"
-                value={description}
-                onChange={""}
-              />
-            </div>
-          </form>
+          <div className="form-block">
+            <label htmlFor="name">Name:</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="Your Name"
+              onChange={actionOnChange}
+              value={name}
+            />
+          </div>
+          <div className="form-block">
+            <label htmlFor="imageInput">Image:</label>
+            <input
+              type="imageInput"
+              id="imageInput"
+              placeholder="image"
+              onChange={actionOnChange}
+              value={imageImput}
+            />
+          </div>
+          <div className="form-block">
+            <label htmlFor="description">Description:</label>
+            <input
+              type="description"
+              id="description"
+              placeholder="Description"
+              value={description}
+              onChange={actionOnChange}
+            />
+          </div>
         </StyleLineForm>
         <StyleButtons>
           <ButtonText text={"CANCEL"} actionOnClick={actionAdd} />
