@@ -22,13 +22,13 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuFilter = () => {
+const MenuFilter = (action) => {
   return (
     <>
       <Container>
-        <Menu>SORT</Menu>
-        <Menu>FILTER</Menu>
-        <Menu>SEARCH</Menu>
+        <Menu onClick={action}>SORT</Menu>
+        <Menu onClick={action}>FILTER</Menu>
+        <Menu onClick={action}>SEARCH</Menu>
       </Container>
     </>
   );
