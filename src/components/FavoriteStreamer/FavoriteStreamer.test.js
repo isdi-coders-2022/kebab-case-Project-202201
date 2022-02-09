@@ -12,7 +12,7 @@ describe("Given an instance of FavoriteStreamer component", () => {
   });
   describe("When called with streamer Info", () => {
     test("It should display an article", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
+      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
 
       const article = screen.getByRole("article");
 
@@ -20,7 +20,7 @@ describe("Given an instance of FavoriteStreamer component", () => {
     });
 
     test("It should display a heading", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
+      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
 
       const header = screen.getByRole("heading");
 
@@ -28,7 +28,7 @@ describe("Given an instance of FavoriteStreamer component", () => {
     });
 
     test("It should display an image", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
+      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
 
       const image = screen.getByRole("img");
 
