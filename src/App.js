@@ -12,13 +12,13 @@ function App() {
   const { theme, dispatch } = useContext(ThemeContext);
   const { streamerList } = useContext(MainPageContext);
 
-  const streamerInfo = {
-    profile_image_url:
-      "https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg",
-    broadcaster_type: "prueba",
-    display_name: "prueba",
-    type: "prueba",
-    description: "prueba",
+  const streamerInfo = (streamers, index) => {
+    const profile_image_url = streamers[index].thumbnail_url;
+    const broadcaster_type = "master";
+    const display_name = streamers[index].user_name;
+    const type = streamers[index].type;
+    const description = streamers[index].title;
+    return { profile_image_url };
   };
 
   const { dispatchStreamerList } = useTwitchAPI();
@@ -28,14 +28,15 @@ function App() {
   useEffect(() => {
     dispatchStreamerList();
   }, [dispatchStreamerList]);
+
   return (
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
-        <Streamer props={streamerInfo} />
-        <Streamer props={streamerInfo} />
-        <Streamer props={streamerInfo} />
+        <Streamer props={(streamerInfo, 0)} />
+        <Streamer props={(streamerInfo, 1)} />
+        <Streamer props={(streamerInfo, 2)} />
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
     </ThemeProvider>
