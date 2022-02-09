@@ -4,7 +4,12 @@ import StreamerListReducer from "../reducers/StreamerListReducer";
 
 const MainPageContextProvider = ({ children }) => {
   const [streamerList, dispatch] = useReducer(StreamerListReducer, []);
-  return <MainPageContext.Provider>{children}</MainPageContext.Provider>;
+
+  return (
+    <MainPageContext.Provider value={{ streamerList, dispatch }}>
+      {children}
+    </MainPageContext.Provider>
+  );
 };
 
 export default MainPageContextProvider;

@@ -5,6 +5,7 @@ import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer";
+import useTwitchAPI from "./hooks/useTwitchAPI";
 
 const streamerInfo = {
   display_name: "Wololoo",
@@ -14,10 +15,14 @@ const streamerInfo = {
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
-
+  const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
   };
+
+  (async () => {
+    await dispatchStreamerList();
+  })();
 
   return (
     <ThemeProvider theme={theme}>
