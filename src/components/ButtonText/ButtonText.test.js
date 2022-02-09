@@ -16,6 +16,26 @@ describe("Given a ButtonText Component", () => {
       expect(action).toHaveBeenCalled();
     });
   });
+  describe("When is rendered", () => {
+    test("It should render a button", () => {
+      render(<ButtonText />);
+
+      const button = screen.getByRole("button");
+
+      expect(button).toBeInTheDocument();
+    });
+
+    test("It should render a a given text", () => {
+      const text = "Add";
+
+      render(<ButtonText text={text} />);
+
+      const button = screen.getByRole("button");
+
+      expect(button).toHaveTextContent("Add");
+    });
+  });
+
   describe("When it get a const button that creates a ButtonText", () => {
     test("then it should create and compare a snapshot with ButtonText component", () => {
       const button = TestRenderer.create(<ButtonText />);
