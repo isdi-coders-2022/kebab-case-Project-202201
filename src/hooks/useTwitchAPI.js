@@ -22,9 +22,8 @@ const useTwitchAPI = () => {
   async function dispatchStreamerList() {
     const data = await fetchStreamInfo();
     const action = loadStreamerList(data);
-    console.log(action);
     dispatch(action);
-    console.log("dispatched cosas");
+    console.log(action);
   }
 
   return {
