@@ -18,7 +18,13 @@ function App() {
     const display_name = streamers[index].user_name;
     const type = streamers[index].type;
     const description = streamers[index].title;
-    return { profile_image_url };
+    return {
+      profile_image_url,
+      broadcaster_type,
+      display_name,
+      type,
+      description,
+    };
   };
 
   const { dispatchStreamerList } = useTwitchAPI();
@@ -34,9 +40,9 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
-        <Streamer props={(streamerInfo, 0)} />
-        <Streamer props={(streamerInfo, 1)} />
-        <Streamer props={(streamerInfo, 2)} />
+        <Streamer props={streamerList(streamerInfo, 0)} />
+        <Streamer props={streamerList(streamerInfo, 1)} />
+        <Streamer props={streamerList(streamerInfo, 2)} />
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
     </ThemeProvider>
