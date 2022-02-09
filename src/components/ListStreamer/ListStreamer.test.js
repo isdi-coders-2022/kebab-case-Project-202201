@@ -7,6 +7,7 @@ describe("Given a ListStreamer", () => {
   beforeAll(() => {
     streamers = [1, 2];
   });
+
   describe("When called a list of streamers", () => {
     test("It should display a list of streamers", () => {
       render(<ListStreamer streamers={streamers} />);
@@ -16,6 +17,7 @@ describe("Given a ListStreamer", () => {
       expect(renderedElement[0]).toBeInTheDocument();
     });
   });
+
   describe("When it get a const listStreamer that creates ListStramer with 1 streamer", () => {
     test("then it should create and compare a snapshot with ListStreamer and the created Streamer", () => {
       const listStreamer = TestRenderer.create(
