@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const ButtonTxt = styled.button`
   background-color: ${(props) => props.theme.accent};
@@ -21,5 +22,10 @@ const ButtonText = ({ text, actionOnClick }) => {
       {text}
     </ButtonTxt>
   );
+};
+
+ButtonText.propTypes = {
+  text: propTypes.string,
+  onclick: propTypes.func,
 };
 export default ButtonText;

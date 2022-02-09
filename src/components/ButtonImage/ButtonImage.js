@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import propTypes from "prop-types";
 
 const ButtonImg = styled.button`
   background-color: transparent;
@@ -19,4 +20,11 @@ const ButtonImage = ({ imageAlt, image, actionOnClick }) => {
     </ButtonImg>
   );
 };
+
+ButtonImage.propTypes = {
+  image: propTypes.string,
+  imageAlt: propTypes.string,
+  onclick: propTypes.func,
+};
+
 export default ButtonImage;
