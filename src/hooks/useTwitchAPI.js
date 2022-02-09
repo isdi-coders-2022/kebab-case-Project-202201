@@ -23,7 +23,6 @@ const useTwitchAPI = () => {
     const data = await fetchStreamInfo();
     const action = loadStreamerList(data);
     dispatch(action);
-    console.log(action);
   }
 
   return {
