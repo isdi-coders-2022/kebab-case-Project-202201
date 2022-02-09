@@ -8,16 +8,15 @@ import useTwitchAPI from "./hooks/useTwitchAPI";
 import MainPageContext from "./store/contexts/MainPageContext";
 import Streamer from "./components/Streamer/Streamer";
 
-/* const streamerInfo = {
-  display_name: "Wololoo",
-  profile_image_url:
-    "https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg",
-}; */
-
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
   const { streamerList } = useContext(MainPageContext);
-  console.log(streamerList[0]);
+
+  const streamerInfo = {
+    display_name: "Wololoo",
+    profile_image_url:
+      "https://media.kingston.com/hyperx/bio/hx-bio-influencer-dendi.jpg",
+  };
 
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
@@ -31,7 +30,7 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
-        <Streamer />
+        <Streamer props={streamerInfo} />
         {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
       </div>
     </ThemeProvider>
