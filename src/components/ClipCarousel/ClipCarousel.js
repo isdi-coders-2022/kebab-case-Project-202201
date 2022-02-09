@@ -1,14 +1,18 @@
 import propTypes from "prop-types";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import useTwitchAPI from "../../hooks/useTwitchAPI";
 
 const ClipCarousel = ({ streamerId }) => {
   const { fetchClipList } = useTwitchAPI();
   const [clipList, setClipList] = useState([]);
-  useEffect(async () => {
-    const fetchedList = await fetchClipList(streamerId);
-    setClipList(fetchedList);
-  }, []);
+
+  useEffect(() => {
+    async function fetchClips() {
+      const fetchedList = await fetchClipList(streamerId);
+      setClipList(fetchedList);
+    }
+    fetchClips();
+  }, [fetchClipList, streamerId]);
 
   return (
     <div>
@@ -18,7 +22,7 @@ const ClipCarousel = ({ streamerId }) => {
             return (
               <li key={clip.id}>
                 <iframe
-                  src={clip.url}
+                  src={`${clip.embed_url}&parent=localhost`}
                   width={"250"}
                   allowFullScreen={true}
                   autoPlay={false}
@@ -31,5 +35,9 @@ const ClipCarousel = ({ streamerId }) => {
       )}
     </div>
   );
+};
+
+ClipCarousel.propTypes = {
+  streamerId: propTypes.number.isRequired,
 };
 export default ClipCarousel;
