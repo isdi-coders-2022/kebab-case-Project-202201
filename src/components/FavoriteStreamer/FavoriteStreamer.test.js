@@ -11,21 +11,33 @@ describe("Given an instance of FavoriteStreamer component", () => {
     };
   });
   describe("When called with streamer Info", () => {
-    test("It should display the received info", () => {
+    test("It should display an article", () => {
       render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
 
       const article = screen.getByRole("article");
-      const header = screen.getByRole("heading");
-      const image = screen.getByRole("img");
 
       expect(article).toBeInTheDocument();
+    });
+
+    test("It should display a heading", () => {
+      render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
+
+      const header = screen.getByRole("heading");
+
       expect(header).toHaveTextContent("adri");
+    });
+
+    test("It should display an image", () => {
+      render(<FavoriteStreamer streamerInfo={streamerInfo}></FavoriteStreamer>);
+
+      const image = screen.getByRole("img");
+
       expect(image).toBeInTheDocument();
     });
   });
 
   describe("When receives streamerInfo", () => {
-    test("THen it should follow the snapshots shape", () => {
+    test("Then it should follow the snapshots shape", () => {
       const favStreamer = TestRenderer.create(
         <FavoriteStreamer streamerInfo={streamerInfo} />
       );
