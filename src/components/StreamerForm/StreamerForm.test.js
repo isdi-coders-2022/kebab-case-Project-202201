@@ -17,5 +17,12 @@ describe("Given a Form component", () => {
 
       expect(renderedInput).not.toBeNull();
     });
+    test("Then it should render a Placeholder input", () => {
+      render(<StreamerForm />);
+
+      const nameInput = screen.queryByPlaceholderText("Your Name");
+
+      expect(nameInput).toBeInTheDocument();
+    });
   });
 });
