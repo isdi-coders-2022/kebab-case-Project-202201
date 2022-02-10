@@ -98,7 +98,7 @@ const StreamerForm = () => {
           </FormBlock>
         </StyleLineForm>
         <StyleButtons>
-          <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
+          <ButtonText text={"CANCEL"} actionOnClick={resetForm} />
           <ButtonText
             type="submit"
             text={"ADD+"}
