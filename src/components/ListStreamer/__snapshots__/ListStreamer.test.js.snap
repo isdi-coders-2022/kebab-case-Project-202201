@@ -2,13 +2,13 @@
 
 exports[`Given a ListStreamer When it get a const listStreamer that creates ListStramer with 1 streamer then it should create and compare a snapshot with ListStreamer and the created Streamer 1`] = `
 <div
-  className="sc-dkPtRN eElyIp container"
+  className="sc-eCImPb beMkJu container"
 >
   <article
-    className="sc-bdvvtL kQhRHt"
+    className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-gsDKAQ jTmZrl"
+      className="sc-hKwDye hkUywq"
     >
       <img
         alt="undefined"
@@ -26,19 +26,26 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
           </button>
         </div>
       </div>
-      <button>
-        shish-kebab
+      <button
+        className="sc-gsDKAQ QrzIO"
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Shish-Kebab Button"
+          src="img/multidurum.png"
+        />
       </button>
     </header>
-    <div>
-      Reel Container
-    </div>
+    <ul
+      className="sc-bdvvtL jqhVmU"
+    />
   </article>
   <article
-    className="sc-bdvvtL kQhRHt"
+    className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-gsDKAQ jTmZrl"
+      className="sc-hKwDye hkUywq"
     >
       <img
         alt="undefined"
@@ -56,13 +63,20 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
           </button>
         </div>
       </div>
-      <button>
-        shish-kebab
+      <button
+        className="sc-gsDKAQ QrzIO"
+        onClick={[Function]}
+        type="button"
+      >
+        <img
+          alt="Shish-Kebab Button"
+          src="img/multidurum.png"
+        />
       </button>
     </header>
-    <div>
-      Reel Container
-    </div>
+    <ul
+      className="sc-bdvvtL jqhVmU"
+    />
   </article>
 </div>
 `;
