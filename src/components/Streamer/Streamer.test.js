@@ -18,7 +18,7 @@ describe("Given the Streamer component", () => {
   describe("When it's rendered", () => {
     test("Then it should show 'partner' in the document", () => {
       render(<Streamer props={streamerInfo}></Streamer>);
-      const streamerElement = screen.getByText("partner");
+      const streamerElement = screen.getByText(/partner/);
 
       expect(streamerElement).toBeInTheDocument();
     });
@@ -47,7 +47,7 @@ describe("Given the Streamer component", () => {
 
       render(<Streamer props={streamerInfo} actionOnClick={mockFunction} />);
 
-      const streamerCard = screen.queryByText("partner");
+      const streamerCard = screen.queryByText(/partner/);
       userEvent.click(streamerCard);
       expect(mockFunction).toHaveBeenCalled();
     });

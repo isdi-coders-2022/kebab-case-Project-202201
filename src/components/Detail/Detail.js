@@ -1,19 +1,100 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
 
-const ArticleCard = styled.article``;
+const ArticleCard = styled.article`
+  margin: 20px;
+  left: 15px;
+  top: 15px;
+  background: #efeff1;
+  display: flex;
+  flex-direction: column;
+`;
 
-const RoundedImage = styled.img``;
+const RoundedImage = styled.img`
+  position: relative;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  left: 10px;
+  top: 10px;
+`;
 
-const BroadcasterType = styled.p``;
+const BroadcasterType = styled.p`
+  width: 70px;
+  height: 18px;
+  padding-left: 10px;
 
-const NameStreamer = styled.p``;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
 
-const TwitchChannel = styled.p``;
+  text-align: left;
+  letter-spacing: 0.4px;
+  background-color: #ffffff;
+  color: #5d16c6;
+`;
 
-const StreamerDescription = styled.p``;
+const NameStreamer = styled.p`
+  padding-top: 20px;
+  padding-left: 10px;
+  text-align: left;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 16px;
 
-const ViewCount = styled.p``;
+  letter-spacing: 0.4px;
+
+  color: #5d16c6;
+`;
+
+const TwitchChannel = styled.p`
+  padding-left: 10px;
+  text-align: right;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+
+  text-align: left;
+  letter-spacing: 0.4px;
+
+  color: #0fa60c;
+`;
+
+const StreamerDescription = styled.p`
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: left;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  color: #000000;
+`;
+
+const ViewCount = styled.p`
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: left;
+
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  color: #000000;
+`;
 
 const Detail = ({ streamerInfo }) => {
   return (
