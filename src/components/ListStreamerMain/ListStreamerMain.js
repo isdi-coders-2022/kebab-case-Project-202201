@@ -19,7 +19,7 @@ const ListStreamerMain = () => {
     <>
       {streamerList.length > 0 &&
         streamerList.map((streamer) => {
-          return <Streamer streamerInfo={streamer} key={streamer.user_id} />;
+          return <Streamer streamerInfo={streamer} key={streamer[0].id} />;
         })}
     </>
   );
