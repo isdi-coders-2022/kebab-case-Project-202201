@@ -38,7 +38,7 @@ function App() {
         <Route path="/Info/:id" element={<InfoPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
-      <NavBar />
+
       {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
     </ThemeProvider>
   );
