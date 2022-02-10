@@ -9,6 +9,7 @@ import useTwitchAPI from "./hooks/useTwitchAPI";
 import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import FormPage from "./pages/FormPage";
+import InfoPage from "./pages/InfoPage";
 
 /* const streamerInfo = {
   display_name: "Wololoo",
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<MainPage />} />
         <Route path="/form" element={<FormPage />} />
+        <Route path="/Info/:id" element={<InfoPage />} />
       </Routes>
       <NavBar />
       {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
