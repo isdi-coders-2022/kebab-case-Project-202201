@@ -20,7 +20,7 @@ const StyleLineForm = styled.div`
   flex-direction: column;
   padding: 10px;
   width: 100%;
-  marging: 15px;
+  margin: 15px;
 `;
 const StyleButtons = styled.div`
   display: flex;
@@ -39,7 +39,8 @@ const StreamerForm = ({
   return (
     <>
       <StyledForm>
-        <StyleLineForm>
+        <StyleLineForm onSubmit={() => {}}>
+          {/* <form className="form-data"> */}
           <div className="form-block">
             <label htmlFor="name">Name:</label>
             <input
@@ -72,7 +73,7 @@ const StreamerForm = ({
           </div>
         </StyleLineForm>
         <StyleButtons>
-          <ButtonText text={"CANCEL"} actionOnClick={actionAdd} />
+          <ButtonText type="submit" text={"CANCEL"} actionOnClick={actionAdd} />
           <ButtonText text={"ADD+"} actionOnClick={actionCancel} />
         </StyleButtons>
       </StyledForm>
