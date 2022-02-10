@@ -132,7 +132,9 @@ const Streamer = ({ streamerInfo }) => {
             actionOnClick={addToFavs}
           />
           <StreamerDescription className="StreamerDescription">
-            {info.description}
+            {info.description.length > 100
+              ? info.description.slice(0, 99) + "..."
+              : info.description}
           </StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
