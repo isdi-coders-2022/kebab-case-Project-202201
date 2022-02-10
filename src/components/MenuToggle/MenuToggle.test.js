@@ -1,10 +1,10 @@
 import { render, screen } from "@testing-library/react";
-import MenuFilter from "./MenuFilter";
+import MenuToggle from "./MenuToggle";
 
-describe("Given a component menuFilter", () => {
+describe("Given a component menu", () => {
   describe("When this component its instancied", () => {
     test("it should be render heading", () => {
-      render(<MenuFilter />);
+      render(<MenuToggle />);
 
       const renderedElement = screen.getAllByRole("heading");
 

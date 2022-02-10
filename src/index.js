@@ -1,5 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import "./index.css";
 import ApiKebabContextProvider from "./store/contexts/ApiKebabContextProvider";
@@ -11,7 +12,9 @@ ReactDOM.render(
     <MainPageContextProvider>
       <ThemeContextProvider>
         <ApiKebabContextProvider>
-          <App />
+          <BrowserRouter>
+            <App />
+          </BrowserRouter>
         </ApiKebabContextProvider>
       </ThemeContextProvider>
     </MainPageContextProvider>
