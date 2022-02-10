@@ -6,8 +6,10 @@ import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 import useTwitchAPI from "./hooks/useTwitchAPI";
 
+
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
+
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
@@ -17,11 +19,13 @@ function App() {
     dispatchStreamerList();
   }, [dispatchStreamerList]);
 
+
   return (
     <ThemeProvider theme={theme}>
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
+
       </div>
     </ThemeProvider>
   );
