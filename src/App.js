@@ -1,27 +1,21 @@
+import NavBar from "./components/NavBar/NavBar";
 import Header from "./components/Header/Header";
-//import NavBar from "./components/NavBar/NavBar";
-import { useContext } from "react";
-import { ThemeProvider } from "styled-components";
-import ThemeContext from "./store/contexts/ThemeContext";
-import { toggleThemeAction } from "./store/actions/theme/actionCreators";
-//import useTwitchAPI from "./hooks/useTwitchAPI";
-import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import FormPage from "./pages/FormPage";
 import InfoPage from "./pages/InfoPage";
 import FavoritesPage from "./pages/FavoritesPage";
-import NavBar from "./components/NavBar/NavBar";
+import ThemeContext from "./store/contexts/ThemeContext";
+import { useContext } from "react";
+import { ThemeProvider } from "styled-components";
+import { toggleThemeAction } from "./store/actions/theme/actionCreators";
+import { Navigate, Route, Routes } from "react-router-dom";
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
-  // const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
   };
-  /*useEffect(() => {
-    dispatchStreamerList();
-  }, [dispatchStreamerList]);
-  */
+
   return (
     <ThemeProvider theme={theme}>
       <Header actionOnClick={toggleTheme} />
@@ -33,7 +27,6 @@ function App() {
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
       <NavBar />
-      {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
     </ThemeProvider>
   );
 }
