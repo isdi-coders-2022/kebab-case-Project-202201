@@ -11,8 +11,15 @@ const Container = styled.div`
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 `;
-const Menu = styled.h2`
-  background-color: ${(props) => props.theme.accentAlt2};
+const Menu = styled.label`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+`;
+const Input = styled.input`
+  background-color: rgba(0, 0, 0, 0.6);
   width: 350px;
   height: 56px;
   display: flex;
@@ -26,7 +33,8 @@ const MenuSearch = (action) => {
   return (
     <>
       <Container>
-        <Menu onClick={action}>SEARCH</Menu>
+        <Menu onSubmit={action}>SEARCH </Menu>
+        <Input />
       </Container>
     </>
   );
