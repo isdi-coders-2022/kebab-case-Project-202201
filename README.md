@@ -6,10 +6,6 @@
 ![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
 
 ### About
-<<<<<<< HEAD
-
-=======
->>>>>>> master
 Hi! We are a group of students who are practicing with our react skills. This project attacks the [Twitch Api](https://dev.twitch.tv/docs/api/) with differents endpoints. We want to create a service where you can manage and visualize your favorite streamers.
 
 ### Figma
@@ -39,7 +35,3 @@ Our Shawarma team is made by
 [Production](https://kebabcase.netlify.app/)
 [Trello](https://trello.com/b/Qtlo49NA/kebab-kase-group-challenge)
 [Git](https://github.com/isdi-coders-2022/kebab-case-Project-202201)
-
-**Table of Contents**
-
-[TOC]
