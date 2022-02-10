@@ -2,6 +2,7 @@ import styled from "styled-components";
 import ButtonText from "../ButtonText/ButtonText";
 import PropTypes from "prop-types";
 import { useState } from "react";
+import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
@@ -11,7 +12,6 @@ const StyledForm = styled.form`
   width: 345px;
   height: 367px;
   left: 22px;
-  top: 87px;
 `;
 
 const StyleLineForm = styled.div`
@@ -30,18 +30,36 @@ const StyleButtons = styled.div`
   bottom: 10px;
 `;
 const StreamerForm = () => {
+  const { sendStreamer } = useFavoritesAPI();
+
   const initialFields = {
     name: "",
-    imageImput: "",
+    imageInput: "",
     description: "",
   };
 
   const [formData, setFormData] = useState(initialFields);
 
+  const onFormSubmit = (event) => {
+    event.preventDefault();
+    sendStreamer(formData);
+    resetForm();
+  };
+
+  const resetForm = () => {
+    setFormData(initialFields);
+  };
+  const changeData = (event) => {
+    setFormData({
+      ...formData,
+      [event.target.id]: event.target.value,
+    });
+  };
+
   return (
     <>
       <StyledForm>
-        <StyleLineForm onSubmit={() => {}}>
+        <StyleLineForm onSubmit={onFormSubmit}>
           {/* <form className="form-data"> */}
           <div className="form-block">
             <label htmlFor="name">Name:</label>
@@ -49,7 +67,7 @@ const StreamerForm = () => {
               type="text"
               id="name"
               placeholder="Your Name"
-              onChange={actionOnChange}
+              onChange={changeData}
               value={formData.name}
             />
           </div>
@@ -59,8 +77,8 @@ const StreamerForm = () => {
               type="imageInput"
               id="imageInput"
               placeholder="image"
-              onChange={actionOnChange}
-              value={formData.imageImput}
+              onChange={changeData}
+              value={formData.imageInput}
             />
           </div>
           <div className="form-block">
@@ -70,16 +88,16 @@ const StreamerForm = () => {
               id="description"
               placeholder="Description"
               value={formData.description}
-              onChange={actionOnChange}
+              onChange={changeData}
             />
           </div>
         </StyleLineForm>
         <StyleButtons>
-          <ButtonText text={"CANCEL"} actionOnClick={actionAdd} />
+          <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
           <ButtonText
             type="submit"
             text={"ADD+"}
-            actionOnClick={actionCancel}
+            actionOnClick={onFormSubmit}
           />
         </StyleButtons>
       </StyledForm>
