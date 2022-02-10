@@ -96,43 +96,33 @@ const ViewCount = styled.p`
   color: #000000;
 `;
 
-const Detail = ({
-  streamerInfo: {
-    profile_image_url,
-    broadcaster_type,
-    display_name,
-    twitchChannel,
-    type,
-    description,
-  },
-  actionOnClick,
-}) => {
+const Detail = ({ streamerInfo, actionOnClick }) => {
   return (
     <>
-      <ArticleCard className="streamerMain" onClick={actionOnClick}>
+      <ArticleCard className="streamerDetail" onClick={actionOnClick}>
         <RoundedImage
           className="streamerPicture"
           alt="Streamer"
-          src={profile_image_url}
+          src={streamerInfo.profile_image_url}
         ></RoundedImage>
         <NameStreamer className="displayName">
-          Name: {display_name}
+          Name: {streamerInfo.display_name}
         </NameStreamer>
         <TwitchChannel className="twitchChannel">
-          Twitch Channel: {twitchChannel}
+          Twitch Channel: {streamerInfo.twitchChannel}
         </TwitchChannel>
         <StreamerDescription className="StreamerDescription">
           Description:{" "}
-          {description.length > 100
-            ? description.slice(0, 99) + "..."
-            : description}
+          {streamerInfo.description.length > 100
+            ? streamerInfo.description.slice(0, 99) + "..."
+            : streamerInfo.description}
         </StreamerDescription>
         <ViewCount>View Count: </ViewCount>
         <BroadcasterType className="broadcasterType">
-          Contract: {broadcaster_type}
+          Contract: {streamerInfo.broadcaster_type}
         </BroadcasterType>
         <NameStreamer className="displayName">
-          On Twitch for: {display_name}
+          On Twitch for: {streamerInfo.display_name}
         </NameStreamer>
       </ArticleCard>
     </>
@@ -140,7 +130,6 @@ const Detail = ({
 };
 
 Detail.propTypes = {
-  id: PropTypes.number,
   display_name: PropTypes.string,
   broadcaster_type: PropTypes.string,
   description: PropTypes.string,
