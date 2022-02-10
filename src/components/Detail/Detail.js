@@ -16,7 +16,6 @@ const StreamerDescription = styled.p``;
 const ViewCount = styled.p``;
 
 const Detail = ({ streamerInfo }) => {
-  console.log("ha entrado");
   return (
     <>
       <ArticleCard
