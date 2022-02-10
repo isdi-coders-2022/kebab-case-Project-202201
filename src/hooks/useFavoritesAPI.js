@@ -18,7 +18,19 @@ const useFavoritesAPI = () => {
     return await response.json();
   };
 
-  return { getAllFavorites, sendStreamer };
+  const modifyStreamer = async (id, data) => {
+    const url = `${favoritesEndpoint}/${id}`;
+    const packInfo = {
+      method: "PUT",
+      headers: { "Content-Type": "application/json" },
+      body: await JSON.stringify(data),
+    };
+
+    const response = await fetch(url, packInfo);
+    return await response.json();
+  };
+
+  return { getAllFavorites, sendStreamer, modifyStreamer };
 };
 
 export default useFavoritesAPI;
