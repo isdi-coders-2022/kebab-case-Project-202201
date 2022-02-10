@@ -1,6 +1,7 @@
 import styled from "styled-components";
-import ButtonText from "../ButtonText/ButtonText";
+
 import ButtonImage from "../ButtonImage/ButtonImage";
+import { Link } from "react-router-dom";
 
 const NavBarStyled = styled.div`
   position: fixed;
@@ -13,18 +14,39 @@ const NavBarStyled = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
+const Button = styled.div`
+  background-color: white;
+  border-color: black;
+  color: white;
+  border-radius: 4px;
+  width: 65px;
+  height: 35px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  padding: 4px 8px 4px 6px;
+`;
 
 const NavBar = () => {
   return (
     <>
       <NavBarStyled>
-        <ButtonText text={"HOME"} actionOnClick={() => {}} />
-        <ButtonImage
-          image={"img/multidurum.png"}
-          imageAlt={"multidurum"}
-          actionOnClick={() => {}}
-        />
-        <ButtonText text={"FAVS"} actionOnClick={() => {}} />
+        <Button>
+          <Link role={"button"} to={"/home"}>
+            HOME
+          </Link>
+        </Button>
+
+        <Link to={"/form"}>
+          <ButtonImage image={"img/multidurum.png"} imageAlt={"multidurum"} />
+        </Link>
+        <Button>
+          <Link role={"button"} to={"/favorites"}>
+            FAVS
+          </Link>
+        </Button>
       </NavBarStyled>
     </>
   );

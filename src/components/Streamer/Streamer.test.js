@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
 import Streamer from "./Streamer";
+import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
 import MainPageContext from "../../store/contexts/MainPageContext";
@@ -52,7 +52,7 @@ describe("Given the Streamer component", () => {
 
       render(<Streamer props={streamerInfo} actionOnClick={mockFunction} />);
 
-      const streamerCard = screen.queryByText("partner");
+      const streamerCard = screen.queryByText(/partner/);
       userEvent.click(streamerCard);
       expect(mockFunction).toHaveBeenCalled();
     });
