@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import ButtonText from "../ButtonText/ButtonText";
 import PropTypes from "prop-types";
+import { useState } from "react";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
@@ -28,14 +29,15 @@ const StyleButtons = styled.div`
   justify-content: space-around;
   bottom: 10px;
 `;
-const StreamerForm = ({
-  name,
-  imageImput,
-  description,
-  actionAdd,
-  actionCancel,
-  actionOnChange,
-}) => {
+const StreamerForm = () => {
+  const initialFields = {
+    name: "",
+    imageImput: "",
+    description: "",
+  };
+
+  const [formData, setFormData] = useState(initialFields);
+
   return (
     <>
       <StyledForm>
@@ -48,7 +50,7 @@ const StreamerForm = ({
               id="name"
               placeholder="Your Name"
               onChange={actionOnChange}
-              value={name}
+              value={formData.name}
             />
           </div>
           <div className="form-block">
@@ -58,7 +60,7 @@ const StreamerForm = ({
               id="imageInput"
               placeholder="image"
               onChange={actionOnChange}
-              value={imageImput}
+              value={formData.imageImput}
             />
           </div>
           <div className="form-block">
@@ -67,7 +69,7 @@ const StreamerForm = ({
               type="description"
               id="description"
               placeholder="Description"
-              value={description}
+              value={formData.description}
               onChange={actionOnChange}
             />
           </div>
