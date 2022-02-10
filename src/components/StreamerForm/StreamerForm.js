@@ -8,9 +8,10 @@ const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   position: absolute;
-  width: 345px;
-  height: 367px;
+  width: 500px;
+  height: 500px;
   left: 22px;
 `;
 
@@ -20,8 +21,13 @@ const StyleLineForm = styled.div`
   flex: 1 1 auto;
   flex-direction: column;
   padding: 10px;
-  width: 100%;
+  width: 400px;
   margin: 15px;
+`;
+const FormBlock = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
 `;
 const StyleButtons = styled.div`
   display: flex;
@@ -60,8 +66,7 @@ const StreamerForm = () => {
     <>
       <StyledForm>
         <StyleLineForm onSubmit={onFormSubmit}>
-          {/* <form className="form-data"> */}
-          <div className="form-block">
+          <FormBlock className="form-block">
             <label htmlFor="name">Name:</label>
             <input
               type="text"
@@ -70,18 +75,18 @@ const StreamerForm = () => {
               onChange={changeData}
               value={formData.name}
             />
-          </div>
-          <div className="form-block">
+          </FormBlock>
+          <FormBlock className="form-block">
             <label htmlFor="imageInput">Image:</label>
             <input
               type="imageInput"
               id="imageInput"
-              placeholder="image"
+              placeholder="Your image"
               onChange={changeData}
               value={formData.imageInput}
             />
-          </div>
-          <div className="form-block">
+          </FormBlock>
+          <FormBlock className="form-block">
             <label htmlFor="description">Description:</label>
             <input
               type="description"
@@ -90,7 +95,7 @@ const StreamerForm = () => {
               value={formData.description}
               onChange={changeData}
             />
-          </div>
+          </FormBlock>
         </StyleLineForm>
         <StyleButtons>
           <ButtonText text={"CANCEL"} actionOnClick={() => {}} />
