@@ -30,7 +30,17 @@ const useFavoritesAPI = () => {
     return await response.json();
   };
 
-  return { getAllFavorites, sendStreamer, modifyStreamer };
+  const deleteStreamer = async (id) => {
+    const url = `${favoritesEndpoint}/${id}`;
+    const packInfo = {
+      method: "DELETE",
+    };
+
+    const response = await fetch(url, packInfo);
+    return await response.json();
+  };
+
+  return { getAllFavorites, sendStreamer, modifyStreamer, deleteStreamer };
 };
 
 export default useFavoritesAPI;
