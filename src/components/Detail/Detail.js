@@ -92,7 +92,7 @@ const StreamerDescription = styled.p`
 `;
 
 const Detail = ({
-  props: {
+  streamerInfo: {
     profile_image_url,
     broadcaster_type,
     display_name,
