@@ -46,10 +46,13 @@ describe("Given the Detail component", () => {
     test("Then the passed action should be called", () => {
       const mockFunction = jest.fn();
 
-      render(<Detail streamerInfo={streamerData} actionClick={mockFunction} />);
+      render(
+        <Detail streamerInfo={streamerData} actionOnClick={mockFunction} />
+      );
 
-      const streamerElement = screen.getByText(/partner/);
-      userEvent.click(streamerElement);
+      const articleElement = screen.queryByRole("article");
+      userEvent.click(articleElement);
+
       expect(mockFunction).toHaveBeenCalled();
     });
   });

@@ -96,13 +96,10 @@ const ViewCount = styled.p`
   color: #000000;
 `;
 
-const Detail = ({ streamerInfo }) => {
+const Detail = ({ streamerInfo, actionOnClick }) => {
   return (
     <>
-      <ArticleCard
-        className="streamerDetail"
-        onClick={streamerInfo.actionOnClick}
-      >
+      <ArticleCard className="streamerDetail" onClick={actionOnClick}>
         <RoundedImage
           className="streamerPicture"
           alt="Streamer"
