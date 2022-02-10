@@ -114,7 +114,9 @@ const Streamer = ({ streamerInfo }) => {
           </NameStreamer>
           <OnlineType className="onlineType">{info.type}</OnlineType>
           <StreamerDescription className="StreamerDescription">
-            {info.description}
+            {info.description.length > 100
+              ? info.description.slice(0, 99) + "..."
+              : info.description}
           </StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
