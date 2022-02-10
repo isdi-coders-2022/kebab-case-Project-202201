@@ -1,5 +1,4 @@
 import ListStreamerMain from "../components/ListStreamerMain/ListStreamerMain";
-import Streamer from "../components/Streamer/Streamer";
 
 const MainPage = () => {
   return (

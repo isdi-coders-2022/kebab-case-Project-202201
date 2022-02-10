@@ -113,7 +113,9 @@ const Streamer = ({ streamerInfo }) => {
             {`${info.display_name}`}
           </NameStreamer>
           <OnlineType className="onlineType">{info.type}</OnlineType>
-          <StreamerDescription className="StreamerDescription"></StreamerDescription>
+          <StreamerDescription className="StreamerDescription">
+            {info.description}
+          </StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
     </>

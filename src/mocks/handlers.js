@@ -37,4 +37,23 @@ export const handlers = [
       ])
     );
   }),
+  rest.get(`${process.env.REACT_APP_STREAMERS}`, (req, res, ctx) => {
+    res(
+      ctx.status(200),
+      ctx.json([
+        {
+          id: 89,
+          name: "wololoo",
+          login: "wululuu",
+          broadcaser_type: "partner",
+        },
+        {
+          id: 45,
+          name: "wililii",
+          login: "wululuu",
+          broadcaser_type: "partner",
+        },
+      ])
+    );
+  }),
 ];
