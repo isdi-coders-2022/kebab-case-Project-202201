@@ -5,11 +5,11 @@ const ButtonImg = styled.button`
   background-color: transparent;
   border: 0px;
   display: flex;
-  align-items: flex-start
+  align-items: flex-start;
   width: 50px;
   height: 50px;
   & img {
-    height : 100%;
+    height: 100%;
   }
 `;
 
