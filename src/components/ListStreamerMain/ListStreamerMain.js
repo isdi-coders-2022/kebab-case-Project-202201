@@ -2,7 +2,7 @@ import Streamer from "../Streamer/Streamer";
 import { useEffect, useState } from "react";
 import useTwitchAPI from "../../hooks/useTwitchAPI";
 
-const ListStreamerMain = ({}) => {
+const ListStreamerMain = () => {
   const [streamerList, setStreamerList] = useState([]);
   const { fetchStreamerIdList, fetchStreamersFromId } = useTwitchAPI();
 

@@ -45,7 +45,6 @@ describe("Given the Streamer component", () => {
   describe("When it's rendered with a description shorter than 100", () => {
     test("Then it should show 'texto breve' in the document", () => {
       streamerInfo2[0].description = "texto breve";
-      console.log(streamerInfo2);
       render(
         <MainPageContextProvider>
           <Streamer streamerInfo={streamerInfo2}></Streamer>
