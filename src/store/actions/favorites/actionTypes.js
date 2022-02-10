@@ -1,5 +1,5 @@
 const actionTypes = {
-  loadFavoriteList: "load-favorite-list",
+  overwriteFavoritesAction: "overwrite-favorites",
 };
 
 export default actionTypes;
