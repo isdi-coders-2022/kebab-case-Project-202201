@@ -49,6 +49,11 @@ const FavStreamerHeader = styled.header`
     flex-direction: row;
     width: 100%;
   }
+  & button {
+    & img {
+      border-radius: 0;
+    }
+  }
 `;
 
 const FavoriteStreamer = ({ streamerInfo }) => {
@@ -78,7 +83,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
         </div>
         <ButtonImage
           imageAlt="Shish-Kebab Button"
-          image="img/multidurum.png"
+          image="img/shish-kebab.png"
           actionOnClick={onClickDelete}
         />
       </FavStreamerHeader>
