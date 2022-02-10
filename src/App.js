@@ -1,5 +1,4 @@
 import Header from "./components/Header/Header";
-//import NavBar from "./components/NavBar/NavBar";
 import { useContext } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
@@ -10,7 +9,6 @@ import MainPage from "./pages/MainPage";
 import FormPage from "./pages/FormPage";
 import InfoPage from "./pages/InfoPage";
 import FavoritesPage from "./pages/FavoritesPage";
-
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
