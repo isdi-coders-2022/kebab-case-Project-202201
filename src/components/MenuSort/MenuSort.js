@@ -22,14 +22,14 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuFilter = (action) => {
+const MenuSort = (action) => {
   return (
     <>
       <Container>
-        <Menu onClick={action}>ONLINE</Menu>
-        <Menu onClick={action}>OFFLINE</Menu>
+        <Menu onClick={action}>NAME</Menu>
+        <Menu onClick={action}>VIEWERS</Menu>
       </Container>
     </>
   );
 };
-export default MenuFilter;
+export default MenuSort;
