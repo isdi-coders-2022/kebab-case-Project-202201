@@ -11,17 +11,16 @@ import FormPage from "./pages/FormPage";
 import InfoPage from "./pages/InfoPage";
 import FavoritesPage from "./pages/FavoritesPage";
 
-
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
-  // const { dispatchStreamerList } = useTwitchAPI();
+  //const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
   };
   /*useEffect(() => {
     dispatchStreamerList();
-  }, [dispatchStreamerList]);
-  */
+  }, [dispatchStreamerList]);*/
+
   return (
     <ThemeProvider theme={theme}>
       <Header actionOnClick={toggleTheme} />

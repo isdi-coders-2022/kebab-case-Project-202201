@@ -93,37 +93,27 @@ const StreamerDescription = styled.p`
   color: #000000;
 `;
 
-const Streamer = ({
-  props: {
-    profile_image_url,
-    broadcaster_type,
-    display_name,
-    type,
-    description,
-  },
-  actionOnClick,
-}) => {
+const Streamer = ({ streamerInfo }) => {
+  const info = streamerInfo[0];
   return (
     <>
-      <ArticleCard className="streamerMain" onClick={actionOnClick}>
+      <ArticleCard className="streamerMain">
         <ColumnCard1>
           <RoundedImage
             className="streamerPicture"
             alt="Streamer"
-            src={profile_image_url}
+            src={info.profile_image_url}
           ></RoundedImage>
           <BroadcasterType className="broadcasterType">
-            {broadcaster_type}
+            {info.broadcaster_type}
           </BroadcasterType>
         </ColumnCard1>
         <ColumnCard2>
-          <NameStreamer className="displayName">{display_name}</NameStreamer>
-          <OnlineType className="onlineType">{type}</OnlineType>
-          <StreamerDescription className="StreamerDescription">
-            {description.length > 100
-              ? description.slice(0, 99) + "..."
-              : description}
-          </StreamerDescription>
+          <NameStreamer className="displayName">
+            {`${info.display_name}`}
+          </NameStreamer>
+          <OnlineType className="onlineType">{info.type}</OnlineType>
+          <StreamerDescription className="StreamerDescription"></StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
     </>
