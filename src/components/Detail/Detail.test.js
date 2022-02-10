@@ -1,10 +1,10 @@
-import Streamer from "./Streamer";
+import Detail from "./Detail";
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
 
-describe("Given the Streamer component", () => {
-  const streamerInfo = {
+describe("Given the Detail component", () => {
+  const streamerData = {
     id: "124422593",
     display_name: "LEC",
     type: "online",
@@ -17,14 +17,14 @@ describe("Given the Streamer component", () => {
 
   describe("When it's rendered", () => {
     test("Then it should show 'partner' in the document", () => {
-      render(<Streamer props={streamerInfo}></Streamer>);
+      render(<Detail streamerInfo={streamerData}></Detail>);
 
       const streamerElement = screen.getByText("partner");
       expect(streamerElement).toBeInTheDocument();
     });
 
     test("Then it should show 'LEC' in the document", () => {
-      render(<Streamer props={streamerInfo}></Streamer>);
+      render(<Detail streamerInfo={streamerData}></Detail>);
 
       const streamerElement = screen.getByText("LEC");
       expect(streamerElement).toBeInTheDocument();
@@ -33,8 +33,9 @@ describe("Given the Streamer component", () => {
 
   describe("When it's rendered with a description shorter than 100", () => {
     test("Then it should show 'texto breve' in the document", () => {
-      streamerInfo.description = "texto breve";
-      render(<Streamer props={streamerInfo}></Streamer>);
+      streamerData.description = "texto breve";
+
+      render(<Detail streamerInfo={streamerData}></Detail>);
 
       const streamerElement = screen.getByText("texto breve");
       expect(streamerElement).toBeInTheDocument();
@@ -45,7 +46,9 @@ describe("Given the Streamer component", () => {
     test("Then the passed action should be called", () => {
       const mockFunction = jest.fn();
 
-      render(<Streamer props={streamerInfo} actionOnClick={mockFunction} />);
+      render(
+        <Detail streamerInfo={streamerData} actionOnClick={mockFunction} />
+      );
 
       const streamerCard = screen.queryByText("partner");
       userEvent.click(streamerCard);
@@ -53,9 +56,11 @@ describe("Given the Streamer component", () => {
     });
   });
 
-  describe("When it get a const streamer that creates a streamer with StreamerInfo as props", () => {
-    test("then it should create and compare a snapshot with Streamer with StreamerInfo as component", () => {
-      const streamer = TestRenderer.create(<Streamer props={streamerInfo} />);
+  describe("When it get a const streamer that creates a streamer with StreamerData as props", () => {
+    test("then it should create and compare a snapshot with Streamer with StreamerData as component", () => {
+      const streamer = TestRenderer.create(
+        <Detail streamerInfo={streamerData} />
+      );
       expect(streamer.toJSON()).toMatchSnapshot();
     });
   });
