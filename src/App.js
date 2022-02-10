@@ -10,7 +10,7 @@ import MainPage from "./pages/MainPage";
 import FormPage from "./pages/FormPage";
 import InfoPage from "./pages/InfoPage";
 import FavoritesPage from "./pages/FavoritesPage";
-
+import NavBar from "./components/NavBar/NavBar";
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
@@ -32,8 +32,7 @@ function App() {
         <Route path="/Info/:id" element={<InfoPage />} />
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
-
-      {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
+      <NavBar />
     </ThemeProvider>
   );
 }
