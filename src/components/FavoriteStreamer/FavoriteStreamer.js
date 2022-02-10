@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
 import ClipCarousel from "../ClipCarousel/ClipCarousel";
+import ButtonImage from "../ButtonImage/ButtonImage";
+import { useContext } from "react";
+import MainPageContext from "../../store/contexts/MainPageContext";
+import useFavoritesAPI from "../../hooks/useFavoritesAPI";
+import { overwriteFavoritesAction } from "../../store/actions/favorites/actionCreators";
 
 const StreamerArticle = styled.article`
   background: ${(props) => props.theme.alt};
@@ -47,6 +52,16 @@ const FavStreamerHeader = styled.header`
 `;
 
 const FavoriteStreamer = ({ streamerInfo }) => {
+  const { favList, dispatchFavs } = useContext(MainPageContext);
+  const { deleteStreamer } = useFavoritesAPI();
+  const onClickDelete = async () => {
+    deleteStreamer(streamerInfo.id);
+    const filteredFavList = favList.filter((fav) => {
+      return fav.id !== streamerInfo.id;
+    });
+    const action = overwriteFavoritesAction(filteredFavList);
+    dispatchFavs(action);
+  };
   return (
     <StreamerArticle>
       <FavStreamerHeader>
@@ -61,7 +76,11 @@ const FavoriteStreamer = ({ streamerInfo }) => {
             <button>edit button</button>
           </div>
         </div>
-        <button>shish-kebab</button>
+        <ButtonImage
+          imageAlt="Shish-Kebab Button"
+          image="img/multidurum.png"
+          actionOnClick={onClickDelete}
+        />
       </FavStreamerHeader>
       <ClipCarousel streamerId={streamerInfo.id} />
     </StreamerArticle>
