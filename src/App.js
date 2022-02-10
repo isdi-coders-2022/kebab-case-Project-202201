@@ -4,7 +4,6 @@ import { useContext, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
-import ClipCarousel from "./components/ClipCarousel/ClipCarousel";
 import useTwitchAPI from "./hooks/useTwitchAPI";
 
 function App() {
