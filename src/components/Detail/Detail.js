@@ -97,12 +97,11 @@ const ViewCount = styled.p`
 `;
 
 const Detail = ({
-  streamerInfo: {
+  streamerData: {
     profile_image_url,
     broadcaster_type,
     display_name,
     twitchChannel,
-    type,
     description,
   },
   actionOnClick,
@@ -140,7 +139,6 @@ const Detail = ({
 };
 
 Detail.propTypes = {
-  id: PropTypes.number,
   display_name: PropTypes.string,
   broadcaster_type: PropTypes.string,
   description: PropTypes.string,
