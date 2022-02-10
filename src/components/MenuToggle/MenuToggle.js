@@ -22,7 +22,7 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuFilter = (action) => {
+const MenuToggle = (action) => {
   return (
     <>
       <Container>
@@ -33,4 +33,4 @@ const MenuFilter = (action) => {
     </>
   );
 };
-export default MenuFilter;
+export default MenuToggle;
