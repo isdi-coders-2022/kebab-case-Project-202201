@@ -6,6 +6,6 @@ export const loadEmotes = (streamerEmotes) => ({
 });
 
 export const loadStreamer = (streamerInfo) => ({
-  type: actionTypes.loadInfo,
+  type: actionTypes.loadStreamerInfo,
   info: streamerInfo,
 });
