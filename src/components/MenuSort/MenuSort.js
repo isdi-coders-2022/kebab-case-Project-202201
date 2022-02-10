@@ -22,7 +22,7 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuSort = (action) => {
+const MenuSort = ({ action }) => {
   return (
     <>
       <Container>

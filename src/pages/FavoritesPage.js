@@ -28,3 +28,4 @@ const FavoritesPage = () => {
 };
 
 export default FavoritesPage;
+<button>shish-kebab</button>;

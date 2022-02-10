@@ -13,7 +13,9 @@ const ListStreamer = ({ streamers }) => {
   return (
     <Container className="container">
       {streamers.map((streamer) => {
-        return <FavoriteStreamer key={streamer} streamerInfo={{ streamer }} />;
+        return (
+          <FavoriteStreamer key={streamer.id} streamerInfo={{ streamer }} />
+        );
       })}
     </Container>
   );
