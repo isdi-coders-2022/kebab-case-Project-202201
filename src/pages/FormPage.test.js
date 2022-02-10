@@ -4,10 +4,10 @@ import FormPage from "./FormPage";
 
 describe("Given a Form page", () => {
   describe("When it's rendered", () => {
-    test("it should be render a form", () => {
+    test("it should be render a label text", () => {
       render(
         <MainContextProvider>
-          <FormPage></FormPage>
+          <FormPage />
         </MainContextProvider>
       );
 
