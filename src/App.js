@@ -6,6 +6,8 @@ import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 /* import FavoriteStreamer from "./components/FavoriteStreamer/FavoriteStreamer"; */
 import useTwitchAPI from "./hooks/useTwitchAPI";
+import { Navigate, Route, Routes } from "react-router-dom";
+import MainPage from "./pages/MainPage";
 
 /* const streamerInfo = {
   display_name: "Wololoo",
@@ -19,16 +21,19 @@ function App() {
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
   };
-  useEffect(() => {
+  /*useEffect(() => {
     dispatchStreamerList();
   }, [dispatchStreamerList]);
+  */
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <Header actionOnClick={toggleTheme} />
-        <NavBar />
-        {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
-      </div>
+      <Header actionOnClick={toggleTheme} />
+      <Routes>
+        <Route path="/" element={<Navigate to="/home" />} />
+        <Route path="/home" element={<MainPage />} />
+      </Routes>
+      <NavBar />
+      {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
     </ThemeProvider>
   );
 }
