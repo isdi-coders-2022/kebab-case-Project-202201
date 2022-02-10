@@ -5,12 +5,11 @@ import { ThemeProvider } from "styled-components";
 import ThemeContext from "./store/contexts/ThemeContext";
 import { toggleThemeAction } from "./store/actions/theme/actionCreators";
 import useTwitchAPI from "./hooks/useTwitchAPI";
-import MainPageContext from "./store/contexts/MainPageContext";
+
 import Detail from "./components/Detail/Detail";
 
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
-  const { streamerList } = useContext(MainPageContext);
 
   const { dispatchStreamerList } = useTwitchAPI();
   const toggleTheme = () => {
