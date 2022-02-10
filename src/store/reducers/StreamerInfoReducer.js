@@ -1,16 +1,16 @@
 import actionTypes from "../actions/detailPage/actionTypes";
 
-const StreamerInfoReducer = (currentStreamerInfo, action) => {
-  let newStreamerInfo;
+const StreamerInfoReducer = (currentStreamer, action) => {
+  let newStreamer;
   switch (action.type) {
     case actionTypes.loadStreamerInfo:
-      newStreamerInfo = [...action.loadStreamerInfo];
+      newStreamer = [...action.info];
       break;
 
     default:
-      newStreamerInfo = [...currentStreamerInfo];
+      newStreamer = [...currentStreamer];
       break;
   }
-  return newStreamerInfo;
+  return newStreamer;
 };
 export default StreamerInfoReducer;
