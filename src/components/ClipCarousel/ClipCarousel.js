@@ -1,6 +1,14 @@
 import propTypes from "prop-types";
 import { useEffect, useState } from "react";
+import styled from "styled-components";
 import useTwitchAPI from "../../hooks/useTwitchAPI";
+
+const HorizontalList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+`;
 
 const ClipCarousel = ({ streamerId }) => {
   const { fetchClipList } = useTwitchAPI();
@@ -15,7 +23,7 @@ const ClipCarousel = ({ streamerId }) => {
   }, [fetchClipList, streamerId]);
 
   return (
-    <ul>
+    <HorizontalList>
       {clipList.length > 0 &&
         clipList.map((clip) => {
           return (
@@ -30,7 +38,7 @@ const ClipCarousel = ({ streamerId }) => {
             </li>
           );
         })}
-    </ul>
+    </HorizontalList>
   );
 };
 

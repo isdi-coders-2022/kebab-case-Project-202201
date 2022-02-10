@@ -13,9 +13,11 @@ function App() {
   const toggleTheme = () => {
     dispatch(toggleThemeAction());
   };
+
   useEffect(() => {
     dispatchStreamerList();
   }, [dispatchStreamerList]);
+
   return (
     <ThemeProvider theme={theme}>
       <div>
