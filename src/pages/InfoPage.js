@@ -1,10 +1,11 @@
-import NavBar from "../components/NavBar/NavBar";
+import Detail from "../components/Detail/Detail";
 
 const InfoPage = () => {
   return (
     <>
-      <div className="container"></div>
-      <NavBar />
+      <div className="container">
+        <Detail />
+      </div>
     </>
   );
 };
