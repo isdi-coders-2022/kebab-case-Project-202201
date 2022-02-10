@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import propTypes from "prop-types";
+import ClipCarousel from "../ClipCarousel/ClipCarousel";
 
 const StreamerArticle = styled.article`
   background: ${(props) => props.theme.alt};
@@ -62,7 +63,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
         </div>
         <button>shish-kebab</button>
       </FavStreamerHeader>
-      <div>Reel Container</div>
+      <ClipCarousel streamerId={streamerInfo.id} />
     </StreamerArticle>
   );
 };
