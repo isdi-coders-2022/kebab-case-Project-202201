@@ -10,6 +10,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import MainPage from "./pages/MainPage";
 import FormPage from "./pages/FormPage";
 import InfoPage from "./pages/InfoPage";
+import FavoritesPage from "./pages/FavoritesPage";
 
 /* const streamerInfo = {
   display_name: "Wololoo",
@@ -35,6 +36,7 @@ function App() {
         <Route path="/home" element={<MainPage />} />
         <Route path="/form" element={<FormPage />} />
         <Route path="/Info/:id" element={<InfoPage />} />
+        <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
       <NavBar />
       {/* <FavoriteStreamer streamerInfo={streamerInfo} /> */}
