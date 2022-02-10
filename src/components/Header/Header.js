@@ -13,6 +13,7 @@ const HeaderBar = styled.header`
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  z-index: 20;
   & button {
     width: 38px;
     height: 47px;

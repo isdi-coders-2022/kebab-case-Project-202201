@@ -10,7 +10,6 @@ import InfoPage from "./pages/InfoPage";
 import FavoritesPage from "./pages/FavoritesPage";
 import NavBar from "./components/NavBar/NavBar";
 
-
 function App() {
   const { theme, dispatch } = useContext(ThemeContext);
   const toggleTheme = () => {
@@ -28,8 +27,6 @@ function App() {
       </Routes>
 
       <NavBar />
-
-
     </ThemeProvider>
   );
 }

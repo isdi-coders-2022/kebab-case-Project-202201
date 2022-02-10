@@ -1,10 +1,11 @@
-import NavBar from "../components/NavBar/NavBar";
+import ListStreamerMain from "../components/ListStreamerMain/ListStreamerMain";
 
 const MainPage = () => {
   return (
     <>
-      <div className="container"></div>
-      <NavBar />
+      <div className="container">
+        <ListStreamerMain></ListStreamerMain>
+      </div>
     </>
   );
 };
