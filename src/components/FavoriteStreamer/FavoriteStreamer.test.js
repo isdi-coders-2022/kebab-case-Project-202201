@@ -1,3 +1,4 @@
+import MainPageContexProvider from "../../store/contexts/MainPageContextProvider";
 import { render, screen } from "@testing-library/react";
 import FavoriteStreamer from "./FavoriteStreamer";
 import TestRenderer from "react-test-renderer";
@@ -8,11 +9,16 @@ describe("Given an instance of FavoriteStreamer component", () => {
     streamerInfo = {
       profile_image_url: "a-very-specific-image-url.png",
       display_name: "adri",
+      id: 546545,
     };
   });
   describe("When called with streamer Info", () => {
     test("It should display an article", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
+      render(
+        <MainPageContexProvider>
+          <FavoriteStreamer streamerInfo={streamerInfo} />
+        </MainPageContexProvider>
+      );
 
       const article = screen.getByRole("article");
 
@@ -20,26 +26,37 @@ describe("Given an instance of FavoriteStreamer component", () => {
     });
 
     test("It should display a heading", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
+      render(
+        <MainPageContexProvider>
+          <FavoriteStreamer streamerInfo={streamerInfo} />
+        </MainPageContexProvider>
+      );
 
       const header = screen.getByRole("heading");
 
       expect(header).toHaveTextContent("adri");
     });
 
-    test("It should display an image", () => {
-      render(<FavoriteStreamer streamerInfo={streamerInfo} />);
+    test("It should display two images", () => {
+      render(
+        <MainPageContexProvider>
+          <FavoriteStreamer streamerInfo={streamerInfo} />
+        </MainPageContexProvider>
+      );
 
-      const image = screen.getByRole("img");
+      const images = screen.getAllByRole("img");
+      const expectedImages = 2;
 
-      expect(image).toBeInTheDocument();
+      expect(images.length).toBe(expectedImages);
     });
   });
 
   describe("When receives streamerInfo", () => {
     test("Then it should follow the snapshots shape", () => {
       const favStreamer = TestRenderer.create(
-        <FavoriteStreamer streamerInfo={streamerInfo} />
+        <MainPageContexProvider>
+          <FavoriteStreamer streamerInfo={streamerInfo} />
+        </MainPageContexProvider>
       );
       expect(favStreamer.toJSON()).toMatchSnapshot();
     });
