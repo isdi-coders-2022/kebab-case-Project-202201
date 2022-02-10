@@ -1,20 +1,27 @@
 import Streamer from "../Streamer/Streamer";
-import styled from "styled-components";
+import { useEffect, useState } from "react";
+import useTwitchAPI from "../../hooks/useTwitchAPI";
 
-const Container = styled.div`
-  background-color: #eaeae1;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-`;
+const ListStreamerMain = () => {
+  const [streamerList, setStreamerList] = useState([]);
+  const { fetchStreamerIdList, fetchStreamersFromId } = useTwitchAPI();
 
-const ListStreamerMain = ({ streamers }) => {
+  useEffect(() => {
+    async function callStreamInfo() {
+      const idList = await fetchStreamerIdList();
+      const s = await fetchStreamersFromId(idList);
+      setStreamerList(s);
+    }
+    callStreamInfo();
+  }, [fetchStreamerIdList, fetchStreamersFromId]);
+
   return (
-    <Container className="container">
-      {streamers.map((streamer) => {
-        return <Streamer key={streamer} streamerInfo={streamer} />;
-      })}
-    </Container>
+    <>
+      {streamerList.length > 0 &&
+        streamerList.map((streamer) => {
+          return <Streamer streamerInfo={streamer} key={streamer[0].id} />;
+        })}
+    </>
   );
 };
 
