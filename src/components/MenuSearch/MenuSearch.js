@@ -29,11 +29,11 @@ const Input = styled.input`
   margin: 10px;
 `;
 
-const MenuSearch = (action) => {
+const MenuSearch = () => {
   return (
     <>
       <Container>
-        <Menu onSubmit={action}>SEARCH </Menu>
+        <Menu onSubmit={() => {}}> SEARCH </Menu>
         <Input />
       </Container>
     </>
