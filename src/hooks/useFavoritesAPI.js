@@ -1,14 +1,16 @@
+import { useCallback } from "react";
+
 const useFavoritesAPI = () => {
   const favoritesEndpoint =
     "https://shawarma-streaming.herokuapp.com/streamers";
 
-  const getAllFavorites = async () => {
+  const getAllFavorites = useCallback(async () => {
     const response = await fetch(favoritesEndpoint);
     const data = await response.json();
     return data;
-  };
+  }, []);
 
-  const sendStreamer = async (streamer) => {
+  const sendStreamer = useCallback(async (streamer) => {
     const packInfo = {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -16,9 +18,9 @@ const useFavoritesAPI = () => {
     };
     const response = await fetch(favoritesEndpoint, packInfo);
     return await response.json();
-  };
+  }, []);
 
-  const modifyStreamer = async (id, data) => {
+  const modifyStreamer = useCallback(async (id, data) => {
     const url = `${favoritesEndpoint}/${id}`;
     const packInfo = {
       method: "PUT",
@@ -28,9 +30,9 @@ const useFavoritesAPI = () => {
 
     const response = await fetch(url, packInfo);
     return await response.json();
-  };
+  }, []);
 
-  const deleteStreamer = async (id) => {
+  const deleteStreamer = useCallback(async (id) => {
     const url = `${favoritesEndpoint}/${id}`;
     const packInfo = {
       method: "DELETE",
@@ -38,7 +40,7 @@ const useFavoritesAPI = () => {
 
     const response = await fetch(url, packInfo);
     return await response.json();
-  };
+  }, []);
 
   return { getAllFavorites, sendStreamer, modifyStreamer, deleteStreamer };
 };
