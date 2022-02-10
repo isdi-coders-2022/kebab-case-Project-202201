@@ -1,4 +1,4 @@
-import StreamerForm from "./StreamForm";
+import StreamerForm from "./StreamerForm";
 import { render, screen } from "@testing-library/react";
 
 describe("Given a Form component", () => {

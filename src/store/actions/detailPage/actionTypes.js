@@ -1,6 +1,6 @@
 const actionTypes = {
   loadEmotes: "load-emotes",
-  loadInfo: "load-info",
+  loadStreamerInfo: "load-info",
 };
 
 export default actionTypes;

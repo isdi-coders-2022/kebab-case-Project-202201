@@ -6,8 +6,7 @@ const useFavoritesAPI = () => {
 
   const getAllFavorites = useCallback(async () => {
     const response = await fetch(favoritesEndpoint);
-    const data = await response.json();
-    return data;
+    return await response.json();
   }, []);
 
   const sendStreamer = useCallback(async (streamer) => {
