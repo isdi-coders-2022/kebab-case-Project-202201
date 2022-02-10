@@ -1,10 +1,11 @@
-import NavBar from "../components/NavBar/NavBar";
+import ListStreamer from "../components/ListStreamer/ListStreamer";
 
 const FavoritesPage = () => {
   return (
     <>
-      <div className="container"></div>
-      <NavBar />
+      <div className="container">
+        <ListStreamer />
+      </div>
     </>
   );
 };
