@@ -2,7 +2,7 @@
 
 exports[`Given the Streamer component When it get a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
 <article
-  className="sc-bdvvtL lenojC streamerMain"
+  className="sc-bdvvtL hKFQns streamerMain"
 >
   <div
     className="sc-gsDKAQ"
