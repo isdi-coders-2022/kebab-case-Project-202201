@@ -2,9 +2,10 @@ import { render, screen } from "@testing-library/react";
 import Streamer from "./Streamer";
 import TestRenderer from "react-test-renderer";
 import userEvent from "@testing-library/user-event";
+import MainPageContext from "../../store/contexts/MainPageContext";
 
 describe("Given the Streamer component", () => {
-  const streamerInfo = {
+  const streamerInfo2 = {
     id: "124422593",
     display_name: "LEC",
     type: "online",
@@ -17,14 +18,18 @@ describe("Given the Streamer component", () => {
 
   describe("When it's rendered", () => {
     test("Then it should show 'partner' in the document", () => {
-      render(<Streamer props={streamerInfo}></Streamer>);
+      render(
+        <MainPageContext>
+          <Streamer streamerInfo={streamerInfo2}></Streamer>
+        </MainPageContext>
+      );
 
-      const streamerElement = screen.getByText("partner");
+      const streamerElement = screen.getByText("LEC");
       expect(streamerElement).toBeInTheDocument();
     });
 
     test("Then it should show 'LEC' in the document", () => {
-      render(<Streamer props={streamerInfo}></Streamer>);
+      render(<Streamer props={streamerInfo2}></Streamer>);
 
       const streamerElement = screen.getByText("LEC");
       expect(streamerElement).toBeInTheDocument();
@@ -33,8 +38,8 @@ describe("Given the Streamer component", () => {
 
   describe("When it's rendered with a description shorter than 100", () => {
     test("Then it should show 'texto breve' in the document", () => {
-      streamerInfo.description = "texto breve";
-      render(<Streamer props={streamerInfo}></Streamer>);
+      streamerInfo2.description = "texto breve";
+      render(<Streamer props={streamerInfo2}></Streamer>);
 
       const streamerElement = screen.getByText("texto breve");
       expect(streamerElement).toBeInTheDocument();

@@ -2,7 +2,7 @@
 
 exports[`Given Header component When it get a const App that creates Header then it should create and compare a snapshot with Header component 1`] = `
 <header
-  className="sc-gsDKAQ ecnTAA"
+  className="sc-gsDKAQ iagqhg"
 >
   <button
     className="sc-bdvvtL cgHFUT"
