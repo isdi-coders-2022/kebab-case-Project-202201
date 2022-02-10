@@ -23,7 +23,6 @@ function App() {
       <div>
         <Header actionOnClick={toggleTheme} />
         <NavBar />
-        <ClipCarousel streamerId={431671263} />
       </div>
     </ThemeProvider>
   );
