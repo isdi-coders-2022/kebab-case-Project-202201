@@ -14,20 +14,14 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
         alt="undefined"
       />
       <div>
-        <p>
-          online/offline
-        </p>
         <div
           className="streamer-name-block"
         >
           <h2 />
-          <button>
-            edit button
-          </button>
         </div>
       </div>
       <button
-        className="sc-gsDKAQ iLDyBF"
+        className="sc-gsDKAQ dQpKYz"
         onClick={[Function]}
         type="button"
       >
@@ -51,20 +45,14 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
         alt="undefined"
       />
       <div>
-        <p>
-          online/offline
-        </p>
         <div
           className="streamer-name-block"
         >
           <h2 />
-          <button>
-            edit button
-          </button>
         </div>
       </div>
       <button
-        className="sc-gsDKAQ iLDyBF"
+        className="sc-gsDKAQ dQpKYz"
         onClick={[Function]}
         type="button"
       >

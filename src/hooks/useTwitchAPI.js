@@ -35,7 +35,7 @@ const useTwitchAPI = () => {
       method: "GET",
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_PASS}`,
-        "Client-Id": `${process.env.REACT_APP_ID}`,
+        "Client-Id": `COSA`,
       },
     };
 

@@ -21,7 +21,6 @@ const ClipCarousel = ({ streamerId }) => {
     }
     fetchClips();
   }, [fetchClipList, streamerId]);
-
   return (
     <HorizontalList>
       {clipList.length > 0 &&
@@ -29,7 +28,7 @@ const ClipCarousel = ({ streamerId }) => {
           return (
             <li key={clip.id}>
               <iframe
-                src={`${clip.embed_url}&parent=localhost`}
+                src={`${clip.embed_url}&parent=${process.env.REACT_APP_PARENT}`}
                 width={"250"}
                 allowFullScreen={true}
                 autoPlay={false}

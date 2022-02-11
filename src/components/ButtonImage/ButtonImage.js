@@ -8,6 +8,7 @@ const ButtonImg = styled.button`
   align-items: flex-start;
   width: 50px;
   height: 50px;
+  cursor: pointer;
   & img {
     height: 100%;
   }

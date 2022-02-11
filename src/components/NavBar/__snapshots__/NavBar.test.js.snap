@@ -20,7 +20,7 @@ exports[`Given a NavBar component When it get a const newNavBar that creates Nav
     onClick={[Function]}
   >
     <button
-      className="sc-bdvvtL zlpSU"
+      className="sc-bdvvtL jAUNTG"
       type="button"
     >
       <img
