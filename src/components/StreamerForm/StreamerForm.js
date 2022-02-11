@@ -39,8 +39,8 @@ const StreamerForm = () => {
   const { sendStreamer } = useFavoritesAPI();
 
   const initialFields = {
-    name: "",
-    imageInput: "",
+    display_name: "",
+    profile_image_url: "",
     description: "",
   };
 
@@ -67,23 +67,23 @@ const StreamerForm = () => {
       <StyledForm>
         <StyleLineForm onSubmit={onFormSubmit}>
           <FormBlock className="form-block">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="display_name">Name:</label>
             <input
               type="text"
-              id="name"
+              id="display_name"
               placeholder="Your Name"
               onChange={changeData}
-              value={formData.name}
+              value={formData.display_name}
             />
           </FormBlock>
           <FormBlock className="form-block">
-            <label htmlFor="imageInput">Image:</label>
+            <label htmlFor="profile_image_url">Image:</label>
             <input
               type="imageInput"
-              id="imageInput"
+              id="profile_image_url"
               placeholder="Your image"
               onChange={changeData}
-              value={formData.imageInput}
+              value={formData.profile_image_url}
             />
           </FormBlock>
           <FormBlock className="form-block">
