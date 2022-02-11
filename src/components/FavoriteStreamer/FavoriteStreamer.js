@@ -75,10 +75,8 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           alt={`${streamerInfo.display_name}`}
         ></img>
         <div>
-          <p>online/offline</p>
           <div className="streamer-name-block">
             <h2>{streamerInfo.display_name}</h2>
-            <button>edit button</button>
           </div>
         </div>
         <ButtonImage
