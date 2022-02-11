@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Given app component When it gets a const app that creates a wrapped app then it should create and compare a snapshot component 1`] = `
+Array [
+  <header
+    className="sc-gsDKAQ jKnvVu"
+  >
+    <button
+      className="sc-bdvvtL zlpSU"
+      onClick={[Function]}
+      type="button"
+    >
+      <img
+        alt="logo shawarma"
+        src="img/logo.png"
+      />
+    </button>
+    <img
+      alt="streaming header title"
+      className="sc-dkPtRN eSHNya"
+      src="img/streaminglight.png"
+    />
+    <img
+      alt="streaming header title"
+      className="sc-hKwDye fVvAZv"
+      src="img/shawarmalight.png"
+    />
+  </header>,
+  <div
+    className="sc-bBHxTw fulWiR"
+  >
+    <div
+      className="sc-iwjdpV gTjRWT"
+    >
+      <a
+        href="/home"
+        onClick={[Function]}
+        role="button"
+      >
+        HOME
+      </a>
+    </div>
+    <a
+      href="/form"
+      onClick={[Function]}
+    >
+      <button
+        className="sc-bdvvtL zlpSU"
+        type="button"
+      >
+        <img
+          alt="multidurum"
+          src="img/multidurum.png"
+        />
+      </button>
+    </a>
+    <div
+      className="sc-iwjdpV gTjRWT"
+    >
+      <a
+        href="/favorites"
+        onClick={[Function]}
+        role="button"
+      >
+        FAVS
+      </a>
+    </div>
+  </div>,
+]
+`;
