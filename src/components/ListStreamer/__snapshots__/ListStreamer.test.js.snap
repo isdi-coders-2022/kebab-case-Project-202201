@@ -8,7 +8,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
     className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-hKwDye hkUywq"
+      className="sc-hKwDye kdSofB"
     >
       <img
         alt="undefined"
@@ -33,7 +33,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       >
         <img
           alt="Shish-Kebab Button"
-          src="img/multidurum.png"
+          src="img/shish-kebab.png"
         />
       </button>
     </header>
@@ -45,7 +45,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
     className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-hKwDye hkUywq"
+      className="sc-hKwDye kdSofB"
     >
       <img
         alt="undefined"
@@ -70,7 +70,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       >
         <img
           alt="Shish-Kebab Button"
-          src="img/multidurum.png"
+          src="img/shish-kebab.png"
         />
       </button>
     </header>

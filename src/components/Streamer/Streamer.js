@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import ButtonImage from "../ButtonImage/ButtonImage";
+import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 
 const ArticleCard = styled.article`
   width: calc(100% - 40px);
@@ -95,6 +97,17 @@ const StreamerDescription = styled.p`
 
 const Streamer = ({ streamerInfo }) => {
   const info = streamerInfo[0];
+  const { sendStreamer } = useFavoritesAPI();
+  const addToFavs = () => {
+    const newStreamer = {
+      id: info.id,
+      user_id: info.user_id,
+      display_name: info.display_name,
+      profile_image_url: info.profile_image_url,
+    };
+    sendStreamer(newStreamer);
+  };
+
   return (
     <>
       <ArticleCard className="streamerMain">
@@ -113,6 +126,11 @@ const Streamer = ({ streamerInfo }) => {
             {`${info.display_name}`}
           </NameStreamer>
           <OnlineType className="onlineType">{info.type}</OnlineType>
+          <ButtonImage
+            image={"img/multidurum.png"}
+            imageAlt={"shawarma icon"}
+            actionOnClick={addToFavs}
+          />
           <StreamerDescription className="StreamerDescription">
             {info.description.length > 100
               ? info.description.slice(0, 99) + "..."

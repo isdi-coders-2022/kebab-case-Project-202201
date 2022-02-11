@@ -55,7 +55,7 @@ const useTwitchAPI = () => {
     };
     const response = await fetch(url, packInfo);
     const clipListJson = await response.json();
-    return clipListJson.data;
+    return clipListJson.data.slice(0, 5);
   }, []);
 
   const fetchStreamerInfo = useCallback(

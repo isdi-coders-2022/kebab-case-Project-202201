@@ -5,7 +5,7 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
   className="sc-dkPtRN kWuYUg"
 >
   <header
-    className="sc-hKwDye hkUywq"
+    className="sc-hKwDye kdSofB"
   >
     <img
       alt="adri"
@@ -33,7 +33,7 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
     >
       <img
         alt="Shish-Kebab Button"
-        src="img/multidurum.png"
+        src="img/shish-kebab.png"
       />
     </button>
   </header>
