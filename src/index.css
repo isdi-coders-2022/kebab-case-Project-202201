@@ -9,3 +9,8 @@
   padding-right: 22.5px;
   padding-left: 22.5px;
 }
+
+.newClass {
+  position: absolute;
+  right: 0;
+}

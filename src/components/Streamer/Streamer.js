@@ -132,17 +132,19 @@ const Streamer = ({ streamerInfo }) => {
             {`${info.display_name}`}
           </NameStreamer>
           <OnlineType className="onlineType">{info.type}</OnlineType>
-          <ButtonImage
-            image={"img/multidurum.png"}
-            imageAlt={"shawarma icon"}
-            actionOnClick={addToFavs}
-          />
+
           <StreamerDescription className="StreamerDescription">
             {info.description.length > 100
               ? info.description.slice(0, 99) + "..."
               : info.description}
           </StreamerDescription>
         </ColumnCard2>
+        <ButtonImage
+          favClass={"newClass"}
+          image={"img/multidurum.png"}
+          imageAlt={"shawarma icon"}
+          actionOnClick={addToFavs}
+        />
       </ArticleCard>
     )
   );
