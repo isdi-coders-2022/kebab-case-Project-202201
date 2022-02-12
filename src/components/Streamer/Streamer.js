@@ -22,7 +22,8 @@ const ColumnCard2 = styled.div`
   flex-direction: column;
   padding-right: 10px;
   justify-content: space-between;
-  width: auto;
+  width: 100%;
+  height: 100px;
 `;
 
 const RoundedImage = styled.img`
