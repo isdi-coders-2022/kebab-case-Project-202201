@@ -1,14 +1,14 @@
 import { render, screen } from "@testing-library/react";
-import MainContextProvider from "../store/contexts/MainPageContextProvider";
+import MainPageContextProvider from "../store/contexts/MainPageContextProvider";
 import FormPage from "./FormPage";
 
 describe("Given a Form page", () => {
   describe("When it's rendered", () => {
     test("it should be render a label text", () => {
       render(
-        <MainContextProvider>
+        <MainPageContextProvider>
           <FormPage />
-        </MainContextProvider>
+        </MainPageContextProvider>
       );
 
       const text = screen.queryByLabelText("Name:");
