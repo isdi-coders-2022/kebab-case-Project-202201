@@ -97,7 +97,7 @@ const StreamerDescription = styled.p`
 `;
 
 const Streamer = ({ streamerInfo }) => {
-  const info = streamerInfo[0];
+  const info = streamerInfo;
   const { sendStreamer } = useFavoritesAPI();
   const addToFavs = () => {
     const newStreamer = {
@@ -115,7 +115,7 @@ const Streamer = ({ streamerInfo }) => {
   };
 
   return (
-    <>
+    streamerInfo && (
       <ArticleCard className="streamerMain" onClick={viewDetails}>
         <ColumnCard1>
           <RoundedImage
@@ -144,7 +144,7 @@ const Streamer = ({ streamerInfo }) => {
           </StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
-    </>
+    )
   );
 };
 

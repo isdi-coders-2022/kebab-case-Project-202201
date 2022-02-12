@@ -86,7 +86,7 @@ const useTwitchAPI = () => {
     async (idList) => {
       const promiseList = idList.map((id) => fetchStreamerInfo(id));
       const solvedPromises = await Promise.all(promiseList);
-      return solvedPromises;
+      return solvedPromises.map((promise) => promise[0]);
     },
     [fetchStreamerInfo]
   );

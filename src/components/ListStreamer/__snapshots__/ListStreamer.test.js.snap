@@ -11,13 +11,16 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       className="sc-hKwDye kdSofB"
     >
       <img
-        alt="undefined"
+        alt="wololoo"
+        src="verySpecificUrl.png"
       />
       <div>
         <div
           className="streamer-name-block"
         >
-          <h2 />
+          <h2>
+            wololoo
+          </h2>
         </div>
       </div>
       <button
@@ -42,13 +45,16 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       className="sc-hKwDye kdSofB"
     >
       <img
-        alt="undefined"
+        alt="wololoo"
+        src="verySpecificUrl.png"
       />
       <div>
         <div
           className="streamer-name-block"
         >
-          <h2 />
+          <h2>
+            wololoo
+          </h2>
         </div>
       </div>
       <button

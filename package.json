@@ -51,7 +51,10 @@
       "src/**/*.js",
       "!src/**/*.test.js",
       "!src/index.js",
-      "!src/store/contexts/*"
+      "!src/store/contexts/ThemeContext.js",
+      "!src/store/contexts/ThemeContextProvider.js",
+      "!src/store/reducers/themeReducer.js",
+      "!src/mocks/*"
     ]
   }
 }

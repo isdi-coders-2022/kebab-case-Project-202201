@@ -13,16 +13,18 @@ const ListStreamer = ({ streamers }) => {
   return (
     <Container className="container">
       {streamers.map((streamer) => {
-        return (
-          <FavoriteStreamer key={streamer.id} streamerInfo={{ streamer }} />
-        );
+        return <FavoriteStreamer key={streamer.id} streamerInfo={streamer} />;
       })}
     </Container>
   );
 };
 
-ListStreamer.prototype = {
-  streamerInfo: propTypes.object,
+ListStreamer.propTypes = {
+  streamer: propTypes.shape({
+    id: propTypes.number.isRequired,
+    display_name: propTypes.string.isRequired,
+    profile_image_url: propTypes.string,
+  }),
 };
 
 export default ListStreamer;
