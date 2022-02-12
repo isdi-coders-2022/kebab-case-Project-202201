@@ -13,6 +13,7 @@ describe("Given a StreamerInfo reducer", () => {
       expect(recievedList).toEqual(newObjectList);
     });
   });
+
   describe("When given a currentlist and a action that is not in actionCreators", () => {
     test("Then should return the current list because its using default statement", () => {
       const currentlist = ["ibai", "soryuga", "auronplay"];
