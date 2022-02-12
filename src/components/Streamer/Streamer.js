@@ -21,6 +21,7 @@ const ColumnCard2 = styled.div`
   padding-left: 15px;
   display: flex;
   flex-direction: column;
+  padding-right: 10px;
 `;
 
 const RoundedImage = styled.img`
@@ -141,7 +142,7 @@ const Streamer = ({ streamerInfo }) => {
         </ColumnCard2>
         <ButtonImage
           favClass={"newClass"}
-          image={"img/multidurum.png"}
+          image={"img/favDown.png"}
           imageAlt={"shawarma icon"}
           actionOnClick={addToFavs}
         />
