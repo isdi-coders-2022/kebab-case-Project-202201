@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import ButtonImage from "../ButtonImage/ButtonImage";
 import useFavoritesAPI from "../../hooks/useFavoritesAPI";
+import { useNavigate } from "react-router-dom";
 
 const ArticleCard = styled.article`
   width: calc(100% - 40px);
@@ -96,7 +97,7 @@ const StreamerDescription = styled.p`
 `;
 
 const Streamer = ({ streamerInfo }) => {
-  const info = streamerInfo[0];
+  const info = streamerInfo;
   const { sendStreamer } = useFavoritesAPI();
   const addToFavs = () => {
     const newStreamer = {
@@ -108,9 +109,14 @@ const Streamer = ({ streamerInfo }) => {
     sendStreamer(newStreamer);
   };
 
+  let navigate = useNavigate();
+  const viewDetails = () => {
+    navigate(`/info/${streamerInfo.id}`);
+  };
+
   return (
-    <>
-      <ArticleCard className="streamerMain">
+    streamerInfo && (
+      <ArticleCard className="streamerMain" onClick={viewDetails}>
         <ColumnCard1>
           <RoundedImage
             className="streamerPicture"
@@ -138,7 +144,7 @@ const Streamer = ({ streamerInfo }) => {
           </StreamerDescription>
         </ColumnCard2>
       </ArticleCard>
-    </>
+    )
   );
 };
 

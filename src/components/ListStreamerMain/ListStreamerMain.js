@@ -9,8 +9,8 @@ const ListStreamerMain = () => {
   useEffect(() => {
     async function callStreamInfo() {
       const idList = await fetchStreamerIdList();
-      const s = await fetchStreamersFromId(idList);
-      setStreamerList(s);
+      const streamer = await fetchStreamersFromId(idList);
+      setStreamerList(streamer);
     }
     callStreamInfo();
   }, [fetchStreamerIdList, fetchStreamersFromId]);
@@ -19,7 +19,7 @@ const ListStreamerMain = () => {
     <>
       {streamerList.length > 0 &&
         streamerList.map((streamer) => {
-          return <Streamer streamerInfo={streamer} key={streamer[0].id} />;
+          return <Streamer streamerInfo={streamer} key={streamer.id} />;
         })}
     </>
   );

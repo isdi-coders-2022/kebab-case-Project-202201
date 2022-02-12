@@ -35,7 +35,7 @@ const useTwitchAPI = () => {
       method: "GET",
       headers: {
         Authorization: `Bearer ${process.env.REACT_APP_PASS}`,
-        "Client-Id": `COSA`,
+        "Client-Id": `${process.env.REACT_APP_ID}`,
       },
     };
 
@@ -86,8 +86,7 @@ const useTwitchAPI = () => {
     async (idList) => {
       const promiseList = idList.map((id) => fetchStreamerInfo(id));
       const solvedPromises = await Promise.all(promiseList);
-      //const dataList = solvedPromises.map((promise) => promise.data);
-      return solvedPromises;
+      return solvedPromises.map((promise) => promise[0]);
     },
     [fetchStreamerInfo]
   );
