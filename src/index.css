@@ -6,11 +6,12 @@
 .container {
   height: 100px;
   padding-top: 85px;
+  margin-bottom: 850px;
   padding-right: 22.5px;
   padding-left: 22.5px;
 }
 
 .newClass {
   position: absolute;
-  right: 100px;
+  right: 10px;
 }
