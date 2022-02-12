@@ -2,6 +2,7 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 import ButtonImage from "../ButtonImage/ButtonImage";
 import useFavoritesAPI from "../../hooks/useFavoritesAPI";
+import { useNavigate } from "react-router-dom";
 
 const ArticleCard = styled.article`
   width: calc(100% - 40px);
@@ -108,9 +109,14 @@ const Streamer = ({ streamerInfo }) => {
     sendStreamer(newStreamer);
   };
 
+  let navigate = useNavigate();
+  const viewDetails = () => {
+    navigate(`/info/${streamerInfo[0].id}`);
+  };
+
   return (
     streamerInfo && (
-      <ArticleCard className="streamerMain">
+      <ArticleCard className="streamerMain" onClick={viewDetails}>
         <ColumnCard1>
           <RoundedImage
             className="streamerPicture"

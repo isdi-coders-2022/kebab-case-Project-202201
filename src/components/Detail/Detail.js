@@ -1,5 +1,7 @@
 import styled from "styled-components";
 import PropTypes from "prop-types";
+import { useEffect, useState } from "react";
+import useTwitchAPI from "../../hooks/useTwitchAPI";
 
 const ArticleCard = styled.article`
   margin: 20px;
@@ -65,7 +67,20 @@ const TwitchChannel = styled.p`
 
   color: #0fa60c;
 `;
+const CreatedAt = styled.p`
+  padding-top: 10px;
+  padding-right: 10px;
+  text-align: left;
 
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+
+  color: #000000;
+`;
 const StreamerDescription = styled.p`
   padding-top: 10px;
   padding-right: 10px;
@@ -96,34 +111,42 @@ const ViewCount = styled.p`
   color: #000000;
 `;
 
-const Detail = ({ streamerInfo, actionOnClick }) => {
+const Detail = ({ streamerId }) => {
+  const [info, setInfo] = useState([]);
+  const { fetchStreamerInfo } = useTwitchAPI();
+
+  useEffect(() => {
+    async function callStreamInfo() {
+      const infoStreamer = await fetchStreamerInfo(streamerId);
+      setInfo(infoStreamer[0]);
+    }
+    callStreamInfo();
+  }, [fetchStreamerInfo, streamerId]);
+
   return (
     <>
-      <ArticleCard className="streamerDetail" onClick={actionOnClick}>
+      <ArticleCard className="streamerDetail">
         <RoundedImage
           className="streamerPicture"
           alt="Streamer"
-          src={streamerInfo.profile_image_url}
+          src={info.profile_image_url}
         ></RoundedImage>
         <NameStreamer className="displayName">
-          Name: {streamerInfo.display_name}
+          Name: {info.display_name}
         </NameStreamer>
         <TwitchChannel className="twitchChannel">
-          Twitch Channel: {streamerInfo.twitchChannel}
+          Twitch Channel: {info.twitchChannel}
         </TwitchChannel>
         <StreamerDescription className="StreamerDescription">
-          Description:{" "}
-          {streamerInfo.description.length > 100
-            ? streamerInfo.description.slice(0, 99) + "..."
-            : streamerInfo.description}
+          Description: {info.description}
         </StreamerDescription>
         <ViewCount>View Count: </ViewCount>
         <BroadcasterType className="broadcasterType">
-          Contract: {streamerInfo.broadcaster_type}
+          Contract: {info.broadcaster_type}
         </BroadcasterType>
-        <NameStreamer className="displayName">
-          On Twitch for: {streamerInfo.display_name}
-        </NameStreamer>
+        <CreatedAt className="created_at">
+          On Twitch for: {info.created_at}
+        </CreatedAt>
       </ArticleCard>
     </>
   );
