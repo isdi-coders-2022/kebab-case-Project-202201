@@ -7,7 +7,6 @@ import FavoriteStreamer from "../components/FavoriteStreamer/FavoriteStreamer";
 const FavoritesPage = () => {
   const { getAllFavorites, sendStreamer } = useFavoritesAPI();
   const { favList, dispatchFavs } = useContext(MainPageContext);
-
   useEffect(() => {
     async function callGetFavs() {
       const resp = await getAllFavorites();
@@ -21,7 +20,7 @@ const FavoritesPage = () => {
     <div className="container">
       {favList &&
         favList.map((favorite) => {
-          return <FavoriteStreamer streamerInfo={favorite} />;
+          return <FavoriteStreamer key={favorite.id} streamerInfo={favorite} />;
         })}
     </div>
   );

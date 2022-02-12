@@ -194,4 +194,33 @@ export const handlers = [
       ])
     );
   }),
+
+  rest.get(
+    "https://shawarma-streaming.herokuapp.com/streamers",
+    (req, res, ctx) => {
+      return res(
+        ctx.status(200),
+        ctx.json([
+          {
+            id: "124420521",
+            display_name: "favStreamer",
+            profile_image_url:
+              "https://static-cdn.jtvnw.net/jtv_user_pictures/de952b08-201d-4b93-9602-c8deb9d2610f-profile_image-300x300.png",
+          },
+          {
+            id: "490592527",
+            display_name: "favStreamer",
+            profile_image_url:
+              "https://static-cdn.jtvnw.net/jtv_user_pictures/811dc7d4-1079-4ead-8b48-97f3ff4fa361-profile_image-300x300.png",
+          },
+          {
+            id: "83232866",
+            display_name: "favStreamer",
+            profile_image_url:
+              "https://static-cdn.jtvnw.net/jtv_user_pictures/574228be-01ef-4eab-bc0e-a4f6b68bedba-profile_image-300x300.png",
+          },
+        ])
+      );
+    }
+  ),
 ];
