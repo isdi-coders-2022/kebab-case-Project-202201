@@ -5,10 +5,9 @@ import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 import { useNavigate } from "react-router-dom";
 
 const ArticleCard = styled.article`
-  width: calc(100% - 40px);
+  width: auto;
   margin: 10px;
   height: 121px;
-  left: 15px;
   top: 15px;
   background: #efeff1;
   display: flex;
