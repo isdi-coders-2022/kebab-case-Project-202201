@@ -9,8 +9,8 @@ const ListStreamerMain = () => {
   useEffect(() => {
     async function callStreamInfo() {
       const idList = await fetchStreamerIdList();
-      const s = await fetchStreamersFromId(idList);
-      setStreamerList(s);
+      const streamer = await fetchStreamersFromId(idList);
+      setStreamerList(streamer);
     }
     callStreamInfo();
   }, [fetchStreamerIdList, fetchStreamersFromId]);
