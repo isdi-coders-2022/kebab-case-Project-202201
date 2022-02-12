@@ -21,6 +21,8 @@ const ColumnCard2 = styled.div`
   display: flex;
   flex-direction: column;
   padding-right: 10px;
+  justify-content: space-between;
+  width: auto;
 `;
 
 const RoundedImage = styled.img`
@@ -60,7 +62,6 @@ const NameStreamer = styled.p`
   font-weight: 800;
   font-size: 24px;
   line-height: 16px;
-
   letter-spacing: 0.4px;
 
   color: #5d16c6;
@@ -68,14 +69,12 @@ const NameStreamer = styled.p`
 
 const OnlineType = styled.p`
   padding-right: 10px;
-  text-align: right;
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
   font-size: 14px;
   line-height: 16px;
-
-  text-align: right;
+  text-align: left;
   letter-spacing: 0.4px;
 
   color: #0fa60c;
@@ -84,8 +83,9 @@ const OnlineType = styled.p`
 const StreamerDescription = styled.p`
   padding-top: 10px;
   padding-right: 10px;
-  text-align: right;
-
+  text-align: left;
+  margin-bottom: 10px;
+  margin-left: 5px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 800;
