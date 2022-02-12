@@ -6,7 +6,18 @@ import ListStreamer from "./ListStreamer";
 describe("Given a ListStreamer", () => {
   let streamers = null;
   beforeAll(() => {
-    streamers = [{ id: 500 }, { id: 250 }];
+    streamers = [
+      {
+        id: 500,
+        display_name: "wololoo",
+        profile_image_url: "verySpecificUrl.png",
+      },
+      {
+        id: 250,
+        display_name: "wololoo",
+        profile_image_url: "verySpecificUrl.png",
+      },
+    ];
   });
 
   describe("When called a list of streamers", () => {
