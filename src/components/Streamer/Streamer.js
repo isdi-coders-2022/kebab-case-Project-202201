@@ -111,7 +111,7 @@ const Streamer = ({ streamerInfo }) => {
 
   let navigate = useNavigate();
   const viewDetails = () => {
-    navigate(`/info/${streamerInfo[0].id}`);
+    navigate(`/info/${streamerInfo.id}`);
   };
 
   return (
