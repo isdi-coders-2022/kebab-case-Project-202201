@@ -1,7 +1,7 @@
 import styled from "styled-components";
-
+import ButtonText from "../ButtonText/ButtonText";
 import ButtonImage from "../ButtonImage/ButtonImage";
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavBarStyled = styled.div`
   position: fixed;
@@ -14,39 +14,33 @@ const NavBarStyled = styled.div`
   align-items: center;
   justify-content: space-around;
 `;
-const Button = styled.div`
-  background-color: white;
-  border-color: black;
-  color: white;
-  border-radius: 4px;
-  width: 65px;
-  height: 35px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  font-size: 14px;
-  padding: 4px 8px 4px 6px;
-`;
 
 const NavBar = () => {
+  let navigate = useNavigate();
+  const goHome = () => {
+    navigate(`/home`);
+  };
+
+  const goFavs = () => {
+    navigate("/favorites");
+  };
+
+  const goForm = () => {
+    navigate("/form");
+  };
+
   return (
     <>
       <NavBarStyled>
-        <Button>
-          <Link role={"button"} to={"/home"}>
-            HOME
-          </Link>
-        </Button>
+        <ButtonText text="HOME" actionOnClick={goHome} />
 
-        <Link to={"/form"}>
-          <ButtonImage image={"img/multidurum.png"} imageAlt={"multidurum"} />
-        </Link>
-        <Button>
-          <Link role={"button"} to={"/favorites"}>
-            FAVS
-          </Link>
-        </Button>
+        <ButtonImage
+          image={"img/multidurum.png"}
+          imageAlt={"multidurum"}
+          actionOnClick={goForm}
+        />
+
+        <ButtonText text="FAVS" actionOnClick={goFavs} />
       </NavBarStyled>
     </>
   );
