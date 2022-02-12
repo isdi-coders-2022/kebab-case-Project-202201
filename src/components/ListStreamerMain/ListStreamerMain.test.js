@@ -14,7 +14,7 @@ describe("Given ListStreamerMain", () => {
   describe("When called", () => {
     test("Then it should be rendered", () => {
       render(wrappedListStreamerMain);
-      // screen.debug();
+      screen.debug();
     });
   });
 });
