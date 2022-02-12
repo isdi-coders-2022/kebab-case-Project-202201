@@ -22,7 +22,11 @@ function App() {
         <Route path="/" element={<Navigate to="/home" />} />
         <Route path="/home" element={<MainPage />} />
         <Route path="/form" element={<FormPage />} />
-        <Route path="/Info/:id" element={<InfoPage />} />
+        <Route path="/info/:id" element={<InfoPage />}>
+          {/* <Route index element={<InfoPage />} /> */}
+          {/*           <Route path="?id" element={<InfoPage />} />
+           */}
+        </Route>
         <Route path="/favorites" element={<FavoritesPage />} />
       </Routes>
 
