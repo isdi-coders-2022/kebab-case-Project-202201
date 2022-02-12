@@ -53,8 +53,49 @@ export const handlers = [
     return res(
       ctx.status(200),
       ctx.json([
-        { id: 89, name: "wololoo" },
-        { id: 45, name: "wililii" },
+        {
+          id: "45492269293",
+          user_id: "156037856",
+          user_login: "fextralife",
+          user_name: "Fextralife",
+          game_id: "490100",
+          game_name: "LOST ARK",
+          type: "live",
+          title: "🔥!DROPS🔥!CLASS !GUIDES !WIKI Launch Day with CAS!",
+          viewer_count: 101303,
+          started_at: "2022-02-11T22:34:55Z",
+          language: "en",
+          thumbnail_url:
+            "https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-{width}x{height}.jpg",
+          tag_ids: [
+            "c2839af5-f1d2-46c4-8edc-1d0bfbd85070",
+            "c2542d6d-cd10-4532-919b-3d19f30a768b",
+            "6ea6bca4-4712-4ab9-a906-e3336a9d8039",
+          ],
+          is_mature: false,
+        },
+        {
+          id: "45495006877",
+          user_id: "71092938",
+          user_login: "xqcow",
+          user_name: "xQcOW",
+          game_id: "91423",
+          game_name: "Dark Souls II",
+          type: "live",
+          title:
+            "NEW HOUSE (#2947854) HAH! INSANE SKELETAL WARLORDIAN MOUTAIN KING JUICELORD COMES BACK TO PLAY AND WATCH GAMES NOT 1 VIEWER ASKED FOR (REAL)",
+          viewer_count: 63748,
+          started_at: "2022-02-12T02:27:01Z",
+          language: "en",
+          thumbnail_url:
+            "https://static-cdn.jtvnw.net/previews-ttv/live_user_xqcow-{width}x{height}.jpg",
+          tag_ids: [
+            "6ea6bca4-4712-4ab9-a906-e3336a9d8039",
+            "6606e54c-f92d-40f6-8257-74977889ccdd",
+            "2193eee1-b8f0-43bd-a6d9-dba8a67528a1",
+          ],
+          is_mature: false,
+        },
       ])
     );
   }),
