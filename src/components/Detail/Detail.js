@@ -118,7 +118,6 @@ const Detail = ({ streamerId }) => {
   useEffect(() => {
     async function callStreamInfo() {
       const infoStreamer = await fetchStreamerInfo(streamerId);
-      console.log(infoStreamer);
       setInfo(infoStreamer[0]);
     }
     callStreamInfo();
@@ -138,11 +137,9 @@ const Detail = ({ streamerId }) => {
         <TwitchChannel className="twitchChannel">
           Twitch Channel: {info.twitchChannel}
         </TwitchChannel>
-        {
-          <StreamerDescription className="StreamerDescription">
-            Description: {info.description}
-          </StreamerDescription>
-        }
+        <StreamerDescription className="StreamerDescription">
+          Description: {info.description}
+        </StreamerDescription>
         <ViewCount>View Count: </ViewCount>
         <BroadcasterType className="broadcasterType">
           Contract: {info.broadcaster_type}
