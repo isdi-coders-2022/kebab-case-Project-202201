@@ -25,10 +25,10 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuToggle = ({ action }, className) => {
+const MenuToggle = ({ action }) => {
   return (
     <>
-      <Container className="">
+      <Container>
         <Menu onClick={action}>SORT</Menu>
         <Menu onClick={action}>FILTER</Menu>
         <Menu onClick={action}>SEARCH</Menu>
