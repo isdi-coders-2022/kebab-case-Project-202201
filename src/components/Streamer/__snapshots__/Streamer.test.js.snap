@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Given the Streamer component When it get a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
+exports[`Given the Streamer component When it gets a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
 <article
   className="sc-gsDKAQ gjFBph streamerMain"
 >

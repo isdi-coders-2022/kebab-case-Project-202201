@@ -1,7 +1,6 @@
 import Streamer from "./Streamer";
 import { render, screen } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
-import userEvent from "@testing-library/user-event";
 import MainPageContextProvider from "../../store/contexts/MainPageContextProvider";
 
 describe("Given the Streamer component", () => {
@@ -56,7 +55,7 @@ describe("Given the Streamer component", () => {
     });
   });
 
-  describe("When it get a const streamer that creates a streamer with StreamerInfo as props", () => {
+  describe("When it gets a const streamer that creates a streamer with StreamerInfo as props", () => {
     test("then it should create and compare a snapshot with Streamer with StreamerInfo as component", () => {
       const streamer = TestRenderer.create(
         <MainPageContextProvider>
