@@ -15,5 +15,16 @@ describe("Given a component Info Page", () => {
 
       expect(article).toBeInTheDocument();
     });
+    test("it should render an image", () => {
+      render(
+        <MainContextProvider>
+          <InfoPage />
+        </MainContextProvider>
+      );
+
+      const image = screen.getByRole("img");
+
+      expect(image).toBeInTheDocument();
+    });
   });
 });
