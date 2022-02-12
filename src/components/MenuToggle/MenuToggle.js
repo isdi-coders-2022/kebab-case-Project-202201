@@ -2,7 +2,10 @@ import styled from "styled-components";
 
 const Container = styled.div`
   background-color: rgba(98, 0, 238, 0.38);
+  position: fixed;
+  bottom: 65px;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,10 +25,10 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
-const MenuToggle = ({ action }) => {
+const MenuToggle = ({ action }, className) => {
   return (
     <>
-      <Container>
+      <Container className="">
         <Menu onClick={action}>SORT</Menu>
         <Menu onClick={action}>FILTER</Menu>
         <Menu onClick={action}>SEARCH</Menu>
