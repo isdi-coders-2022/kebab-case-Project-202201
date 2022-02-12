@@ -53,7 +53,8 @@
       "!src/index.js",
       "!src/store/contexts/ThemeContext.js",
       "!src/store/contexts/ThemeContextProvider.js",
-      "!src/store/reducers/themeReducer.js"
+      "!src/store/reducers/themeReducer.js",
+      "!src/mocks/*"
     ]
   }
 }
