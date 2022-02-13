@@ -10,7 +10,7 @@ const ArticleCard = styled.article`
   margin: 10px;
   height: 121px;
   top: 15px;
-  background: #efeff1;
+  background: ${(props) => props.theme.alt};
   display: flex;
   flex-direction: row;
 `;
@@ -51,7 +51,7 @@ const BroadcasterType = styled.p`
 
   text-align: center;
   letter-spacing: 0.4px;
-  background-color: #5d16c6;
+  background-color: ${(props) => props.theme.accent};
   color: #ffffff;
 `;
 
@@ -66,7 +66,7 @@ const NameStreamer = styled.p`
   line-height: 16px;
   letter-spacing: 0.4px;
 
-  color: #5d16c6;
+  color: ${(props) => props.theme.accent};
 `;
 
 const OnlineType = styled.p`
@@ -95,7 +95,7 @@ const StreamerDescription = styled.p`
   line-height: 16px;
   letter-spacing: 0.4px;
 
-  color: #000000;
+  color: ${(props) => props.theme.descriptionColor};
 `;
 
 const Streamer = ({ streamerInfo }) => {
