@@ -9,6 +9,9 @@ const ButtonImg = styled.button`
   width: 50px;
   height: 50px;
   cursor: pointer;
+  &[title="Edit favorite"] {
+    height: 20px;
+  }
   & img {
     height: 100%;
   }

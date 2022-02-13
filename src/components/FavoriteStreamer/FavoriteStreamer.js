@@ -96,6 +96,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
             <ButtonImage
               imageAlt="Edit button"
               image="img/pencil-solid.svg"
+              title="Edit favorite"
               actionOnClick={editStreamer}
             />
           </EditButton>
