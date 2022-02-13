@@ -15,14 +15,14 @@ describe("Given a component Info Page", () => {
 
       expect(article).toBeInTheDocument();
     });
-    test("it should render an image", () => {
+    test("it should render an image", async () => {
       render(
         <MainPageContextProvider>
           <InfoPage />
         </MainPageContextProvider>
       );
 
-      const image = screen.getByRole("img");
+      const image = await screen.findByRole("img");
 
       expect(image).toBeInTheDocument();
     });

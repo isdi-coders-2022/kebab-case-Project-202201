@@ -33,7 +33,7 @@ describe("Given a ButtonImage Component", () => {
 
       expect(button).toBeInTheDocument();
     });
-    test("It should an alternative text to image", () => {
+    test("It should have an alternative text to image", () => {
       const imageAlt = "another image";
 
       render(<ButtonImage imageAlt={imageAlt} />);
