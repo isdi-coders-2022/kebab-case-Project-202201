@@ -6,6 +6,8 @@ const darkTheme = {
   accent: "#f801fd",
   accentAlt: "#e001e5",
   accentAlt2: "#c701cb",
+  descriptionColor: "#fff",
+  favoriteNameColor: "#f801fd",
 };
 
 export default darkTheme;

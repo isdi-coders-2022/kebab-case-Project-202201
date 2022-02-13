@@ -11,6 +11,7 @@ import { useNavigate } from "react-router-dom";
 const StreamerArticle = styled.article`
   background: ${(props) => props.theme.alt};
   padding: 5px 7px;
+  margin: 10px;
 `;
 const EditButton = styled.div`
   display: flex;
@@ -39,7 +40,7 @@ const FavStreamerHeader = styled.header`
     height: auto;
   }
   & h2 {
-    color: ${(props) => props.theme.accent};
+    color: ${(props) => props.theme.favoriteNameColor};
     display: inline-block;
     padding-bottom: 7px;
     font-size: 24px;
@@ -100,8 +101,9 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           </EditButton>
         </div>
         <ButtonImage
-          imageAlt="Shish-Kebab Button"
+          imageAlt="Shish-Kebab delete Button"
           image="img/shish-kebab.png"
+          title="Delete from favorites"
           actionOnClick={onClickDelete}
         />
       </FavStreamerHeader>

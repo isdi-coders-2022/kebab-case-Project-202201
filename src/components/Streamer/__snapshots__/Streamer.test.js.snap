@@ -2,7 +2,7 @@
 
 exports[`Given the Streamer component When it gets a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
 <article
-  className="sc-gsDKAQ hnSXFn streamerMain"
+  className="sc-gsDKAQ bLgrGo streamerMain"
 >
   <div
     className="sc-dkPtRN"
@@ -13,7 +13,7 @@ exports[`Given the Streamer component When it gets a const streamer that creates
       src="https://static-cdn.jtvnw.net/jtv_user_pictures/41b23352-5c99-4eb2-974b-1e9b8120425e-profile_image-300x300.png"
     />
     <p
-      className="sc-jRQBWg cFTUEa broadcasterType"
+      className="sc-jRQBWg hUyGAt broadcasterType"
     >
       partner
     </p>
@@ -23,7 +23,7 @@ exports[`Given the Streamer component When it gets a const streamer that creates
     onClick={[Function]}
   >
     <p
-      className="sc-gKclnd eOzUoE displayName"
+      className="sc-gKclnd eFrfBj displayName"
     >
       LEC
     </p>
@@ -33,7 +33,7 @@ exports[`Given the Streamer component When it gets a const streamer that creates
       online
     </p>
     <p
-      className="sc-furwcr dwVSQB StreamerDescription"
+      className="sc-furwcr kYgjSd StreamerDescription"
     >
       texto breve
     </p>

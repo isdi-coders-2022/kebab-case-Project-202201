@@ -6,23 +6,15 @@ import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: 22px;
+  width: 100%;
+  padding-bottom: 15px;
 `;
 
 const StyleLineForm = styled.div`
   color: ${(props) => props.theme.accent};
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
-  padding: 10px;
-  width: 400px;
-  margin: 15px;
+  width: 100%;
 `;
 const FormBlock = styled.div`
   display: flex;
@@ -35,6 +27,22 @@ const StyleButtons = styled.div`
   justify-content: space-around;
   bottom: 10px;
 `;
+const StyledInput = styled.input`
+  height: 50px;
+  border-style: none;
+  padding-left: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  background: ${(props) => props.theme.alt2};
+  &[id="description"] {
+    height: 200px;
+  }
+
+  &:focus {
+    outline: 1px solid #6200ee;
+  }
+`;
+
 const StreamerForm = () => {
   const { sendStreamer } = useFavoritesAPI();
 
@@ -68,7 +76,7 @@ const StreamerForm = () => {
         <StyleLineForm onSubmit={onFormSubmit}>
           <FormBlock className="form-block">
             <label htmlFor="display_name">Name:</label>
-            <input
+            <StyledInput
               type="text"
               id="display_name"
               placeholder="Your Name"
@@ -78,7 +86,7 @@ const StreamerForm = () => {
           </FormBlock>
           <FormBlock className="form-block">
             <label htmlFor="profile_image_url">Image:</label>
-            <input
+            <StyledInput
               type="imageInput"
               id="profile_image_url"
               placeholder="Your image"
@@ -88,7 +96,7 @@ const StreamerForm = () => {
           </FormBlock>
           <FormBlock className="form-block">
             <label htmlFor="description">Description:</label>
-            <input
+            <StyledInput
               type="description"
               id="description"
               placeholder="Description"

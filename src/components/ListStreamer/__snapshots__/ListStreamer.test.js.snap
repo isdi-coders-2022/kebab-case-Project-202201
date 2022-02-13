@@ -5,7 +5,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
   className="sc-jRQBWg eypVQJ container"
 >
   <article
-    className="sc-dkPtRN kWuYUg"
+    className="sc-dkPtRN dyQQWI"
   >
     <header
       className="sc-eCImPb gQPsoR"
@@ -40,10 +40,11 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       <button
         className="sc-gsDKAQ dQpKYz"
         onClick={[Function]}
+        title="Delete from favorites"
         type="button"
       >
         <img
-          alt="Shish-Kebab Button"
+          alt="Shish-Kebab delete Button"
           src="img/shish-kebab.png"
         />
       </button>
@@ -53,7 +54,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
     />
   </article>
   <article
-    className="sc-dkPtRN kWuYUg"
+    className="sc-dkPtRN dyQQWI"
   >
     <header
       className="sc-eCImPb gQPsoR"
@@ -88,10 +89,11 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
       <button
         className="sc-gsDKAQ dQpKYz"
         onClick={[Function]}
+        title="Delete from favorites"
         type="button"
       >
         <img
-          alt="Shish-Kebab Button"
+          alt="Shish-Kebab delete Button"
           src="img/shish-kebab.png"
         />
       </button>
