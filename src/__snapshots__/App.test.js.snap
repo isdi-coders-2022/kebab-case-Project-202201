@@ -27,44 +27,32 @@ Array [
     />
   </header>,
   <div
-    className="sc-iwjdpV ewYmRs"
+    className="sc-iJKOTD eehPRd"
   >
-    <div
-      className="sc-cxpSdN eCEQEb"
-    >
-      <a
-        href="/home"
-        onClick={[Function]}
-        role="button"
-      >
-        HOME
-      </a>
-    </div>
-    <a
-      href="/form"
+    <button
+      className="sc-iqseJM czYTP"
       onClick={[Function]}
+      type="button"
     >
-      <button
-        className="sc-bdvvtL jAUNTG"
-        type="button"
-      >
-        <img
-          alt="multidurum"
-          src="img/multidurum.png"
-        />
-      </button>
-    </a>
-    <div
-      className="sc-cxpSdN eCEQEb"
+      HOME
+    </button>
+    <button
+      className="sc-bdvvtL jAUNTG"
+      onClick={[Function]}
+      type="button"
     >
-      <a
-        href="/favorites"
-        onClick={[Function]}
-        role="button"
-      >
-        FAVS
-      </a>
-    </div>
+      <img
+        alt="multidurum"
+        src="img/multidurum.png"
+      />
+    </button>
+    <button
+      className="sc-iqseJM czYTP"
+      onClick={[Function]}
+      type="button"
+    >
+      FAVS
+    </button>
   </div>,
 ]
 `;
