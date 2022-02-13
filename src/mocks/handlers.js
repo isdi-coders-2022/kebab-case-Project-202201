@@ -181,7 +181,7 @@ export const handlers = [
 
   rest.get("https://api.twitch.tv/helix/users", (req, res, ctx) => {
     const idParam = req.url.searchParams.get("id");
-    if (idParam === 71092938) {
+    if (idParam === "71092938") {
       return res(
         ctx.status(200),
         ctx.json({
@@ -204,7 +204,7 @@ export const handlers = [
           ],
         })
       );
-    } else if (idParam === 156037856) {
+    } else if (idParam === "156037856") {
       return res(
         ctx.status(200),
         ctx.json({
