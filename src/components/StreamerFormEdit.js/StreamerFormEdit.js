@@ -36,16 +36,17 @@ const StyleButtons = styled.div`
   bottom: 10px;
 `;
 
-const StreamerFormEdit = (id) => {
+const StreamerFormEdit = ({ streamerId }) => {
   const [data, setData] = useState([]);
-  const { modifyStreamer } = useFavoritesAPI();
+  const { modifyStreamer, getFavorite } = useFavoritesAPI();
+
   useEffect(() => {
-    async function modifyInfo() {
-      const infoStreamer = await modifyStreamer(id);
+    async function infoStreamer() {
+      const infoStreamer = await getFavorite(streamerId);
       setData(infoStreamer);
     }
-    modifyInfo();
-  }, [modifyStreamer, id]);
+    infoStreamer();
+  }, [getFavorite, streamerId]);
 
   const initialFields = {
     display_name: data.display_name,
@@ -55,7 +56,7 @@ const StreamerFormEdit = (id) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    modifyStreamer(data);
+    modifyStreamer(streamerId);
     resetForm();
   };
 
