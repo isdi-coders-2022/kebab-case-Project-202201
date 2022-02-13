@@ -1,4 +1,8 @@
+import { useContext, useState } from "react";
 import styled from "styled-components";
+import MainPageContextProvider from "../../store/contexts/MainPageContextProvider";
+import { filterByLanguageAction } from "../../store/actions/mainPage/actionCreators";
+import MainPageContext from "../../store/contexts/MainPageContext";
 
 const Container = styled.div`
   background-color: rgba(98, 0, 238, 0.38);
@@ -25,12 +29,32 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
+const SubMenu = styled(Menu)`
+  background-color: red;
+`;
 const MenuToggle = ({ action }) => {
+  const { dispatchStreamerList } = useContext(MainPageContext);
+  const [filterIsClicked, setFilterIsClicked] = useState(false);
+  const subMenuAction = () => {
+    setFilterIsClicked(true);
+  };
+
+  const filterByLangage = () => {
+    const action = filterByLanguageAction("affiliate");
+    dispatchStreamerList(action);
+  };
+
   return (
     <>
       <Container>
         <Menu onClick={action}>SORT</Menu>
-        <Menu onClick={action}>FILTER</Menu>
+        <Menu onClick={subMenuAction}>FILTER</Menu>
+        {filterIsClicked && (
+          <>
+            <SubMenu onClick={filterByLangage}>English </SubMenu>
+            <SubMenu onClick={filterByLangage}>Spanish</SubMenu>
+          </>
+        )}
         <Menu onClick={action}>SEARCH</Menu>
       </Container>
     </>

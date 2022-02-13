@@ -5,7 +5,10 @@ import FavoritesReducer from "../reducers/FavoritesReducer";
 import StreamerInfoReducer from "../reducers/StreamerInfoReducer";
 
 const MainPageContextProvider = ({ children }) => {
-  const [streamerList, dispatch] = useReducer(StreamerListReducer, []);
+  const [streamerList, dispatchStreamerList] = useReducer(
+    StreamerListReducer,
+    []
+  );
   const [favList, dispatchFavs] = useReducer(FavoritesReducer);
   const [info, dispatchInfo] = useReducer(StreamerInfoReducer);
 
@@ -13,7 +16,7 @@ const MainPageContextProvider = ({ children }) => {
     <MainPageContext.Provider
       value={{
         streamerList,
-        dispatch,
+        dispatchStreamerList,
         favList,
         dispatchFavs,
         info,
