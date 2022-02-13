@@ -90,7 +90,7 @@ const StreamerFormEdit = ({ streamerId }) => {
         <StyleLineForm onSubmit={onFormSubmit}>
           <FormBlock className="form-block">
             <label htmlFor="display_name">Name:</label>
-            <input
+            <StyledInput
               type="text"
               id="display_name"
               placeholder="Your Name"
@@ -100,7 +100,7 @@ const StreamerFormEdit = ({ streamerId }) => {
           </FormBlock>
           <FormBlock className="form-block">
             <label htmlFor="profile_image_url">Image:</label>
-            <input
+            <StyledInput
               type="imageInput"
               id="profile_image_url"
               placeholder="Your image"
@@ -110,7 +110,7 @@ const StreamerFormEdit = ({ streamerId }) => {
           </FormBlock>
           <FormBlock className="form-block">
             <label htmlFor="description">Description:</label>
-            <input
+            <StyledInput
               type="description"
               id="description"
               placeholder="Description"
