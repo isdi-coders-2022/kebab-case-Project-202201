@@ -2,25 +2,39 @@
 
 exports[`Given a ListStreamer When it get a const listStreamer that creates ListStramer with 1 streamer then it should create and compare a snapshot with ListStreamer and the created Streamer 1`] = `
 <div
-  className="sc-eCImPb beMkJu container"
+  className="sc-jRQBWg eypVQJ container"
 >
   <article
     className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-hKwDye kdSofB"
+      className="sc-eCImPb gQPsoR"
     >
       <img
         alt="wololoo"
         src="verySpecificUrl.png"
       />
-      <div>
-        <div
-          className="streamer-name-block"
-        >
+      <div
+        className="streamer-name-block"
+      >
+        <div>
           <h2>
             wololoo
           </h2>
+        </div>
+        <div
+          className="sc-hKwDye cnHelE"
+        >
+          <button
+            className="sc-gsDKAQ dQpKYz"
+            onClick={[Function]}
+            type="button"
+          >
+            <img
+              alt="Edit button"
+              src="img/pencil-solid.svg"
+            />
+          </button>
         </div>
       </div>
       <button
@@ -42,19 +56,33 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
     className="sc-dkPtRN kWuYUg"
   >
     <header
-      className="sc-hKwDye kdSofB"
+      className="sc-eCImPb gQPsoR"
     >
       <img
         alt="wololoo"
         src="verySpecificUrl.png"
       />
-      <div>
-        <div
-          className="streamer-name-block"
-        >
+      <div
+        className="streamer-name-block"
+      >
+        <div>
           <h2>
             wololoo
           </h2>
+        </div>
+        <div
+          className="sc-hKwDye cnHelE"
+        >
+          <button
+            className="sc-gsDKAQ dQpKYz"
+            onClick={[Function]}
+            type="button"
+          >
+            <img
+              alt="Edit button"
+              src="img/pencil-solid.svg"
+            />
+          </button>
         </div>
       </div>
       <button

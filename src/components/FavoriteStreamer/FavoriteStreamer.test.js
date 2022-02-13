@@ -2,6 +2,7 @@ import MainPageContexProvider from "../../store/contexts/MainPageContextProvider
 import { render, screen } from "@testing-library/react";
 import FavoriteStreamer from "./FavoriteStreamer";
 import TestRenderer from "react-test-renderer";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Given an instance of FavoriteStreamer component", () => {
   let streamerInfo = null;
@@ -15,9 +16,11 @@ describe("Given an instance of FavoriteStreamer component", () => {
   describe("When called with streamer Info", () => {
     test("It should display an article", () => {
       render(
-        <MainPageContexProvider>
-          <FavoriteStreamer streamerInfo={streamerInfo} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <FavoriteStreamer streamerInfo={streamerInfo} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
 
       const article = screen.getByRole("article");
@@ -27,9 +30,11 @@ describe("Given an instance of FavoriteStreamer component", () => {
 
     test("It should display a heading", () => {
       render(
-        <MainPageContexProvider>
-          <FavoriteStreamer streamerInfo={streamerInfo} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <FavoriteStreamer streamerInfo={streamerInfo} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
 
       const header = screen.getByRole("heading");
@@ -39,13 +44,15 @@ describe("Given an instance of FavoriteStreamer component", () => {
 
     test("It should display two images", () => {
       render(
-        <MainPageContexProvider>
-          <FavoriteStreamer streamerInfo={streamerInfo} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <FavoriteStreamer streamerInfo={streamerInfo} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
 
       const images = screen.getAllByRole("img");
-      const expectedImages = 2;
+      const expectedImages = 3;
 
       expect(images.length).toBe(expectedImages);
     });
@@ -54,9 +61,11 @@ describe("Given an instance of FavoriteStreamer component", () => {
   describe("When receives streamerInfo", () => {
     test("Then it should follow the snapshots shape", () => {
       const favStreamer = TestRenderer.create(
-        <MainPageContexProvider>
-          <FavoriteStreamer streamerInfo={streamerInfo} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <FavoriteStreamer streamerInfo={streamerInfo} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
       expect(favStreamer.toJSON()).toMatchSnapshot();
     });

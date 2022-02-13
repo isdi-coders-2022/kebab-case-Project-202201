@@ -5,19 +5,33 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
   className="sc-dkPtRN kWuYUg"
 >
   <header
-    className="sc-hKwDye kdSofB"
+    className="sc-eCImPb gQPsoR"
   >
     <img
       alt="adri"
       src="a-very-specific-image-url.png"
     />
-    <div>
-      <div
-        className="streamer-name-block"
-      >
+    <div
+      className="streamer-name-block"
+    >
+      <div>
         <h2>
           adri
         </h2>
+      </div>
+      <div
+        className="sc-hKwDye cnHelE"
+      >
+        <button
+          className="sc-gsDKAQ dQpKYz"
+          onClick={[Function]}
+          type="button"
+        >
+          <img
+            alt="Edit button"
+            src="img/pencil-solid.svg"
+          />
+        </button>
       </div>
     </div>
     <button

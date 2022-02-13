@@ -2,6 +2,7 @@ import MainPageContexProvider from "../../store/contexts/MainPageContextProvider
 import { screen, render } from "@testing-library/react";
 import TestRenderer from "react-test-renderer";
 import ListStreamer from "./ListStreamer";
+import { BrowserRouter } from "react-router-dom";
 
 describe("Given a ListStreamer", () => {
   let streamers = null;
@@ -23,9 +24,11 @@ describe("Given a ListStreamer", () => {
   describe("When called a list of streamers", () => {
     test("It should display a list of streamers", () => {
       render(
-        <MainPageContexProvider>
-          <ListStreamer streamers={streamers} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <ListStreamer streamers={streamers} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
 
       const renderedElement = screen.getAllByRole("article");
@@ -37,9 +40,11 @@ describe("Given a ListStreamer", () => {
   describe("When it get a const listStreamer that creates ListStramer with 1 streamer", () => {
     test("then it should create and compare a snapshot with ListStreamer and the created Streamer", () => {
       const listStreamer = TestRenderer.create(
-        <MainPageContexProvider>
-          <ListStreamer streamers={streamers} />
-        </MainPageContexProvider>
+        <BrowserRouter>
+          <MainPageContexProvider>
+            <ListStreamer streamers={streamers} />
+          </MainPageContexProvider>
+        </BrowserRouter>
       );
       expect(listStreamer.toJSON()).toMatchSnapshot();
     });
