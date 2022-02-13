@@ -78,7 +78,7 @@ const FavoriteStreamer = ({ streamerInfo }) => {
   };
   let navigate = useNavigate();
   const editStreamer = () => {
-    navigate(`/form`);
+    navigate(`/form/${streamerInfo.id}`);
   };
   return (
     <StreamerArticle>
