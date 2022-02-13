@@ -1,4 +1,7 @@
+import { useContext, useState } from "react";
 import styled from "styled-components";
+import { filterByContractAction } from "../../store/actions/mainPage/actionCreators";
+import MainPageContext from "../../store/contexts/MainPageContext";
 
 const Container = styled.div`
   background-color: rgba(98, 0, 238, 0.38);
@@ -25,12 +28,37 @@ const Menu = styled.h2`
   margin: 10px;
 `;
 
+const SubMenu = styled(Menu)`
+  background-color: red;
+`;
 const MenuToggle = ({ action }) => {
+  const { dispatchStreamerList } = useContext(MainPageContext);
+  const [filterIsClicked, setFilterIsClicked] = useState(false);
+  const subMenuAction = () => {
+    setFilterIsClicked(true);
+  };
+
+  const filterByPartner = () => {
+    const action = filterByContractAction("partner");
+    dispatchStreamerList(action);
+  };
+
+  const filterByAffiliate = () => {
+    const action = filterByContractAction("affiliate");
+    dispatchStreamerList(action);
+  };
+
   return (
     <>
       <Container>
         <Menu onClick={action}>SORT</Menu>
-        <Menu onClick={action}>FILTER</Menu>
+        <Menu onClick={subMenuAction}>FILTER</Menu>
+        {filterIsClicked && (
+          <>
+            <SubMenu onClick={filterByPartner}>Partner </SubMenu>
+            <SubMenu onClick={filterByAffiliate}>Affiliate</SubMenu>
+          </>
+        )}
         <Menu onClick={action}>SEARCH</Menu>
       </Container>
     </>

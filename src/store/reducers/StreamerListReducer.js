@@ -5,8 +5,14 @@ const StreamerListReducer = (currentList, action) => {
   switch (action.type) {
     case actionTypes.loadStreamerList:
       newList = [...action.streamerList];
-
       break;
+
+    case actionTypes.filterByContractAction:
+      newList = currentList.filter((streamer) => {
+        return streamer.broadcaster_type === action.contract;
+      });
+      break;
+
     default:
       newList = [...currentList];
   }
