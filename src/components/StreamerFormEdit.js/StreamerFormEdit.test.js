@@ -26,16 +26,5 @@ describe("Given a Form Edit component", () => {
 
       expect(renderedInput).not.toBeNull();
     });
-    test("Then it should render a Placeholder input", () => {
-      render(
-        <BrowserRouter>
-          <StreamerFormEdit />
-        </BrowserRouter>
-      );
-
-      const nameInput = screen.queryByPlaceholderText("Your Name");
-
-      expect(nameInput).toBeInTheDocument();
-    });
   });
 });
