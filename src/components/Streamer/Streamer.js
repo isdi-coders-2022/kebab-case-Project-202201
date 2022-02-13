@@ -100,6 +100,7 @@ const StreamerDescription = styled.p`
 const Streamer = ({ streamerInfo }) => {
   const info = streamerInfo;
   const { sendStreamer } = useFavoritesAPI();
+  let isClicked = false;
   const addToFavs = () => {
     const newStreamer = {
       id: info.id,
@@ -108,6 +109,7 @@ const Streamer = ({ streamerInfo }) => {
       profile_image_url: info.profile_image_url,
     };
     sendStreamer(newStreamer);
+    isClicked = true;
   };
 
   let navigate = useNavigate();
@@ -142,7 +144,7 @@ const Streamer = ({ streamerInfo }) => {
         </ColumnCard2>
         <ButtonImage
           favClass={"newClass"}
-          image={"img/favDown.png"}
+          image={isClicked ? "img/favUp.png" : "img/favDown.png"}
           imageAlt={"shawarma icon"}
           actionOnClick={addToFavs}
         />
