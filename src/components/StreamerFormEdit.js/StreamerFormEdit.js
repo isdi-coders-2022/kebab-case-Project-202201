@@ -3,6 +3,7 @@ import ButtonText from "../ButtonText/ButtonText";
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
 import useFavoritesAPI from "../../hooks/useFavoritesAPI";
+import { useNavigate } from "react-router-dom";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
@@ -54,15 +55,22 @@ const StreamerFormEdit = ({ streamerId }) => {
     description: data.description,
   };
 
+  let navigate = useNavigate();
+  const goFavorites = () => {
+    navigate(`/favorites`);
+  };
+
   const onFormSubmit = (event) => {
     event.preventDefault();
     modifyStreamer(streamerId, data);
     resetForm();
+    goFavorites();
   };
 
   const resetForm = () => {
     setData(initialFields);
   };
+
   const changeData = (event) => {
     setData({
       ...data,
@@ -106,10 +114,10 @@ const StreamerFormEdit = ({ streamerId }) => {
           </FormBlock>
         </StyleLineForm>
         <StyleButtons>
-          <ButtonText text={"CANCEL"} actionOnClick={resetForm} />
+          <ButtonText text={"CANCEL"} actionOnClick={goFavorites} />
           <ButtonText
             type="submit"
-            text={"ADD+"}
+            text={"EDIT"}
             actionOnClick={onFormSubmit}
           />
         </StyleButtons>
