@@ -179,7 +179,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${process.env.REACT_APP_USERS}`, (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/users", (req, res, ctx) => {
     const idParam = req.url.searchParams.get("id");
     if (idParam === "71092938") {
       return res(
