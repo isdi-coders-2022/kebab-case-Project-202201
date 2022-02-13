@@ -35,7 +35,7 @@ const FavStreamerHeader = styled.header`
     display: flex;
     height: 100%;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
     height: auto;
   }
   & h2 {
