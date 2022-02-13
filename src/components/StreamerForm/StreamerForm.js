@@ -33,7 +33,7 @@ const StyledInput = styled.input`
   padding-left: 10px;
   margin-top: 10px;
   border-radius: 5px;
-
+  background: ${(props) => props.theme.alt2};
   &[id="description"] {
     height: 200px;
   }
