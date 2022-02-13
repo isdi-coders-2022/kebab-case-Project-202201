@@ -3,7 +3,6 @@
 exports[`Given the Streamer component When it gets a const streamer that creates a streamer with StreamerInfo as props then it should create and compare a snapshot with Streamer with StreamerInfo as component 1`] = `
 <article
   className="sc-gsDKAQ hnSXFn streamerMain"
-  onClick={[Function]}
 >
   <div
     className="sc-dkPtRN"
@@ -21,6 +20,7 @@ exports[`Given the Streamer component When it gets a const streamer that creates
   </div>
   <div
     className="sc-hKwDye fnrGzJ"
+    onClick={[Function]}
   >
     <p
       className="sc-gKclnd eOzUoE displayName"
