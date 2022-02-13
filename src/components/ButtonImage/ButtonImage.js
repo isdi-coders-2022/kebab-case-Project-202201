@@ -14,9 +14,9 @@ const ButtonImg = styled.button`
   }
 `;
 
-const ButtonImage = ({ imageAlt, image, actionOnClick }) => {
+const ButtonImage = ({ imageAlt, image, actionOnClick, title }) => {
   return (
-    <ButtonImg type="button" onClick={actionOnClick}>
+    <ButtonImg type="button" onClick={actionOnClick} title={title}>
       <img alt={imageAlt} src={image} />
     </ButtonImg>
   );
