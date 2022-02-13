@@ -7,6 +7,7 @@ const lightTheme = {
   accentAlt: "#5d16c6",
   accentAlt2: "#461094",
   descriptionColor: "#000",
+  favoriteNameColor: "#000",
 };
 
 export default lightTheme;
