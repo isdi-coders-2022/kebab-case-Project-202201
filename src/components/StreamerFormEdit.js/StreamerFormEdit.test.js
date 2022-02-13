@@ -4,14 +4,14 @@ import { BrowserRouter } from "react-router-dom";
 
 describe("Given a Form Edit component", () => {
   describe("When it's rendered", () => {
-    test("Then it should render 'Image:'", () => {
+    test("Then it should render 'Description:'", () => {
       render(
         <BrowserRouter>
           <StreamerFormEdit />
         </BrowserRouter>
       );
 
-      const renderedElement = screen.getByLabelText("Image:");
+      const renderedElement = screen.getByLabelText("Description:");
 
       expect(renderedElement).toBeInTheDocument();
     });
