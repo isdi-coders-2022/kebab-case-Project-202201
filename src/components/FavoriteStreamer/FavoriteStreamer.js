@@ -31,7 +31,7 @@ const FavStreamerHeader = styled.header`
     height: auto;
   }
   & h2 {
-    color: ${(props) => props.theme.descriptionColor};
+    color: ${(props) => props.theme.favoriteNameColor};
     display: inline-block;
     padding-bottom: 7px;
     font-size: 24px;
