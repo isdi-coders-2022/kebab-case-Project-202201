@@ -2,6 +2,8 @@ import styled from "styled-components";
 import ButtonText from "../ButtonText/ButtonText";
 import ButtonImage from "../ButtonImage/ButtonImage";
 import { useNavigate } from "react-router-dom";
+import MenuToggle from "../MenuToggle/MenuToggle";
+import { useState } from "react";
 
 const NavBarStyled = styled.div`
   position: fixed;
@@ -16,6 +18,8 @@ const NavBarStyled = styled.div`
 `;
 
 const NavBar = () => {
+  const [showMenu, setShowMenu] = useState(true);
+
   let navigate = useNavigate();
   const goHome = () => {
     navigate(`/home`);
@@ -25,8 +29,8 @@ const NavBar = () => {
     navigate("/favorites");
   };
 
-  const goForm = () => {
-    navigate("/form");
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
   };
 
   return (
@@ -37,8 +41,9 @@ const NavBar = () => {
         <ButtonImage
           image={"img/multidurum.png"}
           imageAlt={"multidurum"}
-          actionOnClick={goForm}
+          actionOnClick={toggleMenu}
         />
+        {!showMenu && <MenuToggle />}
 
         <ButtonText text="FAVS" actionOnClick={goFavs} />
       </NavBarStyled>
