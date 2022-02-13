@@ -42,6 +42,7 @@ const ClipCarousel = ({ streamerId }) => {
 };
 
 ClipCarousel.propTypes = {
-  streamerId: propTypes.number.isRequired,
+  streamerId: propTypes.oneOfType([propTypes.string, propTypes.number])
+    .isRequired,
 };
 export default ClipCarousel;
