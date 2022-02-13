@@ -3,13 +3,14 @@ import PropTypes from "prop-types";
 import ButtonImage from "../ButtonImage/ButtonImage";
 import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const ArticleCard = styled.article`
   width: auto;
   margin: 10px;
   height: 121px;
   top: 15px;
-  background: #efeff1;
+  background: ${(props) => props.theme.alt};
   display: flex;
   flex-direction: row;
 `;
@@ -50,7 +51,7 @@ const BroadcasterType = styled.p`
 
   text-align: center;
   letter-spacing: 0.4px;
-  background-color: #5d16c6;
+  background-color: ${(props) => props.theme.accent};
   color: #ffffff;
 `;
 
@@ -65,7 +66,7 @@ const NameStreamer = styled.p`
   line-height: 16px;
   letter-spacing: 0.4px;
 
-  color: #5d16c6;
+  color: ${(props) => props.theme.accent};
 `;
 
 const OnlineType = styled.p`
@@ -94,13 +95,16 @@ const StreamerDescription = styled.p`
   line-height: 16px;
   letter-spacing: 0.4px;
 
-  color: #000000;
+  color: ${(props) => props.theme.descriptionColor};
 `;
 
 const Streamer = ({ streamerInfo }) => {
+  const [isClicked, setIsClicked] = useState(false);
+
   const info = streamerInfo;
+
   const { sendStreamer } = useFavoritesAPI();
-  let isClicked = false;
+
   const addToFavs = () => {
     const newStreamer = {
       id: info.id,
@@ -109,7 +113,7 @@ const Streamer = ({ streamerInfo }) => {
       profile_image_url: info.profile_image_url,
     };
     sendStreamer(newStreamer);
-    isClicked = true;
+    setIsClicked(!isClicked);
   };
 
   let navigate = useNavigate();
@@ -119,7 +123,7 @@ const Streamer = ({ streamerInfo }) => {
 
   return (
     streamerInfo && (
-      <ArticleCard className="streamerMain" onClick={viewDetails}>
+      <ArticleCard className="streamerMain">
         <ColumnCard1>
           <RoundedImage
             className="streamerPicture"
@@ -130,7 +134,7 @@ const Streamer = ({ streamerInfo }) => {
             {info.broadcaster_type}
           </BroadcasterType>
         </ColumnCard1>
-        <ColumnCard2>
+        <ColumnCard2 onClick={viewDetails}>
           <NameStreamer className="displayName">
             {`${info.display_name}`}
           </NameStreamer>
@@ -142,12 +146,21 @@ const Streamer = ({ streamerInfo }) => {
               : info.description}
           </StreamerDescription>
         </ColumnCard2>
-        <ButtonImage
-          favClass={"newClass"}
-          image={isClicked ? "img/favUp.png" : "img/favDown.png"}
-          imageAlt={"shawarma icon"}
-          actionOnClick={addToFavs}
-        />
+        {!isClicked ? (
+          <ButtonImage
+            favClass={"newClass"}
+            image={"img/favDown.png"}
+            imageAlt={"shawarma icon"}
+            actionOnClick={addToFavs}
+          />
+        ) : (
+          <ButtonImage
+            favClass={"newClass"}
+            image={"img/favUp.png"}
+            imageAlt={"shawarma icon"}
+            actionOnClick={addToFavs}
+          />
+        )}
       </ArticleCard>
     )
   );
