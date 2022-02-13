@@ -241,6 +241,7 @@ export const handlers = [
       ])
     );
   }),
+
   rest.get(`${process.env.REACT_APP_FAVORITES}/156037856`, (req, res, ctx) => {
     return res(
       ctx.status(200),
@@ -263,6 +264,7 @@ export const handlers = [
       ])
     );
   }),
+
   rest.get(`${process.env.REACT_APP_EMOTES}`, (req, res, ctx) => {
     res(
       ctx.status(200),
