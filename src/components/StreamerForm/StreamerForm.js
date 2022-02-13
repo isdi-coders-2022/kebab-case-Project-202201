@@ -7,6 +7,7 @@ import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
   width: 100%;
+  padding-bottom: 15px;
 `;
 
 const StyleLineForm = styled.div`
@@ -30,7 +31,13 @@ const StyledInput = styled.input`
   height: 50px;
   border-style: none;
   padding-left: 10px;
+  margin-top: 10px;
   border-radius: 5px;
+
+  &[id="description"] {
+    height: 200px;
+  }
+
   &:focus {
     outline: 1px solid #6200ee;
   }
