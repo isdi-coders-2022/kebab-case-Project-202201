@@ -126,7 +126,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${process.env.REACT_APP_STREAMLIST}`, (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/streams", (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
