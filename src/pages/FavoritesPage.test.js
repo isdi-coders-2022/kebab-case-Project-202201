@@ -1,5 +1,4 @@
 import { render, screen } from "@testing-library/react";
-import { act } from "react-dom/test-utils";
 import MainPageContextProvider from "../store/contexts/MainPageContextProvider";
 import FavoritesPage from "./FavoritesPage";
 
