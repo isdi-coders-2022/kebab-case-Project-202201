@@ -56,7 +56,7 @@ const StreamerFormEdit = ({ streamerId }) => {
 
   const onFormSubmit = (event) => {
     event.preventDefault();
-    modifyStreamer(streamerId);
+    modifyStreamer(streamerId, data);
     resetForm();
   };
 
