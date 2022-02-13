@@ -2,7 +2,7 @@
 
 exports[`Given an instance of FavoriteStreamer component When receives streamerInfo Then it should follow the snapshots shape 1`] = `
 <article
-  className="sc-dkPtRN kWuYUg"
+  className="sc-dkPtRN dyQQWI"
 >
   <header
     className="sc-hKwDye kdSofB"
