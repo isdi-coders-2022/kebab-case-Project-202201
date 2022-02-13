@@ -6,17 +6,25 @@ import { useContext } from "react";
 import MainPageContext from "../../store/contexts/MainPageContext";
 import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 import { overwriteFavoritesAction } from "../../store/actions/favorites/actionCreators";
+import { useNavigate } from "react-router-dom";
 
 const StreamerArticle = styled.article`
   background: ${(props) => props.theme.alt};
   padding: 5px 7px;
   margin: 10px;
 `;
+const EditButton = styled.div`
+  display: flex;
+  flex-direction: row;
+  width: 50px;
+  height: 50px;
+`;
 
 const FavStreamerHeader = styled.header`
   border-bottom: 5px solid ${(props) => props.theme.accent};
   padding: 0;
   display: flex;
+  flex-direction: row;
   padding: 0px;
   justify-content: space-between;
   & > * {
@@ -27,8 +35,8 @@ const FavStreamerHeader = styled.header`
     flex: 1 1 auto;
     display: flex;
     height: 100%;
-    flex-direction: column;
-    justify-content: space-between;
+    flex-direction: row;
+    justify-content: flex-start;
     height: auto;
   }
   & h2 {
@@ -48,6 +56,7 @@ const FavStreamerHeader = styled.header`
   & streamer-name-block {
     display: flex;
     flex-direction: row;
+    justify-content: flex-start;
     width: 100%;
   }
   & button {
@@ -68,6 +77,10 @@ const FavoriteStreamer = ({ streamerInfo }) => {
     const action = overwriteFavoritesAction(filteredFavList);
     dispatchFavs(action);
   };
+  let navigate = useNavigate();
+  const editStreamer = () => {
+    navigate(`/form/${streamerInfo.id}`);
+  };
   return (
     <StreamerArticle>
       <FavStreamerHeader>
@@ -75,10 +88,17 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           src={streamerInfo.profile_image_url}
           alt={`${streamerInfo.display_name}`}
         ></img>
-        <div>
-          <div className="streamer-name-block">
+        <div className="streamer-name-block">
+          <div>
             <h2>{streamerInfo.display_name}</h2>
           </div>
+          <EditButton>
+            <ButtonImage
+              imageAlt="Edit button"
+              image="img/pencil-solid.svg"
+              actionOnClick={editStreamer}
+            />
+          </EditButton>
         </div>
         <ButtonImage
           imageAlt="Shish-Kebab delete Button"
