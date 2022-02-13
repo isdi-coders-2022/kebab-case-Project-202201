@@ -1,11 +1,12 @@
 import ListStreamerMain from "../components/ListStreamerMain/ListStreamerMain";
+import Container from "../globalTheme";
 
 const MainPage = () => {
   return (
     <>
-      <div className="container">
+      <Container>
         <ListStreamerMain></ListStreamerMain>
-      </div>
+      </Container>
     </>
   );
 };
