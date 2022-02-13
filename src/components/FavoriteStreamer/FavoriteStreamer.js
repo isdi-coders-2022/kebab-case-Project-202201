@@ -10,6 +10,7 @@ import { overwriteFavoritesAction } from "../../store/actions/favorites/actionCr
 const StreamerArticle = styled.article`
   background: ${(props) => props.theme.alt};
   padding: 5px 7px;
+  margin: 10px;
 `;
 
 const FavStreamerHeader = styled.header`

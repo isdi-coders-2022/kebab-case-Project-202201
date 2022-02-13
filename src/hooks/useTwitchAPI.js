@@ -78,8 +78,7 @@ const useTwitchAPI = () => {
 
   const fetchStreamerIdList = useCallback(async () => {
     const streamerList = await fetchStreamInfo();
-    const streamerIdList = streamerList.map((streamer) => streamer.user_id);
-    return streamerIdList;
+    return streamerList.map((streamer) => streamer.user_id);
   }, [fetchStreamInfo]);
 
   const fetchStreamersFromId = useCallback(
