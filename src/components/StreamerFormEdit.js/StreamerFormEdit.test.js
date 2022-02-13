@@ -3,11 +3,12 @@ import { render, screen } from "@testing-library/react";
 import { BrowserRouter } from "react-router-dom";
 
 describe("Given a Form Edit component", () => {
+  const id = 156037856;
   describe("When it's rendered", () => {
     test("Then it should render 'Description:'", () => {
       render(
         <BrowserRouter>
-          <StreamerFormEdit />
+          <StreamerFormEdit streamerId={id} />
         </BrowserRouter>
       );
 
@@ -18,7 +19,7 @@ describe("Given a Form Edit component", () => {
     test("Then it should render an input", () => {
       render(
         <BrowserRouter>
-          <StreamerFormEdit />
+          <StreamerFormEdit streamerId={id} />
         </BrowserRouter>
       );
 

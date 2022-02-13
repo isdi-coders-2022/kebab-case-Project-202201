@@ -179,7 +179,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("https://api.twitch.tv/helix/users", (req, res, ctx) => {
+  rest.get(`${process.env.REACT_APP_USERS}`, (req, res, ctx) => {
     const idParam = req.url.searchParams.get("id");
     if (idParam === "71092938") {
       return res(
@@ -241,7 +241,28 @@ export const handlers = [
       ])
     );
   }),
-
+  rest.get(`${process.env.REACT_APP_FAVORITES}/156037856`, (req, res, ctx) => {
+    return res(
+      ctx.status(200),
+      ctx.json([
+        {
+          id: "156037856",
+          login: "fextralife",
+          display_name: "Fextralife",
+          type: "",
+          broadcaster_type: "partner",
+          description:
+            "Fextralife is a gaming community & game news source fueled by a team of dedicated gamers! We play Action, Adventure and RPGs, some Survival & FPS too!. Elden Ring, Baldur's Gate 3 hype! Check out our 200+ Wikis, reviews on Youtube & more! This week STREAMS: Elden Ring & LOST ARK",
+          profile_image_url:
+            "https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-300x300.png",
+          offline_image_url:
+            "https://static-cdn.jtvnw.net/jtv_user_pictures/96dacfa8-b861-4849-811c-b119e422cd85-channel_offline_image-1920x1080.jpeg",
+          view_count: 1881634275,
+          created_at: "2017-05-07T00:21:11Z",
+        },
+      ])
+    );
+  }),
   rest.get(`${process.env.REACT_APP_EMOTES}`, (req, res, ctx) => {
     res(
       ctx.status(200),
