@@ -9,6 +9,17 @@ const useFavoritesAPI = () => {
     return await response.json();
   }, []);
 
+  const getFavorite = useCallback(async (id) => {
+    const url = `${favoritesEndpoint}/${id}`;
+    const packInfo = {
+      method: "GET",
+      headers: { "Content-Type": "application/json" },
+      body: await JSON.stringify(),
+    };
+    const response = await fetch(url, packInfo);
+    return await response.json();
+  }, []);
+
   const sendStreamer = useCallback(async (streamer) => {
     const packInfo = {
       method: "POST",
@@ -41,7 +52,13 @@ const useFavoritesAPI = () => {
     return await response.json();
   }, []);
 
-  return { getAllFavorites, sendStreamer, modifyStreamer, deleteStreamer };
+  return {
+    getAllFavorites,
+    getFavorite,
+    sendStreamer,
+    modifyStreamer,
+    deleteStreamer,
+  };
 };
 
 export default useFavoritesAPI;
