@@ -242,7 +242,7 @@ export const handlers = [
     );
   }),
 
-  rest.get(`${process.env.REACT_APP_EMOTEST}`, (req, res, ctx) => {
+  rest.get(`${process.env.REACT_APP_EMOTES}`, (req, res, ctx) => {
     res(
       ctx.status(200),
       ctx.json([

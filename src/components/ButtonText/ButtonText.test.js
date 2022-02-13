@@ -36,8 +36,8 @@ describe("Given a ButtonText Component", () => {
     });
   });
 
-  describe("When it get a const button that creates a ButtonText", () => {
-    test("then it should create and compare a snapshot with ButtonText component", () => {
+  describe("When it is tested", () => {
+    test("Then it should create and compare a snapshot with ButtonText component", () => {
       const button = TestRenderer.create(<ButtonText />);
       expect(button.toJSON()).toMatchSnapshot();
     });
