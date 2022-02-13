@@ -6,6 +6,7 @@ import FavoriteStreamer from "../components/FavoriteStreamer/FavoriteStreamer";
 import ButtonText from "../components/ButtonText/ButtonText";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import Container from "../globalTheme";
 
 const DisplayButton = styled.div`
   display: flex;
@@ -37,7 +38,7 @@ const FavoritesPage = () => {
   }, [dispatchFavs, getAllFavorites, sendStreamer]);
 
   return (
-    <div className="container">
+    <Container>
       {favList &&
         favList.map((favorite) => {
           return <FavoriteStreamer key={favorite.id} streamerInfo={favorite} />;
@@ -46,7 +47,7 @@ const FavoritesPage = () => {
       <DisplayButton>
         <ButtonText text="Create" actionOnClick={goForm} />
       </DisplayButton>
-    </div>
+    </Container>
   );
 };
 

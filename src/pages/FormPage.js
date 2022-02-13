@@ -1,17 +1,16 @@
 import StreamerForm from "../components/StreamerForm/StreamerForm";
 import StreamerFormEdit from "../components/StreamerFormEdit.js/StreamerFormEdit";
 import { useParams } from "react-router-dom";
+import Container from "../globalTheme";
 
 const FormPage = () => {
   const params = useParams();
   const { id } = params;
 
   return (
-    <>
-      <div className="container">
-        {!id ? <StreamerForm /> : <StreamerFormEdit streamerId={id} />}
-      </div>
-    </>
+    <Container>
+      {!id ? <StreamerForm /> : <StreamerFormEdit streamerId={id} />}
+    </Container>
   );
 };
 
