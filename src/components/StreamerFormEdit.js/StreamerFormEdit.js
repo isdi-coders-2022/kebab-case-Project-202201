@@ -49,8 +49,8 @@ const StreamerFormEdit = ({ streamerId }) => {
 
   useEffect(() => {
     async function infoStreamer() {
-      const infoStreamer = await getFavorite(streamerId);
-      setData(infoStreamer);
+      const favoriteStreamer = await getFavorite(streamerId);
+      setData(favoriteStreamer);
     }
     infoStreamer();
   }, [getFavorite, streamerId]);

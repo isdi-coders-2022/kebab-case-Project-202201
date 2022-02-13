@@ -39,13 +39,13 @@ const MenuToggle = ({ action }) => {
   };
 
   const filterByPartner = () => {
-    const action = filterByContractAction("partner");
-    dispatchStreamerList(action);
+    const filterPartnerAction = filterByContractAction("partner");
+    dispatchStreamerList(filterPartnerAction);
   };
 
   const filterByAffiliate = () => {
-    const action = filterByContractAction("affiliate");
-    dispatchStreamerList(action);
+    const filterAffiliateAction = filterByContractAction("affiliate");
+    dispatchStreamerList(filterAffiliateAction);
   };
 
   return (
