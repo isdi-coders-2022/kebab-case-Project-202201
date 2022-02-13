@@ -6,23 +6,14 @@ import useFavoritesAPI from "../../hooks/useFavoritesAPI";
 
 const StyledForm = styled.form`
   background-color: ${(props) => props.theme.alt};
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  position: absolute;
-  width: 500px;
-  height: 500px;
-  left: 22px;
+  width: 100%;
 `;
 
 const StyleLineForm = styled.div`
   color: ${(props) => props.theme.accent};
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
-  padding: 10px;
-  width: 400px;
-  margin: 15px;
+  width: 100%;
 `;
 const FormBlock = styled.div`
   display: flex;
