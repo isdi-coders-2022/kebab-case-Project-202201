@@ -16,9 +16,9 @@ const ButtonTxt = styled.button`
   padding: 4px 8px 4px 6px;
 `;
 
-const ButtonText = ({ text, actionOnClick }) => {
+const ButtonText = ({ text, actionOnClick, title }) => {
   return (
-    <ButtonTxt type="button" onClick={actionOnClick}>
+    <ButtonTxt type="button" onClick={actionOnClick} title={title}>
       {text}
     </ButtonTxt>
   );

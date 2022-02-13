@@ -80,8 +80,9 @@ const FavoriteStreamer = ({ streamerInfo }) => {
           </div>
         </div>
         <ButtonImage
-          imageAlt="Shish-Kebab Button"
+          imageAlt="Shish-Kebab delete Button"
           image="img/shish-kebab.png"
+          title="Delete from favorites"
           actionOnClick={onClickDelete}
         />
       </FavStreamerHeader>
