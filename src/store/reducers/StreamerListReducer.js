@@ -7,10 +7,9 @@ const StreamerListReducer = (currentList, action) => {
       newList = [...action.streamerList];
       break;
 
-    case actionTypes.filterByLanguageAction:
+    case actionTypes.filterByContractAction:
       newList = currentList.filter((streamer) => {
-        console.log(streamer);
-        return streamer.broadcaster_type === action.language;
+        return streamer.broadcaster_type === action.contract;
       });
       break;
 

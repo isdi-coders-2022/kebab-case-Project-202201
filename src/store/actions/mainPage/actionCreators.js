@@ -5,7 +5,7 @@ export const loadStreamerList = (streamerList) => ({
   streamerList: streamerList,
 });
 
-export const filterByLanguageAction = (language) => ({
-  type: actionTypes.filterByLanguageAction,
-  language: language,
+export const filterByContractAction = (contract) => ({
+  type: actionTypes.filterByContractAction,
+  contract: contract,
 });

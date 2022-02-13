@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
 import MainPageContextProvider from "../../store/contexts/MainPageContextProvider";
-import { filterByLanguageAction } from "../../store/actions/mainPage/actionCreators";
+import { filterByContractAction } from "../../store/actions/mainPage/actionCreators";
 import MainPageContext from "../../store/contexts/MainPageContext";
 
 const Container = styled.div`
@@ -39,8 +39,13 @@ const MenuToggle = ({ action }) => {
     setFilterIsClicked(true);
   };
 
-  const filterByLangage = () => {
-    const action = filterByLanguageAction("affiliate");
+  const filterByPartner = () => {
+    const action = filterByContractAction("partner");
+    dispatchStreamerList(action);
+  };
+
+  const filterByAffiliate = () => {
+    const action = filterByContractAction("affiliate");
     dispatchStreamerList(action);
   };
 
@@ -51,8 +56,8 @@ const MenuToggle = ({ action }) => {
         <Menu onClick={subMenuAction}>FILTER</Menu>
         {filterIsClicked && (
           <>
-            <SubMenu onClick={filterByLangage}>English </SubMenu>
-            <SubMenu onClick={filterByLangage}>Spanish</SubMenu>
+            <SubMenu onClick={filterByPartner}>Partner </SubMenu>
+            <SubMenu onClick={filterByAffiliate}>Affiliate</SubMenu>
           </>
         )}
         <Menu onClick={action}>SEARCH</Menu>

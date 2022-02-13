@@ -1,6 +1,6 @@
 const actionTypes = {
   loadStreamerList: "load-streamer-list",
-  filterByLanguageAction: "filter-by-language-action",
+  filterByContractAction: "filter-by-contract-action",
 };
 
 export default actionTypes;
