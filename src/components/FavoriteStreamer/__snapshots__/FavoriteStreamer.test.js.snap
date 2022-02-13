@@ -23,8 +23,9 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
         className="sc-hKwDye cnHelE"
       >
         <button
-          className="sc-gsDKAQ dQpKYz"
+          className="sc-gsDKAQ eFKzta"
           onClick={[Function]}
+          title="Edit favorite"
           type="button"
         >
           <img
@@ -35,7 +36,7 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
       </div>
     </div>
     <button
-      className="sc-gsDKAQ dQpKYz"
+      className="sc-gsDKAQ eFKzta"
       onClick={[Function]}
       title="Delete from favorites"
       type="button"

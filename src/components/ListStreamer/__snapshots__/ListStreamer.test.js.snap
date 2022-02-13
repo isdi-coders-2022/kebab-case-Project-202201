@@ -26,8 +26,9 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
           className="sc-hKwDye cnHelE"
         >
           <button
-            className="sc-gsDKAQ dQpKYz"
+            className="sc-gsDKAQ eFKzta"
             onClick={[Function]}
+            title="Edit favorite"
             type="button"
           >
             <img
@@ -38,7 +39,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
         </div>
       </div>
       <button
-        className="sc-gsDKAQ dQpKYz"
+        className="sc-gsDKAQ eFKzta"
         onClick={[Function]}
         title="Delete from favorites"
         type="button"
@@ -75,8 +76,9 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
           className="sc-hKwDye cnHelE"
         >
           <button
-            className="sc-gsDKAQ dQpKYz"
+            className="sc-gsDKAQ eFKzta"
             onClick={[Function]}
+            title="Edit favorite"
             type="button"
           >
             <img
@@ -87,7 +89,7 @@ exports[`Given a ListStreamer When it get a const listStreamer that creates List
         </div>
       </div>
       <button
-        className="sc-gsDKAQ dQpKYz"
+        className="sc-gsDKAQ eFKzta"
         onClick={[Function]}
         title="Delete from favorites"
         type="button"

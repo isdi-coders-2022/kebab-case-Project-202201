@@ -6,7 +6,7 @@ Array [
     className="sc-gsDKAQ jKnvVu"
   >
     <button
-      className="sc-bdvvtL jAUNTG"
+      className="sc-bdvvtL feheQX"
       onClick={[Function]}
       type="button"
     >
@@ -27,17 +27,17 @@ Array [
     />
   </header>,
   <div
-    className="sc-gWXbKe hpfLQK"
+    className="sc-cCcXHH hxSDCJ"
   >
     <button
-      className="sc-iqseJM czYTP"
+      className="sc-crHmcD doNwLt"
       onClick={[Function]}
       type="button"
     >
       HOME
     </button>
     <button
-      className="sc-bdvvtL jAUNTG"
+      className="sc-bdvvtL feheQX"
       onClick={[Function]}
       type="button"
     >
@@ -47,7 +47,7 @@ Array [
       />
     </button>
     <button
-      className="sc-iqseJM czYTP"
+      className="sc-crHmcD doNwLt"
       onClick={[Function]}
       type="button"
     >

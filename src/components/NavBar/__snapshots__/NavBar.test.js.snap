@@ -12,7 +12,7 @@ exports[`Given a NavBar component When it get a const newNavBar that creates Nav
     HOME
   </button>
   <button
-    className="sc-gsDKAQ dQpKYz"
+    className="sc-gsDKAQ eFKzta"
     onClick={[Function]}
     type="button"
   >
