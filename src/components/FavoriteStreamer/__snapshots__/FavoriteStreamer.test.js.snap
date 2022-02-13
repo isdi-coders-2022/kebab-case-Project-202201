@@ -23,10 +23,11 @@ exports[`Given an instance of FavoriteStreamer component When receives streamerI
     <button
       className="sc-gsDKAQ dQpKYz"
       onClick={[Function]}
+      title="Delete from favorites"
       type="button"
     >
       <img
-        alt="Shish-Kebab Button"
+        alt="Shish-Kebab delete Button"
         src="img/shish-kebab.png"
       />
     </button>
