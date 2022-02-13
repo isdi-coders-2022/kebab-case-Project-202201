@@ -2,7 +2,7 @@
 
 exports[`Given a NavBar component When it get a const newNavBar that creates NavBar then it should create and compare a snapshot with newNavBar 1`] = `
 <div
-  className="sc-eCImPb kTnpUM"
+  className="sc-jRQBWg fiajYn"
 >
   <button
     className="sc-bdvvtL jbnYpL"

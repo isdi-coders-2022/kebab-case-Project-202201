@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
 import styled from "styled-components";
-import MainPageContextProvider from "../../store/contexts/MainPageContextProvider";
 import { filterByContractAction } from "../../store/actions/mainPage/actionCreators";
 import MainPageContext from "../../store/contexts/MainPageContext";
 
