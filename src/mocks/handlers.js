@@ -246,7 +246,7 @@ export const handlers = [
   ),
 
   rest.get(
-    "https://shawarma-streaming.herokuapp.com/streamers/156037856",
+    "https://shawarma-streaming.herokuapp.com/streamers/156037856/",
     (req, res, ctx) => {
       return res(
         ctx.status(200),
@@ -271,7 +271,7 @@ export const handlers = [
     }
   ),
 
-  rest.get("https://api.twitch.tv/helix/chat/emotes", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/chat/emotes/", (req, res, ctx) => {
     res(
       ctx.status(200),
       ctx.json([
@@ -281,7 +281,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("https://api.twitch.tv/helix/streams", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/streams/", (req, res, ctx) => {
     res(
       ctx.status(200),
       ctx.json([
