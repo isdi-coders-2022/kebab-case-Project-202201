@@ -1,7 +1,7 @@
 import { rest } from "msw";
 
 export const handlers = [
-  rest.get(`${process.env.REACT_APP_CLIPLIST}`, (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/clips/", (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -126,7 +126,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("https://api.twitch.tv/helix/streams", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/streams/", (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -179,7 +179,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("https://api.twitch.tv/helix/users", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/users/", (req, res, ctx) => {
     const idParam = req.url.searchParams.get("id");
     if (idParam === "71092938") {
       return res(
@@ -233,7 +233,7 @@ export const handlers = [
   }),
 
   rest.get(
-    "https://shawarma-streaming.herokuapp.com/streamers",
+    "https://shawarma-streaming.herokuapp.com/streamers/",
     (req, res, ctx) => {
       res(
         ctx.status(200),
