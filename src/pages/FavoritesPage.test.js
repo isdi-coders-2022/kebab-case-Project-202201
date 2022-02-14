@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import MainPageContextProvider from "../store/contexts/MainPageContextProvider";
 import FavoritesPage from "./FavoritesPage";
@@ -18,11 +18,17 @@ describe("Given the Favorites Page", () => {
       </MainPageContextProvider>
     );
   });
+
   describe("When rendered", () => {
     test("Then it displays the favorites in our API", async () => {
       render(wrappedPage);
       const streamers = await screen.findAllByText(/favStreamer/);
       expect(streamers.length).toBe(3);
+
+      await waitFor(async () => {
+        const list = await screen.findAllByRole("listitem");
+        return expect(list.length).toBe(5);
+      });
     });
   });
 
@@ -43,6 +49,11 @@ describe("Given the Favorites Page", () => {
       expect(streamer1).not.toBeInTheDocument();
       expect(streamer2).toBeInTheDocument();
       expect(streamer3).toBeInTheDocument();
+
+      await waitFor(async () => {
+        const list = await screen.findAllByRole("listitem");
+        return expect(list.length).toBe(5);
+      });
     });
   });
 });

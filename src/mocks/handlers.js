@@ -1,7 +1,7 @@
 import { rest } from "msw";
 
 export const handlers = [
-  rest.get(`${process.env.REACT_APP_CLIPLIST}`, (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/clips", (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -126,7 +126,7 @@ export const handlers = [
     );
   }),
 
-  rest.get("https://api.twitch.tv/helix/streams", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/streams/", (req, res, ctx) => {
     return res(
       ctx.status(200),
       ctx.json({
@@ -177,6 +177,59 @@ export const handlers = [
         ],
       })
     );
+  }),
+
+  rest.get("https://api.twitch.tv/helix/users/", (req, res, ctx) => {
+    const idParam = req.url.searchParams.get("id");
+    if (idParam === "71092938") {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          data: [
+            {
+              id: "71092938",
+              login: "xqcow",
+              display_name: "xQcOW",
+              type: "",
+              broadcaster_type: "partner",
+              description:
+                "THE BEST AT ABSOLUTELY EVERYTHING. THE JUICER. LEADER OF THE JUICERS.",
+              profile_image_url:
+                "https://static-cdn.jtvnw.net/jtv_user_pictures/xqcow-profile_image-9298dca608632101-300x300.jpeg",
+              offline_image_url:
+                "https://static-cdn.jtvnw.net/jtv_user_pictures/cd4e260a-7ea8-476c-af64-a151838add9a-channel_offline_image-1920x1080.png",
+              view_count: 487588507,
+              created_at: "2014-09-12T23:50:05Z",
+            },
+          ],
+        })
+      );
+    } else if (idParam === "156037856") {
+      return res(
+        ctx.status(200),
+        ctx.json({
+          data: [
+            {
+              id: "156037856",
+              login: "fextralife",
+              display_name: "Fextralife",
+              type: "",
+              broadcaster_type: "partner",
+              description:
+                "Fextralife is a gaming community & game news source fueled by a team of dedicated gamers! We play Action, Adventure and RPGs, some Survival & FPS too!. Elden Ring, Baldur's Gate 3 hype! Check out our 200+ Wikis, reviews on Youtube & more! This week STREAMS: Elden Ring & LOST ARK",
+              profile_image_url:
+                "https://static-cdn.jtvnw.net/jtv_user_pictures/a28b0d37-81d0-415a-8ed8-1a1f998ea26d-profile_image-300x300.png",
+              offline_image_url:
+                "https://static-cdn.jtvnw.net/jtv_user_pictures/96dacfa8-b861-4849-811c-b119e422cd85-channel_offline_image-1920x1080.jpeg",
+              view_count: 1881634275,
+              created_at: "2017-05-07T00:21:11Z",
+            },
+          ],
+        })
+      );
+    } else {
+      return res(ctx.status(400), ctx.json());
+    }
   }),
 
   rest.get("https://api.twitch.tv/helix/users", (req, res, ctx) => {
@@ -231,7 +284,6 @@ export const handlers = [
       return res(ctx.status(400), ctx.json());
     }
   }),
-
   rest.get(
     "https://shawarma-streaming.herokuapp.com/streamers",
     (req, res, ctx) => {
@@ -271,7 +323,7 @@ export const handlers = [
     }
   ),
 
-  rest.get("https://api.twitch.tv/helix/chat/emotes", (req, res, ctx) => {
+  rest.get("https://api.twitch.tv/helix/chat/emotes/", (req, res, ctx) => {
     res(
       ctx.status(200),
       ctx.json([
@@ -282,22 +334,51 @@ export const handlers = [
   }),
 
   rest.get("https://api.twitch.tv/helix/streams", (req, res, ctx) => {
-    res(
+    return res(
       ctx.status(200),
-      ctx.json([
-        {
-          id: 89,
-          name: "wololoo",
-          login: "wululuu",
-          broadcaser_type: "partner",
-        },
-        {
-          id: 45,
-          name: "wililii",
-          login: "wululuu",
-          broadcaser_type: "partner",
-        },
-      ])
+      ctx.json({
+        data: [
+          {
+            id: "45523006573",
+            user_id: "156037856",
+            user_login: "fextralife",
+            user_name: "Fextralife",
+            game_id: "490100",
+            game_name: "LOST ARK",
+            type: "live",
+            title:
+              "🔥HELGIA PET !DROPS🔥!CLASS !GUIDES !WIKI Lost Ark Deadeye with TYR!",
+            viewer_count: 49272,
+            started_at: "2022-02-14T08:14:05Z",
+            language: "en",
+            thumbnail_url:
+              "https://static-cdn.jtvnw.net/previews-ttv/live_user_fextralife-{width}x{height}.jpg",
+            tag_ids: [
+              "c2542d6d-cd10-4532-919b-3d19f30a768b",
+              "6ea6bca4-4712-4ab9-a906-e3336a9d8039",
+            ],
+            is_mature: false,
+          },
+          {
+            id: "40533713083",
+            user_id: "71190292",
+            user_login: "trainwreckstv",
+            user_name: "Trainwreckstv",
+            game_id: "498566",
+            game_name: "Slots",
+            type: "live",
+            title:
+              "18+ where's my max win #ad | !twitter | !instagram | !podcast | !youtube",
+            viewer_count: 35269,
+            started_at: "2022-02-13T07:59:59Z",
+            language: "en",
+            thumbnail_url:
+              "https://static-cdn.jtvnw.net/previews-ttv/live_user_trainwreckstv-{width}x{height}.jpg",
+            tag_ids: ["6ea6bca4-4712-4ab9-a906-e3336a9d8039"],
+            is_mature: true,
+          },
+        ],
+      })
     );
   }),
 

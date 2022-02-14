@@ -2,6 +2,16 @@ name: Testing on push
 
 on: push
 
+env:
+  REACT_APP_ID: 7apyztvt5kmx8o1ateivp57mxe17ml
+  REACT_APP_PASS: 2skh3pxj2nk4q2x0mp7nvd479u7zvj
+  REACT_APP_FAVORITES: https://shawarma-streaming.herokuapp.com/streamers/
+  REACT_APP_STREAMLIST: https://api.twitch.tv/helix/streams/
+  REACT_APP_EMOTES: https://api.twitch.tv/helix/chat/emotes/
+  REACT_APP_PARENT: localhost
+  REACT_APP_CLIPLIST: https://api.twitch.tv/helix/clips/
+  REACT_APP_USERS: https://api.twitch.tv/helix/users/
+
 jobs:
   test:
     name: Test passes

@@ -9,7 +9,7 @@ jest.mock("react-router-dom", () => ({
   useNavigate: () => mockNavigate,
 }));
 
-describe("Given the Favorites Page", () => {
+describe("Given the Main Page", () => {
   let wrapped;
   beforeAll(() => {
     wrapped = (
@@ -19,10 +19,12 @@ describe("Given the Favorites Page", () => {
     );
   });
   describe("When rendered", () => {
-    test.only("Then it should render a alist of 2 streamers", async () => {
+    test.only("Then it should render a list of 2 streamers", async () => {
       render(wrapped);
-      const streamers = await screen.findAllByText(/Fextralife/);
-      expect(streamers.length).toBe(2);
+      const streamer1 = await screen.findByText("Fextralife");
+      const streamer2 = await screen.findAllByText(/Trainwreckstv/);
+      expect(streamer1).toBeInTheDocument();
+      expect(streamer2).toBeInTheDocument();
     });
   });
 });

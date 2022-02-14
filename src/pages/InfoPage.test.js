@@ -15,6 +15,7 @@ describe("Given a component Info Page", () => {
 
       expect(article).toBeInTheDocument();
     });
+
     test("it should render an image", async () => {
       render(
         <MainPageContextProvider>
