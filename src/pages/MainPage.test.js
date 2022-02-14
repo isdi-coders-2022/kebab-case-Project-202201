@@ -23,7 +23,6 @@ describe("Given the Main Page", () => {
       render(wrapped);
       const streamer1 = await screen.findByText("Fextralife");
       const streamer2 = await screen.findAllByText(/Trainwreckstv/);
-      screen.debug();
       expect(streamer1).toBeInTheDocument();
       expect(streamer2).toBeInTheDocument();
     });
